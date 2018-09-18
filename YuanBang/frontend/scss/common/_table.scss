@@ -1,0 +1,187 @@
+﻿@import "compass/utilities/general/clearfix";
+
+.app-table-content {
+    margin-top: 24px;
+    width: 100%;
+
+
+    .app-table-nav {
+        @include clearfix();
+
+        li {
+            float: left;
+            text-align: center;
+            position: relative;
+            display: block;
+
+            a {
+                display: block;
+                padding: 6px 12px;
+                border-radius: 0px;
+                border: 1px solid #D9DEE4;
+                color: #666;
+                line-height: 20px;
+                height: 32px;
+                margin-left: 2px;
+                font-size: 12px;
+            }
+
+            & + li {
+                margin-left: 2px;
+            }
+        }
+    }
+    //工具栏样式
+    .app-table-toolbar {
+        //分类导航条样式
+        .app-table-nav {
+            li {
+                a {
+                    background-color: #D9DEE4;
+
+                    &:hover {
+                        border: 1px solid #D9DEE4;
+                        background-color: #DCE2E7;
+                        color: #444;
+                    }
+                }
+
+                &.active {
+                    a {
+                        border: 1px solid #546478;
+                        background-color: #546478;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+
+    .app-table {
+        table {
+            width: 100%;
+            background: #FFF;
+            font-size: 12px;
+            border-top: 1px solid #E1E6EB;
+            margin-top: 8px;
+            border: 1px solid #E1E6EB;
+
+            thead {
+                tr {
+                    th {
+                        padding: 8px 8px;
+                        font-weight: normal;
+                        color: #999;
+                        border-bottom: 1px solid #E1E6EB;
+                        background-color: #F5F6FA;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        padding: 12px 8px;
+                        border-top: 0px;
+                        border-bottom: 1px solid #E1E6EB;
+                        vertical-align: middle;
+                    }
+
+                    &:hover {
+                        td {
+                            background-color: #F9F9FA;
+                        }
+                    }
+                }
+            }
+
+            tfoot {
+                tr {
+                    td {
+                        padding: 8px 8px;
+                        font-weight: normal;
+                        color: #999;
+                        border-bottom: 1px solid #E1E6EB;
+                        background-color: #F5F6FA;
+
+                        .app-table-nav {
+                            float: left;
+
+                            li {
+
+                                a {
+                                    color: #333;
+                                    border: 1px solid #ddd;
+                                    font-size: 12px;
+                                    border-radius: 0px;
+                                    padding: 8px 16px;
+                                    height: 32px;
+                                    line-height: 14px;
+
+                                    &.delete {
+                                        background-color: #FF4351;
+                                        border-color: #FF4351;
+                                        color: #FFF;
+
+                                        &:hover {
+                                            background-color: #ff7680;
+                                            border-color: #ff7680;
+                                            color: #FFF;
+                                        }
+                                    }
+
+                                    &.add {
+                                        background-color: #7B72E9;
+                                        border-color: #7B72E9;
+                                        color: #FFF;
+
+                                        &:hover {
+                                            background-color: #a49ef0;
+                                            border-color: #a49ef0;
+                                            color: #FFF;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .app-table-pages {
+                            float: right;
+
+                            li {
+                                float: left;
+                                margin-right:8px;
+                                a {
+                                    float: left;
+                                    color: #333;
+                                    text-align: center;
+                                    position: relative;
+                                    display: block;
+                                    width: 24px;
+                                    text-align: center;
+                                    height: 32px;
+                                    line-height: 32px;
+                                    border: 1px solid #ddd;
+                                    background-color: #fff;
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        border-color: #333;
+                                    }
+                                }
+
+                                &.active {
+                                    a {
+                                        background-color: #7B72E9;
+                                        color: #fff;
+                                        border-color: transparent !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,106 @@
+﻿@import 'common/_base.scss';
+@import 'common/_table.scss';
+@import 'common/_form.scss';
+
+header {
+    background-color: #252a2f;
+    height: 50px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 1030 !important;
+}
+aside {
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    width: 140px;
+    z-index: 1020 !important;
+    background-color: #252a2f;
+    border-top: 1px solid hsla(0,0%,100%,.1);
+
+    ul {
+        li {
+            color: #fff;
+            font-size: 12px;
+            white-space: nowrap;
+            overflow: hidden;
+            position: absolute;
+            -webkit-transition: all .2s ease-out 0s;
+            transition: all .2s ease-out 0s;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            font-size: 0;
+            cursor: pointer;
+
+            span {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                display: inline-block;
+                vertical-align: middle;
+
+                i {
+                    font-size: 16px;
+                    vertical-align: middle;
+                    color: hsla(0,0%,100%,.65)
+                }
+            }
+
+            a {
+                display: inline-block;
+                vertical-align: middle;
+                width: 100px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                color: #fff;
+                font-size: 12px;
+                padding-right: 8px;
+                user-select:none;
+            }
+
+            &:hover {
+                background-color: #192129;
+
+                i {
+                    color: #fff;
+                }
+
+                a {
+                    color: #00c1de;
+                }
+            }
+        }
+    }
+}
+#container {
+    position: absolute;
+    top: 50px;
+    bottom: 0px;
+    left: 140px;
+    background-color: #fff;
+    z-index: 100;
+    right: 0;
+    padding: 15px;
+
+    > .app-title {
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+        border-bottom: 1px solid #DDD;
+
+        span {
+            float: left;
+            border-left: 2px solid #88B7E0;
+            text-indent: 8px;
+            height:20px;
+            line-height:20px;
+            margin:8px 0;
+        }
+    }
+}

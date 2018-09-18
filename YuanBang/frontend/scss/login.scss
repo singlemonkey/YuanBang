@@ -1,0 +1,116 @@
+﻿@import 'common/_base.scss';
+html {
+    background-color: #373d41 !important;
+}
+.app-login-header {
+    height: 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    background-color: #1F2325;
+    position: relative;
+    .app-login-index{
+        position:absolute;
+        left:10px;
+        cursor:pointer;
+        img{
+            height:70px;
+            opacity:.9;
+        }
+        span{
+            position:absolute;
+            top:18px;
+            left:60px;
+            color:#fff;
+            font-weight:bold;
+            width:300px;
+            font-size:24px;
+            user-select:none;
+            letter-spacing:2px;
+        }
+    }
+}
+.app-login-body {
+    background-color: #1F2325;
+    padding: 74px 0 118px;
+    text-align: center;
+
+    .app-login-box {
+        width: 990px;
+        margin: auto;
+        position: relative;
+        height: 388px;
+
+        .app-login-form {
+            width: 380px;
+            height: 360px;
+            padding: 22px 25px 0;
+            background-color: #fff;
+            border: none;
+            position: absolute;
+            right: 0;
+            top: 20px;
+            color: #373d41;
+            font: 400 12px arial;
+            font-family: PingFang SC,Helvetica,Arial,Verdana,Microsoft YaHei,serif !important;
+
+            h4 {
+                width: 100%;
+                font-size: 18px;
+                font-weight: 400;
+                border-bottom: 1px solid transport;
+                padding-bottom: 5px;
+                margin: 0 auto 10px;
+                text-align: left;
+                margin-bottom: 15px;
+            }
+
+            .app-login-error {
+                display:none;
+                border: 1px solid #ff934c;
+                background: #fefcee;
+                margin-bottom: 10px;
+                font-size: 14px;
+                padding: 5px 8px;
+                overflow: hidden;
+
+                i {
+                    float: left;
+                    font-size: 16px;
+                    color: #ff934c;
+                }
+
+                span {
+                    float: left;
+                    padding-left:5px;
+                    font-size: 12px;
+                    color: #373d41;
+                }
+            }
+
+            form {
+                padding-top: 10px;
+
+                .app-login-field {
+                    margin-bottom: 18px;
+
+                    input {
+                        width: 100%;
+                        height: 42px;
+                    }
+                }
+
+                #submit {
+                    background-color: #1B9AF7;
+                    border-color: #1B9AF7;
+                    color: #fff;
+                    cursor: pointer;
+                    font-size: 16px;
+
+                    &:hover {
+                        background-color: #4cb0f9;
+                        border-color: #4cb0f9;
+                    }
+                }
+            }
+        }
+    }
+}

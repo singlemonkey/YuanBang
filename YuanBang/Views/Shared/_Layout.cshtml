@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>广东圆邦物流有限公司</title>
+    <link rel="stylesheet" href="~/frontend/css/layout.css" />
+    <link rel="stylesheet" href="~/frontend/libs/iconfont/iconfont.css"/>
+</head>
+<body>
+    <header></header>
+    <aside>
+        <ul>
+            <li>
+                <span>
+                    <i class="iconfont icon-news"></i>
+                </span>
+                <a href="/Admin/News">新闻公告</a>
+            </li>
+        </ul>
+    </aside>
+    <div id="container">
+        @RenderBody()
+    </div>
+    <script type="text/javascript" src="~/frontend/libs/jQuery/jquery.js"></script>
+    <script type="text/javascript" src="~/frontend/libs/jsrender.js"></script>
+    <script type="text/javascript" src="~/frontend/js/app.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

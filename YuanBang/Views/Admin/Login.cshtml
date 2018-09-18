@@ -1,0 +1,84 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="~/frontend/css/login.css" />
+    <link rel="stylesheet" href="~/frontend/libs/iconfont/iconfont.css" />
+</head>
+<body>
+    <div class="app-login-header">
+        <a class="app-login-index">
+            <img alt="广东圆邦物流有限公司" src="~/frontend/images/login/logo.png" />
+            <span>广东圆邦物流有限公司</span>
+        </a>
+    </div>
+    <div class="app-login-body">
+        <div class="app-login-box">
+            <div class="app-login-info"></div>
+            <div class="app-login-form">
+                <h4>密码登录</h4>
+                <div class="app-login-error">
+                    <i class="iconfont icon-warning"></i>
+                    <span id="errorMessage"></span>
+                </div>
+                <form >
+                    <div class="app-login-field">
+                        <input type="text" id="username" placeholder="请输入用户名" />
+                    </div>
+                    <div class="app-login-field">
+                        <input type="text" id="password" placeholder="请输入登录密码" />
+                    </div>
+                    <div class="app-login-field">
+                        <input type="button" id="submit" value="登录" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="~/frontend/libs/jQuery/jquery.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#submit').on('click', function () {
+                //用户输入判断
+                const userName = $('#username').val();
+                const password = $('#password').val();
+
+                if (userName.trim().length === 0) {
+                    $('#errorMessage').text('请输入用户名');
+                    $('.app-login-error').show();
+                } else if (password.trim().length === 0) {
+                    $('#errorMessage').text('请输入密码');
+                    $('.app-login-error').show();
+                } else {
+                    $.ajax({
+                        url: '/Admin/Login',
+                        type:'post',
+                        data: {
+                            userName: userName,
+                            password: password
+                        },
+                        success: function (msg) {
+                            $('#errorMessage').text(msg.Message);
+                            $('.app-login-error').show();
+                            if (!msg.State) {
+                                //如果验证失败
+                                $('.app-login-error i').removeClass('icon-success').addClass('icon-warning');
+                            } else {
+                                $('.app-login-error i').removeClass('icon-warning').addClass('icon-success');
+                                window.location.href = '/Admin/Index';
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

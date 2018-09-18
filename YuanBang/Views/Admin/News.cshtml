@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewBag.Title = "News";
+}
+<div class="app-title">
+    <span>新闻公告管理</span>
+</div>
+<div class="container">
+    <div id="NewsManage">
+        <div class="app-table-content">
+            <div class="app-table-toolbar">
+                <ul class="app-table-nav"></ul>
+            </div>
+            <div class="app-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:40px;text-align:center;">
+                                <input type="checkbox" class="selectAll" />
+                            </th>
+                            <th>
+                                标题
+                            </th>
+                            <th style="width:80px">
+                                类型
+                            </th>
+                            <th style="width:140px">
+                                发布时间
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="NewsTable"></tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                <ul class="app-table-nav">
+                                    <li><a href="javascript:;" id="delete" class="delete">删除</a></li>
+                                    <li><a href="javascript:;" id="add" class="add">新建新闻公告</a></li>
+                                </ul>
+                                <ul class="app-table-pages"></ul>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script type="text/x-jsrender" id="navItem">
+        <li data-dict-id={{:ID}} class="navItem">
+            <a href='javascript:;'>{{:Name}}</a>
+        </li>
+    </script>
+    <script type="text/x-jsrender" id="row">
+        <tr>
+            <td style="width:40px;text-align:center">
+                <input type="checkbox" class="selectItem" data-id="{{:ID}}" />
+            </td>
+            <td>{{:Title}}</td>
+            <td>{{:NoticeType.Name}}</td>
+            <td>{{:DateString}}</td>
+        </tr>
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            //初始化表格
+            let table = new Table({
+                container: '#NewsTable',
+                url: '/Admin/GetNotices',
+                queryInfo: {
+                    type: null,
+                    name: null
+                },
+                rows: 10,
+                template: $.templates("#row")
+            });
+
+            //先加载新闻分类
+            $.ajax({
+                url: '/Admin/GetDictionaries',
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    dictionaryType: '新闻公告'
+                },
+                success: function (data) {
+                    let template = $.templates("#navItem");
+                    let navItamAll = template.render({
+                        ID: -1,
+                        Name: '全部新闻公告'
+                    });
+                    $('.app-table-toolbar .app-table-nav').append($(navItamAll).addClass('active'));
+                    data.forEach(function (currentValue) {
+                        $('.app-table-toolbar .app-table-nav').append(template.render(currentValue));
+                    });
+
+                    table.query();
+                }
+            });
+
+            $('.app-table-nav').on('click', '.navItem', function () {
+                let dictID = $(this).data('dictId');
+                $('.app-table-nav .active').removeClass('active');
+                $(this).addClass('active');
+                dictID = dictID === -1 ? null : dictID;
+                table.query({
+                    type: dictID
+                });
+            });
+
+            $('#add').on('click', function () {
+                window.location.href = '/Admin/AddNotice';
+            });
+        });
+    </script>
+}
+

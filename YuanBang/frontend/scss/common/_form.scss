@@ -1,0 +1,70 @@
+﻿.app-form {
+    margin-top: 28px;
+
+    input {
+        font-size: 12px;
+        border: 1px solid #c8cbcc;
+        padding: 2px 30px 2px 10px;
+        outline: none;
+        background-color: white;
+        -webkit-rtl-ordering: logical;
+        cursor: text;
+        width: 80%;
+        height: 32px;
+        line-height: 32px;
+        max-width: 600px;
+    }
+
+    select {
+        font-size: 12px;
+        height: 32px;
+        line-height: 32px;
+        outline: none;
+        padding: 0 5px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .form-row {
+        margin-bottom: 12px;
+        display: flex;
+        flex-direction: row;
+
+        .form-field {
+            line-height: 40px;
+            display: flex;
+            flex: 1 0 auto;
+            width: 1%;
+
+            span {
+                flex: 0 0 80px;
+                text-align: right;
+            }
+
+            .form-control {
+                flex: 1 1 auto;
+
+                input[type=button] {
+                    width: auto;
+                    text-align: center;
+                    padding: 5px 10px;
+                    background-color: #7B72E9;
+                    border-color: #7B72E9;
+                    color: #FFF;
+                    line-height: 1;
+                    float: right;
+                    margin-right: 10px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #a49ef0;
+                        border-color: #a49ef0;
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+}

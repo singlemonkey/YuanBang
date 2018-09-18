@@ -1,0 +1,115 @@
+﻿
+@{
+    ViewBag.Title = "AddNotice";
+}
+<div class="app-title">
+    <span>添加新闻公告</span>
+</div>
+<div class="container">
+    <div id="AddNotice">
+        <div class="app-form">
+            <div class="form-row">
+                <div class="form-field">
+                    <span>标题：</span>
+                    <div class="form-control">
+                        <input placeholder="请输入标题" id="noticeName" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-field">
+                    <span>类型：</span>
+                    <div class="form-control">
+                        <select id="noticeType"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-field" style="line-height:1;">
+                    <span>内容：</span>
+                    <div class="form-control" style="width:100%;">
+                        <script id="noticeContainer" name="content" type="text/plain">
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-field">
+                    <div class="form-control">
+                        <input type="button" value="取消" id="cancel" />
+                        <input type="button" value="保存" id="save" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script type="text/javascript" src="~/frontend/libs/editor/ueditor.config.js"></script>
+    <script type="text/javascript" src="~/frontend/libs/editor/ueditor.all.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //获取option填充类型选择
+            $.ajax({
+                url: '/Admin/GetDictionaries',
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    dictionaryType: '新闻公告'
+                },
+                success: function (data) {
+                    data.forEach(function (currentValue) {
+                        let option = $('<option></option>', {
+                            value: currentValue.ID,
+                            text: currentValue.Name
+                        });
+                        $('#noticeType').append(option);
+                    });
+
+                }
+            });
+
+            //加载文本编辑器
+            //TODO:文本编辑器的文件上传、图片上传功能需要进一步处理
+            //TODO:文本编辑器的自适应大小问题
+            var ue = UE.getEditor('noticeContainer', {
+                initialFrameWidth: '100%',
+                initialFrameHeight: '400'
+            });
+
+            $('#save').on('click', function () {
+                let noticeName = $('#noticeName').val();
+                let noticeType = $('#noticeType').val();
+                let noticeContent = ue.getContent();
+
+                let data = {
+                    Title: noticeName,
+                    NoticeTypeID: noticeType,
+                    Content: noticeContent
+                };
+
+                $.ajax({
+                    url: '/Admin/AddNotice/',
+                    type: 'post',
+                    dataType: 'json',
+                    data: JSON.stringify(data),
+                    contentType: "application/json",
+                    success: function (jsonData) {
+                        if (jsonData.State) {
+                            window.location.href = '/Admin/News';
+                        } else {
+                            alert(jsonData.Message);
+                        }
+                    }
+                });
+
+
+            });
+
+            $('#cancel').on('click', function () {
+                window.location.href = '/Admin/News';
+            });
+        });
+    </script>
+}
+
