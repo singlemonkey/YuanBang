@@ -1,0 +1,40 @@
+﻿@model YuanBang.Models.Notice
+@{
+    ViewBag.Title = "新闻详情";
+    Layout = "~/Views/Shared/_UserLayoutPage.cshtml";
+}
+<link rel="stylesheet" href="~/frontend/css/menus/news.css" />
+<div class="container">
+    <div id="NoticeDetail">
+        <div class="app-layout-title">
+            <span>新闻详情</span>
+        </div>
+        <div class="app-notice">
+            <h4>@Html.DisplayFor(model => model.Title)</h4>
+            <div class="app-notice-tooltip">
+                <span>发布时间:@Html.DisplayFor(model => model.DateString)</span>
+            </div>
+            <div id="NoticeContent">
+
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script type="text/javascript" src="~/frontend/libs/editor/ueditor.parse.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            function HTMLDecode(text) {
+                var temp = document.createElement("div");
+                temp.innerHTML = text;
+                var output = temp.innerText || temp.textContent;
+                temp = null;
+                return output;
+            }
+            $('#NoticeContent').html(HTMLDecode('@Model.Content'));
+            uParse('#NoticeContent', {
+                rootPath: '~/frontend/libs/editor'
+            });
+        });
+    </script>
+}

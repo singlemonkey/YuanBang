@@ -29,6 +29,8 @@ P:\YuanBang\YuanBang\bin\roslyn\vbc.rsp
 P:\YuanBang\YuanBang\bin\roslyn\VBCSCompiler.exe
 P:\YuanBang\YuanBang\bin\roslyn\VBCSCompiler.exe.config
 P:\YuanBang\YuanBang\bin\Antlr3.Runtime.dll
+P:\YuanBang\YuanBang\bin\EntityFramework.dll
+P:\YuanBang\YuanBang\bin\EntityFramework.SqlServer.dll
 P:\YuanBang\YuanBang\bin\Microsoft.AI.Agent.Intercept.dll
 P:\YuanBang\YuanBang\bin\Microsoft.AI.DependencyCollector.dll
 P:\YuanBang\YuanBang\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -40,6 +42,7 @@ P:\YuanBang\YuanBang\bin\Microsoft.AspNet.TelemetryCorrelation.dll
 P:\YuanBang\YuanBang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 P:\YuanBang\YuanBang\bin\Microsoft.Web.Infrastructure.dll
 P:\YuanBang\YuanBang\bin\Newtonsoft.Json.dll
+P:\YuanBang\YuanBang\bin\PagedList.dll
 P:\YuanBang\YuanBang\bin\System.Diagnostics.DiagnosticSource.dll
 P:\YuanBang\YuanBang\bin\System.Web.Helpers.dll
 P:\YuanBang\YuanBang\bin\System.Web.Mvc.dll
@@ -49,6 +52,9 @@ P:\YuanBang\YuanBang\bin\System.Web.WebPages.Deployment.dll
 P:\YuanBang\YuanBang\bin\System.Web.WebPages.dll
 P:\YuanBang\YuanBang\bin\System.Web.WebPages.Razor.dll
 P:\YuanBang\YuanBang\bin\WebGrease.dll
+P:\YuanBang\YuanBang\bin\EntityFramework.xml
+P:\YuanBang\YuanBang\bin\EntityFramework.SqlServer.xml
+P:\YuanBang\YuanBang\bin\PagedList.xml
 P:\YuanBang\YuanBang\bin\System.Web.Helpers.xml
 P:\YuanBang\YuanBang\bin\System.Web.Mvc.xml
 P:\YuanBang\YuanBang\bin\System.Web.Optimization.xml
@@ -64,6 +70,8 @@ P:\YuanBang\YuanBang\bin\Microsoft.AI.DependencyCollector.xml
 P:\YuanBang\YuanBang\bin\Microsoft.AI.WindowsServer.xml
 P:\YuanBang\YuanBang\bin\Microsoft.AI.Web.xml
 P:\YuanBang\YuanBang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+P:\YuanBang\YuanBang\bin\zh-Hans\EntityFramework.resources.dll
+P:\YuanBang\YuanBang\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
 P:\YuanBang\YuanBang\bin\zh-Hans\System.Web.Helpers.resources.dll
 P:\YuanBang\YuanBang\bin\zh-Hans\System.Web.Mvc.resources.dll
 P:\YuanBang\YuanBang\bin\zh-Hans\System.Web.Optimization.resources.dll
@@ -75,12 +83,4 @@ P:\YuanBang\YuanBang\obj\Debug\YuanBang.csproj.CoreCompileInputs.cache
 P:\YuanBang\YuanBang\obj\Debug\YuanBang.csproj.CopyComplete
 P:\YuanBang\YuanBang\obj\Debug\YuanBang.dll
 P:\YuanBang\YuanBang\obj\Debug\YuanBang.pdb
-P:\YuanBang\YuanBang\bin\EntityFramework.dll
-P:\YuanBang\YuanBang\bin\EntityFramework.SqlServer.dll
-P:\YuanBang\YuanBang\bin\EntityFramework.xml
-P:\YuanBang\YuanBang\bin\EntityFramework.SqlServer.xml
-P:\YuanBang\YuanBang\bin\zh-Hans\EntityFramework.resources.dll
-P:\YuanBang\YuanBang\bin\PagedList.dll
-P:\YuanBang\YuanBang\bin\PagedList.xml
-P:\YuanBang\YuanBang\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
 P:\YuanBang\YuanBang\obj\Debug\YuanBang.csprojAssemblyReference.cache

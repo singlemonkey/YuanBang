@@ -1,6 +1,7 @@
 ﻿@import 'common/_base.scss';
 @import 'common/_table.scss';
 @import 'common/_form.scss';
+@import 'common/_notice.scss';
 
 header {
     background-color: #252a2f;
@@ -27,7 +28,6 @@ aside {
             font-size: 12px;
             white-space: nowrap;
             overflow: hidden;
-            position: absolute;
             -webkit-transition: all .2s ease-out 0s;
             transition: all .2s ease-out 0s;
             width: 100%;
@@ -98,9 +98,23 @@ aside {
             float: left;
             border-left: 2px solid #88B7E0;
             text-indent: 8px;
-            height:20px;
-            line-height:20px;
-            margin:8px 0;
+            height: 20px;
+            line-height: 20px;
+            margin: 8px 0;
+        }
+
+        a {
+            width: auto;
+            text-align: center;
+            padding: 5px 10px;
+            background-color: #7B72E9;
+            border-color: #7B72E9;
+            color: #FFF;
+            line-height: 1;
+            float: right;
+            margin-right: 10px;
+            cursor: pointer;
+            margin-top:6px;
         }
     }
 }

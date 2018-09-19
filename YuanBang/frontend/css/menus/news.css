@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/* line 3, ../../scss/common/_notice.scss */
+.app-notice {
+  margin-top: 28px;
+}
+/* line 6, ../../scss/common/_notice.scss */
+.app-notice h4 {
+  font: bold 38px/150% "微软雅黑";
+  color: #222;
+  text-align: center;
+}
+/* line 12, ../../scss/common/_notice.scss */
+.app-notice .app-notice-tooltip {
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 18, ../../scss/common/_notice.scss */
+.app-notice .app-notice-tooltip span {
+  float: right;
+  margin-right: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* line 3, ../../scss/menus/news.scss */
+.app-news {
+  margin-top: 30px;
+}
+/* line 8, ../../scss/menus/news.scss */
+.app-news .app-news-content ul li {
+  overflow: hidden;
+  *zoom: 1;
+  cursor: pointer;
+}
+/* line 13, ../../scss/menus/news.scss */
+.app-news .app-news-content ul li:hover a {
+  color: #222;
+}
+/* line 18, ../../scss/menus/news.scss */
+.app-news .app-news-content ul li span {
+  color: #666666;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+}
+/* line 24, ../../scss/menus/news.scss */
+.app-news .app-news-content ul li span a {
+  color: #666;
+}
+/* line 29, ../../scss/menus/news.scss */
+.app-news .app-news-content ul li > .title {
+  float: left;
+  margin-left: 20px;
+}
+/* line 34, ../../scss/menus/news.scss */
+.app-news .app-news-content ul li > .date {
+  float: right;
+  margin-right: 20px;
+}

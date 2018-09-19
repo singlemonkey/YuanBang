@@ -1,0 +1,26 @@
+﻿@model IEnumerable<YuanBang.Models.Notice>
+
+@{
+    ViewBag.Title = "News";
+    Layout = "~/Views/Shared/_UserLayoutPage.cshtml";
+}
+<link rel="stylesheet" href="~/frontend/css/menus/news.css" />
+<div class="app-layout-title">
+    <span>圆邦动态</span>
+</div>
+<div class="app-news">
+    <div class="app-news-content">
+        <ul id="news">
+            @foreach (var item in Model)
+            {
+                <li>
+                    <span class="title">
+                        @Html.ActionLink(item.Title, "NewsDetail", new { ID = item.ID })
+                    </span>
+                    <span class="date">@Html.DisplayFor(modelItem => item.DateString)</span>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+

@@ -1,0 +1,27 @@
+/* line 2, ../../scss/menus/third.scss */
+.app-third-logistics p {
+  margin-top: 30px;
+  font-size: 16px;
+  color: #666666;
+  text-indent: 2em;
+  line-height: 28px;
+}
+/* line 10, ../../scss/menus/third.scss */
+.app-third-logistics .app-third-logistics-contact {
+  margin-top: 56px;
+}
+/* line 13, ../../scss/menus/third.scss */
+.app-third-logistics .app-third-logistics-contact span {
+  height: 100px;
+  width: 50%;
+  float: left;
+  background-image: url(../../images/third-logistics-contact.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+  line-height: 90px;
+  text-indent: 10px;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 20px;
+}

@@ -1,0 +1,324 @@
+﻿@import "compass/reset";
+@import "compass/utilities/general/clearfix";
+
+@import "../scss/common/_footer.scss";
+@import "../scss/common/_header.scss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft YaHei';
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.app-container {
+    width: 1200px;
+    margin: 0 auto;
+    @include clearfix;
+}
+
+.app-body {
+    .app-container {
+        margin-top: 20px;
+    }
+
+    .app-body-left {
+        float: left;
+        width: 325px;
+    }
+
+    .app-body-right {
+        width: 855px;
+        float: right;
+    }
+
+    .app-order-query {
+        height: 240px;
+        width: 326px;
+        background-image: url(../images/index/query.png);
+        background-repeat: no-repeat;
+        text-align: center;
+
+        #app-order-num {
+            height: 134px;
+            width: 280px;
+            margin-top: 24px;
+            resize: none;
+            padding: 12px;
+        }
+
+        #app-order-query-btn {
+            width: 280px;
+            height: 44px;
+            background-color: #074a92;
+            text-align: center;
+            letter-spacing: 18px;
+            color: #fff;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            margin-top: 16px;
+            transition: background-color ease-in-out .2s;
+            box-shadow: 0px 2px 2px #062f5b;
+
+            &:hover {
+                background-color: #0a7ce5;
+            }
+        }
+    }
+
+    .app-business {
+        width: 326px;
+        height: 110px;
+        background-image: url(../images/index/business.png);
+        background-repeat: no-repeat;
+        margin-top: 14px;
+    }
+
+    .app-slide {
+        position: relative;
+
+        ul {
+            li {
+                span {
+                    img {
+                        height: 364px;
+                        width: 854px;
+                    }
+                }
+            }
+        }
+
+        .prev {
+            position: absolute;
+            opacity: 0.6;
+            width: 20px;
+            height: 58px;
+            left: 22px;
+            top: 155px;
+            background-image: url(../images/index/arrow-left.png);
+            background-repeat: no-repeat;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        .next {
+            position: absolute;
+            opacity: 0.6;
+            width: 20px;
+            height: 58px;
+            top: 155px;
+            right: 22px;
+            background-image: url(../images/index/arrow-right.png);
+            background-repeat: no-repeat;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        .prevStop {
+            display: none;
+        }
+
+        .nextStop {
+            display: none;
+        }
+    }
+
+    .app-cars {
+        ul {
+            li {
+                margin-bottom: 8px;
+
+                a {
+                    display: inline-block;
+                    width: 325px;
+                    height: 66px;
+                    background-repeat: no-repeat;
+                    line-height: 66px;
+                    font-size: 20px;
+                    color: rgba(255,255,255,.8);
+                    text-indent: 50px;
+
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+
+                &.app-cars-item-1 {
+                    background-image: url(../images/index/car1.png);
+                }
+
+                &.app-cars-item-2 {
+                    background-image: url(../images/index/car2.png);
+                }
+
+                &.app-cars-item-3 {
+                    background-image: url(../images/index/car3.png);
+                }
+            }
+        }
+    }
+
+    .app-company-profile {
+
+        .app-profile-content {
+            @include clearfix;
+
+            .app-profile-slide {
+                width: 414px;
+                float: left;
+
+                li {
+                    position: relative;
+
+                    img {
+                        width: 414px;
+                        height: 239px;
+                    }
+
+                    span {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        height: 40px;
+                        line-height: 40px;
+                        font-size: 14px;
+                        color: #fff;
+                        background-color: rgba(0,0,0,.4);
+                        padding: 0 0 0 22px;
+                    }
+                }
+            }
+
+            .app-profile-text {
+                float: right;
+                height: 241px;
+                width: 420px;
+                padding: 15px 20px;
+
+                p {
+                    text-indent: 2em;
+                    font-size: 14px;
+                    color: #555555;
+                    line-height: 24px;
+                    -webkit-font-smoothing: antialiased;
+                }
+            }
+        }
+    }
+
+    .app-news {
+        margin-top: 30px;
+
+        .app-news-content {
+            ul {
+                li {
+                    @include clearfix;
+                    cursor: pointer;
+
+                    &:hover {
+                        a {
+                            color: #222;
+                        }
+                    }
+
+                    span {
+                        color: #666666;
+                        display: inline-block;
+                        height: 40px;
+                        line-height: 40px;
+
+                        a {
+                            color: #666;
+                        }
+                    }
+
+                    > .title {
+                        float: left;
+                        margin-left: 20px;
+                    }
+
+                    > .date {
+                        float: right;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .app-content-title {
+        border-top: 1px solid #f3f3f3;
+        position: relative;
+
+        > span.title {
+            display: block;
+            width: 106px;
+            height: 44px;
+            line-height: 44px;
+            text-align: center;
+            letter-spacing: 3px;
+            color: #074a92;
+            border-top: 3px solid #074a92;
+            font-size: 18px;
+        }
+
+        > a.more {
+            position: absolute;
+            right: 16px;
+            top: 12px;
+            color: #555555;
+            cursor: pointer;
+            text-decoration: none;
+
+            &:hover {
+                color: #00c1de;
+            }
+        }
+    }
+
+    .app-service {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 52px;
+
+        li {
+            flex: 0 0 288px;
+
+            a {
+                display: block;
+                width: 288px;
+                height: 192px;
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                &.app-contact-site {
+                    background-image: url(../images/index/servier-site.png);
+                }
+
+                &.app-contact-order {
+                    background-image: url(../images/index/service-order.png);
+                }
+
+                &.app-contact-value {
+                    background-image: url(../images/index/service-value.png);
+                }
+
+                &.app-contact-suggestion {
+                    background-image: url(../images/index/service-suggestion.png);
+                }
+            }
+        }
+    }
+}

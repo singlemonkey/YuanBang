@@ -1,3 +1,4 @@
+﻿@charset "UTF-8";
 /* line 5, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -339,7 +340,33 @@ input[type=button] {
   color: #FFF;
 }
 
-/* line 5, ../scss/layout.scss */
+/* line 3, ../scss/common/_notice.scss */
+.app-notice {
+  margin-top: 28px;
+}
+/* line 6, ../scss/common/_notice.scss */
+.app-notice h4 {
+  font: bold 38px/150% "微软雅黑";
+  color: #222;
+  text-align: center;
+}
+/* line 12, ../scss/common/_notice.scss */
+.app-notice .app-notice-tooltip {
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 18, ../scss/common/_notice.scss */
+.app-notice .app-notice-tooltip span {
+  float: right;
+  margin-right: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* line 6, ../scss/layout.scss */
 header {
   background-color: #252a2f;
   height: 50px;
@@ -350,7 +377,7 @@ header {
   z-index: 1030 !important;
 }
 
-/* line 14, ../scss/layout.scss */
+/* line 15, ../scss/layout.scss */
 aside {
   position: fixed;
   top: 50px;
@@ -361,13 +388,12 @@ aside {
   background-color: #252a2f;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-/* line 25, ../scss/layout.scss */
+/* line 26, ../scss/layout.scss */
 aside ul li {
   color: #fff;
   font-size: 12px;
   white-space: nowrap;
   overflow: hidden;
-  position: absolute;
   -webkit-transition: all .2s ease-out 0s;
   transition: all .2s ease-out 0s;
   width: 100%;
@@ -443,4 +469,18 @@ aside ul li:hover a {
   height: 20px;
   line-height: 20px;
   margin: 8px 0;
+}
+/* line 106, ../scss/layout.scss */
+#container > .app-title a {
+  width: auto;
+  text-align: center;
+  padding: 5px 10px;
+  background-color: #7B72E9;
+  border-color: #7B72E9;
+  color: #FFF;
+  line-height: 1;
+  float: right;
+  margin-right: 10px;
+  cursor: pointer;
+  margin-top: 6px;
 }

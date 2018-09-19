@@ -1,0 +1,36 @@
+/* line 1, ../../scss/menus/route.scss */
+.app-route-show {
+  min-height: 996px;
+  background-color: #f3f3f3;
+}
+/* line 5, ../../scss/menus/route.scss */
+.app-route-show .app-route-map {
+  height: 552px;
+  text-align: center;
+}
+/* line 9, ../../scss/menus/route.scss */
+.app-route-show .app-route-map img {
+  margin-top: 10px;
+}
+/* line 14, ../../scss/menus/route.scss */
+.app-route-show .app-route-list {
+  padding: 0 42px 0 55px;
+}
+/* line 18, ../../scss/menus/route.scss */
+.app-route-show .app-route-list ul li {
+  margin-bottom: 24px;
+}
+/* line 21, ../../scss/menus/route.scss */
+.app-route-show .app-route-list ul li .app-route-destination {
+  display: block;
+  font-size: 16px;
+  color: #333333;
+}
+/* line 27, ../../scss/menus/route.scss */
+.app-route-show .app-route-list ul li .app-route-radiation {
+  display: block;
+  font-size: 12px;
+  color: #888888;
+  padding-left: 30px;
+  line-height: 22px;
+}

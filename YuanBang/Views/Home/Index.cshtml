@@ -1,31 +1,186 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    Layout = null;
 }
+<!DOCTYPE html>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>广东圆邦物流有限公司</title>
+    <link rel="stylesheet" href="~/frontend/libs/iconfont/iconfont.css" />
+    <link rel="stylesheet" href="~/frontend/css/index.css" />
+</head>
+<body>
+    @Html.Partial("Header")
+    <div class="app-body">
+        <div class="app-container">
+            <div class="app-body-left">
+                <div class="app-order-query">
+                    <textarea id="app-order-num" placeholder="在此输入单号进行查询"></textarea>
+                    <input type="button" id="app-order-query-btn" value="查询" />
+                </div>
+                <div class="app-business"></div>
+            </div>
+            <div class="app-body-right">
+                <div class="app-slide">
+                    <div class="bd">
+                        <ul>
+                            <li>
+                                <span>
+                                    <img src="~/frontend/images/index/banner3.png" />
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="~/frontend/images/index/banner2.png" />
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="~/frontend/images/index/banner4.png" />
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="~/frontend/images/index/banner5.png" />
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="prev" href="javascript:void(0)"></a>
+                    <a class="next" href="javascript:void(0)"></a>
+                </div>
+            </div>
+        </div>
+        <div class="app-container">
+            <div class="app-body-left">
+                <div class="app-cars">
+                    <ul>
+                        <li class="app-cars-item-1">
+                            <a href="/Home/RouteLine/?destination=ToXiAn">
+                                广州直达西安
+                            </a>
+                        </li>
+                        <li class="app-cars-item-1">
+                            <a href="/Home/RouteLine/?destination=ToTaiYuan">
+                                广东直达太原
+                            </a>
+                        </li>
+                        <li class="app-cars-item-1">
+                            <a href="/Home/RouteLine/?destination=ToChangZhi">
+                                广东直达长治
+                            </a>
+                        </li>
+                        <li class="app-cars-item-1">
+                            <a href="/Home/RouteLine/?destination=ToJinCheng">
+                                广东直达晋城
+                            </a>
+                        </li>
+                        <li class="app-cars-item-1">
+                            <a href="/Home/RouteLine/?destination=ToHuShi">
+                                广东直达呼市
+                            </a>
+                        </li>
+                        <li class="app-cars-item-1">
+                            <a href="/Home/RouteLine/?destination=ToBaoTou">
+                                广东直达包头
+                            </a>
+                        </li>
+                        <li class="app-cars-item-2">
+                            <a href="/Home/Third">
+                                第三方物流
+                            </a>
+                        </li>
+                        <li class="app-cars-item-3">
+                            <a href="/Home/Join">
+                                招商加盟
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="app-body-right">
+                <div class="app-company-profile">
+                    <div class="app-content-title">
+                        <span class="title">公司概况</span>
+                    </div>
+                    <div class="app-profile-content">
+                        <div class="app-profile-slide">
+                            <div class="bd">
+                                <ul>
+                                    <li>
+                                        <img src="~/frontend/images/index/profile-1.png" />
+                                        <span>业精于勤荒于嬉</span>
+                                    </li>
+                                    <li>
+                                        <img src="~/frontend/images/index/profile-2.png" />
+                                        <span>行成于思毁于随</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="app-profile-text">
+                            <p>
+                                广东圆邦物流有限公司成立于2008年,主营广东发往全国各地，精品专线，广州直达西安，呼和浩特，包头，太原，长治，晋城，辐射陕西全境，内蒙全境，山西全境。
+                            </p>
+                            <p>
+                                公司本着以客户为中心，凭借坚实的网络基础，强大的人才储备，丰富的市场资源，为客户创造高效.便捷的物流运输服务。
+                            </p>
+                            <p>
+                                选择秉承“顾客至上.锐意进取”的经营思路，公司本着“别人做不到.我们要做到.别人做的到.我们要做的更好”的服务理念，尽心尽力为每一位客户提供完美周到的服务。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-news">
+                    <div class="app-content-title">
+                        <span class="title">公司新闻</span>
+                        <a class="more" href="/Home/News">更多>></a>
+                    </div>
+                    <div class="app-news-content">
+                        <ul id="news"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="app-container">
+            <ul class="app-service">
+                <li>
+                    <a href="/Home/Point" class="app-contact-site">
+                    </a>
+                </li>
+                <li>
+                    <a href="/Static/Recruit" class="app-contact-order">
+                    </a>
+                </li>
+                <li>
+                    <a href="/Static/ValueService" class="app-contact-value">
+                    </a>
+                </li>
+                <li>
+                    <a href="/Static/Suggestion" class="app-contact-suggestion">
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+    @Html.Partial("Footer")
+    <script type="text/javascript" src="~/frontend/libs/superslide/jquery1.42.min.js"></script>
+    <script type="text/javascript" src="~/frontend/libs/superslide/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="~/frontend/libs/jsrender.js"></script>
+    <script type="text/javascript" src="~/frontend/js/index.js"></script>
+    <script type="text/x-jsrender" id="newsItem">
+        <li>
+            <span class="title"><a href="/Home/NewsDetail/?ID={{:ID}}">{{:Title}}</a></span>
+            <span class="date">{{:DateString}}</span>
+        </li>
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            initSlide();
+            initNotices();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿@import '../common/_notice.scss';
+
+.app-news {
+    margin-top: 30px;
+
+    .app-news-content {
+        ul {
+            li {
+                @include clearfix;
+                cursor: pointer;
+
+                &:hover {
+                    a {
+                        color: #222;
+                    }
+                }
+
+                span {
+                    color: #666666;
+                    display: inline-block;
+                    height: 40px;
+                    line-height: 40px;
+
+                    a {
+                        color: #666;
+                    }
+                }
+
+                > .title {
+                    float: left;
+                    margin-left: 20px;
+                }
+
+                > .date {
+                    float: right;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

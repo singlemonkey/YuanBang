@@ -1,0 +1,25 @@
+﻿@import "compass/utilities/general/clearfix";
+
+.app-notice {
+    margin-top: 28px;
+
+    h4 {
+        font: bold 38px/150% "微软雅黑";
+        color: #222;
+        text-align: center;
+    }
+
+    .app-notice-tooltip {
+        height: 40px;
+        line-height: 40px;
+        margin-bottom: 10px;
+        @include clearfix();
+
+        span {
+            float: right;
+            margin-right: 20px;
+            font-size: 16px;
+            color: #333;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - 圆邦物流</title>
+    <link rel="stylesheet" href="~/frontend/libs/iconfont/iconfont.css" />
+    <link rel="stylesheet" href="~/frontend/css/userLayout.css" />
+</head>
+<body>
+    @Html.Partial("Header")
+    <div class="app-container app-body">
+        <div class="app-body-left">
+            <div class="app-routes">
+                <div class="app-layout-title">
+                    <span>路线介绍</span>
+                </div>
+                <ul class="app-routes-list">
+                    <li>
+                        <a href="/Home/RouteLine/?destination=ToXiAn" class="app-route-xian"></a>
+                    </li>
+                    <li>
+                        <a href="/Home/RouteLine/?destination=ToTaiYuan" class="app-route-taiyuan"></a>
+                    </li>
+                    <li>
+                        <a href="/Home/RouteLine/?destination=ToChangZhi" class="app-route-changzhi"></a>
+                    </li>
+                    <li>
+                        <a href="/Home/RouteLine/?destination=ToJinCheng" class="app-route-jincheng"></a>
+                    </li>
+                    <li>
+                        <a href="/Home/RouteLine/?destination=ToHuShi" class="app-route-hushi"></a>
+                    </li>
+                    <li>
+                        <a href="/Home/RouteLine/?destination=ToBaoTou" class="app-route-baotou"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="app-contact">
+                <div class="app-layout-title">
+                    <span>联系我们</span>
+                </div>
+                <div class="app-contact-content">
+                    <table>
+                        <tr>
+                            <td>传真：</td>
+                            <td>0000-1234567</td>
+                        </tr>
+                        <tr>
+                            <td>电话：</td>
+                            <td>400-993-1856</td>
+                        </tr>
+                        <tr>
+                            <td>邮箱：</td>
+                            <td>yuanbangwuliu@163.com</td>
+                        </tr>
+                        <tr>
+                            <td>网址：</td>
+                            <td>www.yuanbang.com</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" style="vertical-align:top !important; ">地址：</td>
+                            <td>广州市白云区石门街鸦岗工业路6-8号</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0 !important">广州市锦亿物流货运市场G07-12单元</td>
+                        </tr>
+                    </table>
+                    <div class="app-contact-qr-code">
+                        <img alt="扫码关注圆邦物流官方微信" src="~/frontend/images/subpage/QR-Code.png" />
+                        <span>扫码关注圆邦物流官方微信</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="app-render-body app-body-right">
+            @RenderBody()
+        </div>
+    </div>
+    @Html.Partial("Footer")
+    <script type="text/javascript" src="~/frontend/libs/jQuery/jquery.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

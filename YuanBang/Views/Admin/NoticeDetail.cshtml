@@ -1,0 +1,41 @@
+﻿@model YuanBang.Models.Notice
+
+<div class="app-title">
+    <span>新闻公告展示</span>
+    @Html.ActionLink("返回", "/News")
+</div>
+<div class="container">
+    <div id="NoticeDetail">
+        <div class="app-notice">
+            <h4>@Html.DisplayFor(model => model.Title)</h4>
+            <div class="app-notice-tooltip">
+                <span>发布时间:@Html.DisplayFor(model => model.DateString)</span>
+            </div>
+            <div id="NoticeContent">
+
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+    @* @Html.ActionLink("d", "Edit", new { id = Model.ID }) |*@
+
+</p>
+@section scripts{
+    <script type="text/javascript" src="~/frontend/libs/editor/ueditor.parse.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            function HTMLDecode(text) {
+                var temp = document.createElement("div");
+                temp.innerHTML = text;
+                var output = temp.innerText || temp.textContent;
+                temp = null;
+                return output;
+            }
+            $('#NoticeContent').html(HTMLDecode('@Model.Content'));
+            uParse('#NoticeContent', {
+                rootPath: '~/frontend/libs/editor'
+            });
+        });
+    </script>
+}

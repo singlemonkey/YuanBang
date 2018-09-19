@@ -247,7 +247,7 @@
 	},
 
 	/**
-	 * TODO: 
+	 * : 
 	 * - switchRowsAndColumns
 	 */
 	parseGoogleSpreadsheet: function () {

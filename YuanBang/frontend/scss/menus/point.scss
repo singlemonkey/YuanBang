@@ -1,0 +1,40 @@
+﻿.app-service-list {
+    padding: 25px 0 25px 50px;
+
+    .app-service-item {
+        height: 190px;
+        border-bottom: 1px solid #f3f3f3;
+        position: relative;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        img {
+            position: absolute;
+            top: 20px;
+            left: 0;
+        }
+
+        .app-service-contact {
+            position: absolute;
+            top: 36px;
+            left: 290px;
+            color: #666666;
+            font-size: 16px;
+
+
+            .app-service-address-name, .app-service-contact-name {
+                font-weight: 800;
+                height: 34px;
+                line-height: 34px;
+            }
+
+            .app-service-address-value, .app-service-contact-value {
+                height: 28px;
+                line-height: 28px;
+                text-indent: 50px;
+            }
+        }
+    }
+}

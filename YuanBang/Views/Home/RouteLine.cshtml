@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "路线介绍";
+    Layout = "~/Views/Shared/_UserLayoutPage.cshtml";
+}
+<img id="routeLine" src="~/frontend/images/subpage/ToXiAn.png" />
+@section scripts{
+    <script type="text/javascript">
+        $(function () {
+            const destination = '@ViewBag.destination';
+            $('#routeLine').prop('src', '/frontend/images/subpage/' + destination+'.png');
+        });
+    </script>
+}
+

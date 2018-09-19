@@ -49,6 +49,12 @@ namespace YuanBang.Controllers
         {
             return View();
         }
+
+        public ActionResult NoticeDetail(int ID)
+        {
+            Notice notice = db.Notices.Find(ID);
+            return View(notice);
+        }
         #endregion
 
         #region 相关方法
@@ -100,17 +106,17 @@ namespace YuanBang.Controllers
         /// <param name="pageInfo"></param>
         /// <returns></returns>
         [HttpPost]
+        [AllowAnonymous]
         public JsonResult GetNotices(NewsQueryInfo queryInfo, PageInfo pageInfo)
         {
             var notices = from notice in db.Notices
                           select notice;
-            
 
             if (queryInfo.Type != null)
             {
                 notices = notices.Where(m => m.NoticeTypeID == queryInfo.Type);
             }
-            if (queryInfo.Name != null)
+            if (queryInfo.Name!=null && queryInfo.Name.Trim().Length != 0)
             {
                 notices = notices.Where(m => m.Title.Contains(queryInfo.Name));
             }

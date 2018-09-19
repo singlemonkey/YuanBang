@@ -1,0 +1,215 @@
+﻿@import "compass/reset";
+@import "compass/utilities/general/clearfix";
+
+@import "../scss/common/_footer.scss";
+@import "../scss/common/_header.scss";
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft YaHei';
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+textarea {
+    resize: none;
+    outline: none !important;
+    padding: 10px;
+}
+
+input[type=text] {
+    height: 34px;
+    line-height: 16px;
+    background: #fff;
+    border: 1px solid #c8cbcc;
+    padding: 0 10px;
+    font-size: 14px;
+    color: #000;
+    transition: border-color ease-in-out .15s;
+    border-radius: 0;
+
+    &:focus {
+        border: 1px solid #c8cbcc;
+        border-bottom: 3px solid #000;
+        padding-top: 2px;
+        outline-style: none;
+    }
+}
+
+.app-container {
+    width: 1200px;
+    margin: 0 auto;
+    @include clearfix;
+}
+
+.app-body {
+    margin-top: 21px;
+    @include clearfix;
+
+    .app-body-left {
+        float: left;
+        width: 326px;
+    }
+
+    .app-body-right {
+        float: right;
+        width: 854px;
+    }
+
+    .app-routes {
+        .app-routes-list {
+            li {
+                margin-top: 4px;
+
+                a {
+                    height: 80px;
+                    width: 325px;
+                    display: block;
+                    background-repeat: no-repeat;
+                }
+
+                .app-route-xian {
+                    background: url(../images/subpage/GZ-XA.png);
+                }
+
+                .app-route-taiyuan {
+                    background: url(../images/subpage/GZ-TY.png);
+                }
+
+                .app-route-changzhi {
+                    background: url(../images/subpage/GZ-CZ.png);
+                }
+
+                .app-route-jincheng {
+                    background: url(../images/subpage/GZ-JC.png);
+                }
+
+                .app-route-hushi {
+                    background: url(../images/subpage/GZ-HS.png);
+                }
+
+                .app-route-baotou {
+                    background: url(../images/subpage/GZ-BT.png);
+                }
+            }
+        }
+    }
+
+    .app-contact {
+        margin-top: 30px;
+
+        .app-contact-content {
+            table {
+                color: #666666;
+                table-layout: fixed;
+                font-size: 12px;
+                width: 100%;
+
+                tr {
+                    height: 24px;
+                    line-height: 24px;
+
+                    td:first-child {
+                        padding-left: 18px;
+                        width: 55px;
+                    }
+
+                    td:last-child {
+                    }
+
+                    td {
+                        overflow: hidden;
+                    }
+                }
+            }
+
+            .app-contact-qr-code {
+                height: 234px;
+                position: relative;
+
+                img {
+                    position: absolute;
+                    top: 48px;
+                    left: 106px;
+                }
+
+                span {
+                    font-size: 12px;
+                    color: #666666;
+                    position: absolute;
+                    top: 180px;
+                    left: 85px;
+                }
+            }
+        }
+    }
+}
+
+//公用样式
+.app-layout-title {
+    border-top: 1px solid #f3f3f3;
+
+    span {
+        display: inline-block;
+        font-size: 18px;
+        color: #074a92;
+        border-top: 3px solid #074a92;
+        padding: 10px 14px 10px 18px;
+    }
+}
+
+//表单相关样式
+.app-form-row {
+    @include clearfix;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .app-form-group {
+        float: left;
+        flex: 0 0 300px;
+        display: flex;
+        line-height: 58px;
+
+        &.app-form-group-single {
+            flex: 1 0 auto;
+
+            input {
+                flex: 1 0 auto;
+            }
+        }
+
+        label {
+            font-size: 16px;
+            color: #666666;
+            position: relative;
+            flex: 0 0 66px;
+            text-align: right;
+
+            .icon-required {
+                color: red;
+                font-size: 22px !important;
+                position: absolute;
+                left: -1px;
+                top: -2px;
+                font-weight: 800px;
+            }
+        }
+
+        input {
+            margin-top: 12px;
+            flex: 0 0 234px;
+        }
+    }
+}

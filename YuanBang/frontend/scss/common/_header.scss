@@ -1,0 +1,144 @@
+﻿.app-header {
+    .app-header-links {
+        border-bottom: 1px solid #197bce;
+
+        .app-container {
+            height: 60px;
+            position: relative;
+        }
+
+        nav {
+            position: absolute;
+            right: 0;
+            bottom: 12px;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+
+                li {
+                    flex: 1 0 auto;
+
+                    a {
+                        width: 100px;
+                        display: inline-block;
+                        text-align: center;
+                        border-right: 1px solid #5a5a5a;
+                        color: #5a5a5a;
+                        font-size: 14px !important;
+                        cursor: pointer;
+                        transition: all ease-in .2s;
+
+                        &:hover {
+                            color: #00c1de;
+                        }
+                    }
+                }
+
+                :last-child {
+                    a {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .app-header-content {
+        height: 153px;
+        position: relative;
+        overflow: visible !important;
+
+        .app-header-logo {
+            position: absolute;
+            top: -59px;
+            height: 272px;
+            width: 198px;
+            background-image: url(../../frontend/images/index/logo.png);
+        }
+
+        .app-header-company {
+            position: absolute;
+            left: 245px;
+            top: 32px;
+            width: 388px;
+            height: 54px;
+            background-image: url(../../frontend/images/index/company.png);
+        }
+
+        .app-header-wx {
+            position: absolute;
+            right: 348px;
+            top: 30px;
+            width: 55px;
+            height: 55px;
+            background-image: url(../../frontend/images/index/wx-small.png);
+        }
+
+        .app-header-hotline {
+            position: absolute;
+            right: 1px;
+            top: 38px;
+            width: 319px;
+            height: 46px;
+            background-image: url(../../frontend/images/index/hotline.png);
+        }
+
+        .app-header-menus {
+            position: absolute;
+            left: 248px;
+            bottom: 18px;
+            right: 0;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                font-size: 18px;
+
+                li {
+                    flex: 1 1 auto;
+                    text-align: center;
+
+                    a {
+                        cursor: pointer;
+                        color: #444444;
+                        transition: color ease-in .2s;
+
+                        &:hover {
+                            color: #52a1e5 !important;
+                        }
+                    }
+                }
+
+                li.split-line {
+                    flex: 0 0 8px;
+                    color: #959595;
+                }
+
+                li.menu-home {
+                    flex: 0 0 70px;
+                    text-align: left;
+                    margin-left: 5px;
+                }
+
+                li:first-child {
+                    flex: 0 0 22px;
+                    height: 18px;
+                    background-image: url(../../frontend/images/index/icon-home.png);
+                    span{
+                        &::before{
+                            display:none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .app-long-img {
+        height: 190px;
+        background-image: url(../../frontend/images/index/long-img-0.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

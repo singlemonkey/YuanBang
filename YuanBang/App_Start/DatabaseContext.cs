@@ -28,7 +28,7 @@ namespace YuanBang
     /// <summary>
     /// 初始化数据库数据
     /// </summary>
-    public class ModelInitializer :DropCreateDatabaseAlways<YuanBangContext>
+    public class ModelInitializer :DropCreateDatabaseIfModelChanges<YuanBangContext>
     {
         protected override void Seed(YuanBangContext context)
         {

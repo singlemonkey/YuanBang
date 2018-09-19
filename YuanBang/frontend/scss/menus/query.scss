@@ -1,0 +1,68 @@
+﻿.app-bill-query {
+    width: 854px;
+    height: 222px;
+    background-color: #074a92;
+    position: relative;
+    padding:14px 20px;
+
+    > span {
+        position: absolute;
+        font-size: 18px;
+        color: #ffffff;
+        top: 15px;
+        left: 20px;
+    }
+
+    > textarea {
+        height: 114px;
+        width: 814px;
+        resize: none;
+        padding: 12px;
+        position:absolute;
+        top:50px;
+    }
+    >img{
+        position:absolute;
+        right:20px;
+        bottom:12px;
+        cursor:pointer;
+    }
+}
+.app-bill-info {
+    margin-top: 30px;
+
+    table {
+        color: #666666;
+        font-size: 16px;
+
+        td {
+            height: 40px;
+            line-height: 40px;
+            padding-left: 16px;
+        }
+
+        thead {
+            td {
+                font-weight: 600 !important;
+            }
+        }
+
+        tbody {
+            tr:first-child {
+                background-color: #074a92;
+
+                td {
+                    color: #fff;
+                }
+            }
+
+            tr:hover {
+                background-color: #074a92;
+
+                td {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

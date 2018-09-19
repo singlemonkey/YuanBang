@@ -1,0 +1,68 @@
+/* line 1, ../../scss/menus/query.scss */
+.app-bill-query {
+  width: 854px;
+  height: 222px;
+  background-color: #074a92;
+  position: relative;
+  padding: 14px 20px;
+}
+/* line 8, ../../scss/menus/query.scss */
+.app-bill-query > span {
+  position: absolute;
+  font-size: 18px;
+  color: #ffffff;
+  top: 15px;
+  left: 20px;
+}
+/* line 16, ../../scss/menus/query.scss */
+.app-bill-query > textarea {
+  height: 114px;
+  width: 814px;
+  resize: none;
+  padding: 12px;
+  position: absolute;
+  top: 50px;
+}
+/* line 24, ../../scss/menus/query.scss */
+.app-bill-query > img {
+  position: absolute;
+  right: 20px;
+  bottom: 12px;
+  cursor: pointer;
+}
+
+/* line 31, ../../scss/menus/query.scss */
+.app-bill-info {
+  margin-top: 30px;
+}
+/* line 34, ../../scss/menus/query.scss */
+.app-bill-info table {
+  color: #666666;
+  font-size: 16px;
+}
+/* line 38, ../../scss/menus/query.scss */
+.app-bill-info table td {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 16px;
+}
+/* line 45, ../../scss/menus/query.scss */
+.app-bill-info table thead td {
+  font-weight: 600 !important;
+}
+/* line 51, ../../scss/menus/query.scss */
+.app-bill-info table tbody tr:first-child {
+  background-color: #074a92;
+}
+/* line 54, ../../scss/menus/query.scss */
+.app-bill-info table tbody tr:first-child td {
+  color: #fff;
+}
+/* line 59, ../../scss/menus/query.scss */
+.app-bill-info table tbody tr:hover {
+  background-color: #074a92;
+}
+/* line 62, ../../scss/menus/query.scss */
+.app-bill-info table tbody tr:hover td {
+  color: #fff;
+}
