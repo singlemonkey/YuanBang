@@ -1,0 +1,28 @@
+/* line 1, ../../scss/menus/order.scss */
+.app-send-content, .app-receive-content {
+  padding: 38px 68px 100px 54px;
+}
+
+/* line 5, ../../scss/menus/order.scss */
+.app-service-term {
+  width: 100%;
+  cursor: pointer;
+}
+/* line 9, ../../scss/menus/order.scss */
+.app-service-term a {
+  color: #396ea8;
+  text-decoration: underline !important;
+}
+
+/* line 15, ../../scss/menus/order.scss */
+.app-form-submit-btn {
+  height: 86px;
+  position: relative;
+}
+/* line 19, ../../scss/menus/order.scss */
+.app-form-submit-btn img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}

@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_UserLayoutPage.cshtml";
+}
+
+<link rel="stylesheet" href="~/frontend/css/menus/order.css" />
+<form id="app-form-waybill">
+    <div class="app-send-info">
+        <div class="app-layout-title">
+            <span>发货人信息</span>
+        </div>
+        <div class="app-send-content">
+            <div class="app-form-row">
+                <div class="app-form-group">
+                    <label><i class="iconfont icon-required"></i>姓名：</label>
+                    <input type="text" />
+                </div>
+                <div class="app-form-group">
+                    <label><i class="iconfont icon-required"></i>电话：</label>
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="app-form-row">
+                <div class="app-form-group app-form-group-single">
+                    <label><i class="iconfont icon-required"></i>地址：</label>
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="app-form-row">
+                <div class="app-form-group">
+                    <label style="flex:0 0 100px"><i class="iconfont icon-required"></i>货物名称：</label>
+                    <input style="flex: 0 0 200px;" type="text" />
+                </div>
+                <div class="app-form-group">
+                    <label><i class="iconfont icon-required"></i>数量：</label>
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="app-form-row">
+                <div class="app-form-group">
+                    <label>重量：</label>
+                    <input type="text" />
+                </div>
+                <div class="app-form-group">
+                    <label>体积：</label>
+                    <input type="text" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="app-receive-info">
+        <div class="app-layout-title">
+            <span>收货人信息</span>
+        </div>
+        <div class="app-receive-content">
+            <div class="app-form-row">
+                <div class="app-form-group">
+                    <label><i class="iconfont icon-required"></i>姓名：</label>
+                    <input type="text" />
+                </div>
+                <div class="app-form-group">
+                    <label><i class="iconfont icon-required"></i>电话：</label>
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="app-form-row">
+                <div class="app-form-group app-form-group-single">
+                    <label><i class="iconfont icon-required"></i>地址：</label>
+                    <input type="text" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="app-form-submit">
+    <label class="app-service-term">
+        <input type="checkbox" checked="checked" />
+        <a>我已理解并同意遵守服务条款</a>
+    </label>
+    <div class="app-form-submit-btn">
+        <img alt="立即下单" src="~/frontend/images/subpage/bill-add-btn.png" />
+    </div>
+</div>
+

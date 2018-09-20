@@ -1,0 +1,25 @@
+﻿.app-send-content, .app-receive-content {
+    padding: 38px 68px 100px 54px;
+}
+
+.app-service-term {
+    width: 100%;
+    cursor: pointer;
+
+    a {
+        color: #396ea8;
+        text-decoration: underline !important;
+    }
+}
+
+.app-form-submit-btn {
+    height: 86px;
+    position: relative;
+
+    img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+    }
+}
