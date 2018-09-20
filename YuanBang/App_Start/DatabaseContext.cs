@@ -49,14 +49,6 @@ namespace YuanBang
             };
             admins.ForEach(a => context.Admins.Add(a));
             context.SaveChanges();
-
-            var notices = new List<Notice>
-            {
-                new Notice{ID = 1,NoticeTypeID =2,Date =DateTime.Parse("2018-08-08"),Title ="新闻内容",Content ="这是一条新的新闻，没有内容"},
-                new Notice{ID =2,NoticeTypeID =3,Date =DateTime.Parse("2018-09-08"),Title ="另一条新闻内容",Content ="这是一条新的新闻，没有内容"}
-            };
-            notices.ForEach(n => context.Notices.Add(n));
-            context.SaveChanges();
         }
     }
 }
