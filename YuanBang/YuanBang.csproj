@@ -553,6 +553,9 @@
     <Content Include="frontend\scss\menus\point.scss" />
     <Content Include="frontend\scss\menus\order.scss" />
     <Content Include="frontend\scss\menus\suggestion.scss" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -597,6 +600,7 @@
     <Content Include="Views\Home\Order.cshtml" />
     <Content Include="Views\Home\Suggestion.cshtml" />
     <Content Include="Views\Home\Service.cshtml" />
+    <Content Include="Views\Admin\EditNotice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
