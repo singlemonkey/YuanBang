@@ -1,0 +1,17 @@
+/* line 1, ../../scss/menus/suggestion.scss */
+.app-complaint-content, .app-suggest-content {
+  padding: 36px 70px 80px 54px;
+}
+
+/* line 5, ../../scss/menus/suggestion.scss */
+.app-form-submit-btn {
+  height: 86px;
+  position: relative;
+}
+/* line 9, ../../scss/menus/suggestion.scss */
+.app-form-submit-btn img {
+  position: absolute;
+  right: 70px;
+  bottom: 0;
+  cursor: pointer;
+}

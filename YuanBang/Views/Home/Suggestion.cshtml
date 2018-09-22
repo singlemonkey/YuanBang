@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "投诉建议";
+    Layout = "~/Views/Shared/_UserLayoutPage.cshtml";
+}
+<link href="~/frontend/css/menus/suggestion.css" rel="stylesheet" />
+<div class="app-complaint">
+    <div class="app-layout-title">
+        <span>投诉栏</span>
+    </div>
+    <div class="app-complaint-content">
+        <form>
+            <div class="app-form-row">
+                <div class="app-form-group app-form-group-single">
+                    <label><i class="iconfont icon-required"></i>标题：</label>
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="app-form-row">
+                <div class="app-form-group app-form-group-single">
+                    <label style="flex:0 0 100px"><i class="iconfont icon-required"></i>投诉内容：</label>
+                    <textarea style="flex:0 0 630px; height:150px;"></textarea>
+                </div>
+            </div>
+            <div class="app-form-row">
+                <div class="app-form-group">
+                    <label style="flex:0 0 100px">联系方式：</label>
+                    <input type="text" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="app-suggest">
+    <div class="app-layout-title">
+        <span>建议栏</span>
+    </div>
+    <div class="app-suggest-content">
+        <form>
+            <div class="app-form-row">
+                <div class="app-form-group app-form-group-single">
+                    <label><i class="iconfont icon-required"></i>标题：</label>
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="app-form-row">
+                <div class="app-form-group app-form-group-single">
+                    <label style="flex:0 0 100px"><i class="iconfont icon-required"></i>建议内容：</label>
+                    <textarea style="flex:0 0 630px; height:150px;"></textarea>
+                </div>
+            </div>
+            <div class="app-form-row">
+                <div class="app-form-group">
+                    <label style="flex:0 0 100px">联系方式：</label>
+                    <input type="text" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="app-form-submit">
+    <div class="app-form-submit-btn">
+        <img alt="提交" src="~/frontend/images/subpage/suggest-submit.png" />
+    </div>
+</div>
+

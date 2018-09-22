@@ -1,0 +1,15 @@
+﻿.app-complaint-content, .app-suggest-content {
+    padding: 36px 70px 80px 54px;
+}
+
+.app-form-submit-btn {
+    height: 86px;
+    position: relative;
+
+    img {
+        position: absolute;
+        right: 70px;
+        bottom: 0;
+        cursor: pointer;
+    }
+}
