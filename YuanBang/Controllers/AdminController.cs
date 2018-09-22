@@ -69,34 +69,39 @@ namespace YuanBang.Controllers
         [AllowAnonymous]
         public JsonResult Login(string userName, string password)
         {
-            JsonData data = new JsonData();
+            try {
+                JsonData data = new JsonData();
 
-            Admin admin = db.Admins.FirstOrDefault(m => m.UserName == userName);
-            if (admin == null)
-            {
-                //如果账号不存在
-                data.State = false;
-                data.Message = "账号不存在";
-            }
-            else
-            {
-                if (admin.Password != password)
+                Admin admin = db.Admins.FirstOrDefault(m => m.UserName == userName);
+                if (admin == null)
                 {
-                    //如果密码不正确
+                    //如果账号不存在
                     data.State = false;
-                    data.Message = "密码不正确";
+                    data.Message = "账号不存在";
                 }
                 else
                 {
-                    //保存session信息
-                    data.State = true;
-                    data.Message = "登陆成功";
+                    if (admin.Password != password)
+                    {
+                        //如果密码不正确
+                        data.State = false;
+                        data.Message = "密码不正确";
+                    }
+                    else
+                    {
+                        //保存session信息
+                        data.State = true;
+                        data.Message = "登陆成功";
 
-                    Session["Admin"] = admin.UserName;
+                        Session["Admin"] = admin.UserName;
+                    }
                 }
-            }
 
-            return Json(data);
+                return Json(data);
+            } catch (Exception ex) {
+                throw new Exception(ex.Message);
+            }
+            
         }
 
         /// <summary>
@@ -116,7 +121,7 @@ namespace YuanBang.Controllers
             {
                 notices = notices.Where(m => m.NoticeTypeID == queryInfo.Type);
             }
-            if (queryInfo.Name!=null && queryInfo.Name.Trim().Length != 0)
+            if (queryInfo.Name != null && queryInfo.Name.Trim().Length != 0)
             {
                 notices = notices.Where(m => m.Title.Contains(queryInfo.Name));
             }
@@ -135,7 +140,8 @@ namespace YuanBang.Controllers
         {
             notice.Date = DateTime.Now;
             JsonData jsonData = new JsonData();
-            try {
+            try
+            {
                 db.Notices.Add(notice);
                 db.SaveChanges();
 
@@ -147,7 +153,20 @@ namespace YuanBang.Controllers
                 jsonData.State = false;
                 jsonData.Message = ex.Message;
             }
-            return Json(jsonData,JsonRequestBehavior.AllowGet);
+            return Json(jsonData, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult EditNotice(int ID)
+        {
+            Notice notice = db.Notices.Find(ID);
+            return View(notice);
+        }
+
+        [HttpPost]
+        public ActionResult EditNotice(Notice notice)
+        {
+            notice.Date = DateTime.Now;
+            return Json(new { });
         }
         #endregion
 

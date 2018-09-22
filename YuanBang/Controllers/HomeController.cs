@@ -26,6 +26,21 @@ namespace YuanBang.Controllers
             return View();
         }
 
+        public ActionResult Order()
+        {
+            return View();
+        }
+
+        public ActionResult Suggestion()
+        {
+            return View();
+        }
+
+        public ActionResult Service()
+        {
+            return View();
+        }
+
         /// <summary>
         /// 路线介绍
         /// </summary>

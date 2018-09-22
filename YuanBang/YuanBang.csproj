@@ -180,6 +180,7 @@
     <Content Include="frontend\css\layout.css" />
     <Content Include="frontend\css\login.css" />
     <Content Include="frontend\css\menus\news.css" />
+    <Content Include="frontend\css\menus\point.css" />
     <Content Include="frontend\css\menus\query.css" />
     <Content Include="frontend\css\menus\route.css" />
     <Content Include="frontend\css\menus\third.css" />
@@ -210,6 +211,7 @@
     <Content Include="frontend\images\index\wx-big.png" />
     <Content Include="frontend\images\index\wx-small.png" />
     <Content Include="frontend\images\login\logo.png" />
+    <Content Include="frontend\images\subpage\bill-add-btn.png" />
     <Content Include="frontend\images\subpage\bill-query-btn.png" />
     <Content Include="frontend\images\subpage\GZ-BT.png" />
     <Content Include="frontend\images\subpage\GZ-CZ.png" />
@@ -221,6 +223,7 @@
     <Content Include="frontend\images\subpage\map.png" />
     <Content Include="frontend\images\subpage\QR-Code.png" />
     <Content Include="frontend\images\subpage\service-point.png" />
+    <Content Include="frontend\images\subpage\suggest-submit.png" />
     <Content Include="frontend\images\subpage\third-logistics.png" />
     <Content Include="frontend\images\subpage\ToBaoTou.png" />
     <Content Include="frontend\images\subpage\ToChangZhi.png" />
@@ -228,6 +231,7 @@
     <Content Include="frontend\images\subpage\ToJinCheng.png" />
     <Content Include="frontend\images\subpage\ToTaiYuan.png" />
     <Content Include="frontend\images\subpage\ToXiAn.png" />
+    <Content Include="frontend\images\subpage\value-service.png" />
     <Content Include="frontend\js\app.js" />
     <Content Include="frontend\js\index.js" />
     <Content Include="frontend\libs\editor\asp\action_config.asp" />
@@ -547,6 +551,11 @@
     <Content Include="frontend\scss\menus\third.scss" />
     <Content Include="frontend\scss\menus\news.scss" />
     <Content Include="frontend\scss\menus\point.scss" />
+    <Content Include="frontend\scss\menus\order.scss" />
+    <Content Include="frontend\scss\menus\suggestion.scss" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -588,6 +597,10 @@
     <Content Include="Views\Home\NewsDetail.cshtml" />
     <Content Include="Views\Home\News.cshtml" />
     <Content Include="Views\Home\Point.cshtml" />
+    <Content Include="Views\Home\Order.cshtml" />
+    <Content Include="Views\Home\Suggestion.cshtml" />
+    <Content Include="Views\Home\Service.cshtml" />
+    <Content Include="Views\Admin\EditNotice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
