@@ -7,7 +7,7 @@
 <div class="app-title">
     <span>修改新闻公告</span>
 </div>
-@Html.HiddenFor(model => model.ID, new { htmlAttributes = new { @ID = "noticeID" } });
+@Html.HiddenFor(model => model.ID, new { htmlAttributes = new { @ID = "noticeID" } })
 <div class="container">
     <div id="EditNotice">
         <div class="app-form">
@@ -73,13 +73,13 @@
             });
 
             //加载文本编辑器
-            //TODO:文本编辑器的文件上传、图片上传功能需要进一步处理
-            //TODO:文本编辑器的自适应大小问题
             var ue = UE.getEditor('noticeContainer', {
                 initialFrameWidth: '100%',
                 initialFrameHeight: '400'
             });
-            ue.setContent(@Model.Content);
+            ue.ready(function () {
+                ue.setContent($.HTMLDecode('@Model.Content'));
+            });
 
             $('#save').on('click', function () {
                 let noticeName = $('#noticeName').val();

@@ -64,6 +64,25 @@
                         color: #FFF;
                     }
                 }
+
+                label.form-warning {
+                    display: none;
+                    height: 40px;
+                    line-height: 40px;
+                    text-indent: 1em;
+                    color: #ff6a00;
+
+                    i {
+                        margin-right: 8px;
+                    }
+                }
+
+                &.error {
+
+                    label.form-warning {
+                        display: inline-block;
+                    }
+                }
             }
         }
     }

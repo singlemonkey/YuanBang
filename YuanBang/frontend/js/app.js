@@ -78,12 +78,39 @@ class Table {
         $('.app-table-pages [data-page=' + this.pageInfo.pageIndex + ']').addClass('active');
     }
 
+    
+    getSelect() {
+        const IDs= $('.selectItem:checked').map(function (index, item) {
+            return $(item).data('id');
+        }).get();
+        return IDs;
+    }
+
     _bindEvent() {
         let self = this;
         $('.app-table-pages').on('click', 'li', function () {
             let pageIndex = $(this).data('page');
             self.pageInfo.pageIndex = pageIndex;
             self.query();
+        });
+
+        $(".selectAll").on("click", function () {
+            let checked = $(this).prop("checked");
+            $(".selectItem").prop("checked", checked);
+        });
+
+        $(self.container).on('click', '.selectItem', function () {
+            let flag = true;
+            $(".selectItem").each((i, e) => {
+                let checked = $(e).prop("checked");
+                if (checked) {
+                    return true;
+                } else {
+                    flag = false;
+                    return flag;
+                }
+            });
+            $(".selectAll").prop("checked", flag);
         });
     }
 }
@@ -105,7 +132,13 @@ $(function () {
             } else {
                 return y + '-' + m + '-' + d;
             }
+        },
+        HTMLDecode(text) {
+            var temp = document.createElement("div");
+            temp.innerHTML = text;
+            var output = temp.innerText || temp.textContent;
+            temp = null;
+            return output;
         }
     });
-
 });

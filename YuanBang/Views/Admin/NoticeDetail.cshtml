@@ -3,7 +3,7 @@
 <div class="app-title">
     <span>新闻公告展示</span>
     @Html.ActionLink("返回", "/News")
-    @Html.ActionLink("修改","/Edit",new { ID=Model.ID});
+    @Html.ActionLink("修改","/EditNotice",new { ID=Model.ID});
 </div>
 <div class="container">
     <div id="NoticeDetail">
@@ -22,14 +22,7 @@
     <script type="text/javascript" src="~/frontend/libs/editor/ueditor.parse.js"></script>
     <script type="text/javascript">
         $(function () {
-            function HTMLDecode(text) {
-                var temp = document.createElement("div");
-                temp.innerHTML = text;
-                var output = temp.innerText || temp.textContent;
-                temp = null;
-                return output;
-            }
-            $('#NoticeContent').html(HTMLDecode('@Model.Content'));
+            $('#NoticeContent').html($.HTMLDecode('@Model.Content'));
             uParse('#NoticeContent', {
                 rootPath: '~/frontend/libs/editor'
             });
