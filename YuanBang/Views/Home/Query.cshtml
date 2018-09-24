@@ -36,7 +36,7 @@
     <script type="text/javascript">
         $(function () {
             let order = $.getQueryString('order');
-            const auth = '7d1b8c24605c6a98373ffc15963bb2d1';
+            const auth = '999028872cfff7ae8ee330a33cbd3874';
             
 
             $('#query').on('click', function () {
@@ -44,11 +44,10 @@
                 order = $('#app-bill-num').val();
                 if (order.trim().length !== 0) {
                     $.ajax({
-                        url: 'http://t800.chemanman.com/api/Order/Search/searchByAuth',
-                        type: 'get',
+                        url: '/Home/GetOrder',
+                        type: 'POST',
                         data: {
-                            auth: auth,
-                            search_num: order
+                            order: order
                         },
                         success: function (data) {
                             console.log(data);

@@ -169,3 +169,4 @@ D:\Github\YuanBang\YuanBang\obj\Debug\YuanBang.csproj.CopyComplete
 D:\Github\YuanBang\YuanBang\obj\Debug\YuanBang.dll
 D:\Github\YuanBang\YuanBang\obj\Debug\YuanBang.pdb
 P:\YuanBang\YuanBang\obj\Debug\YuanBang.csprojAssemblyReference.cache
+D:\Github\YuanBang\YuanBang\obj\Debug\YuanBang.csprojAssemblyReference.cache

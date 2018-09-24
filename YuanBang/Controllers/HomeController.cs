@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using YuanBang.Models;
@@ -87,6 +90,26 @@ namespace YuanBang.Controllers
         public ActionResult Point()
         {
             return View();
+        }
+
+
+        public JsonResult GetOrder(string order)
+        {
+            string url = "http://t800.chemanman.com/api/Order/Search/searchByAuth?auth=999028872cfff7ae8ee330a33cbd3874&search_num="+order;
+
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            request.Method = "GET";
+            request.ContentType = "text/html;charset=UTF-8";
+
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            Stream stream = response.GetResponseStream();
+            StreamReader reader = new StreamReader(stream,Encoding.UTF8);
+            string str = reader.ReadToEnd();
+
+            reader.Close();
+            stream.Close();
+
+            return Json(str);
         }
     }
 }
