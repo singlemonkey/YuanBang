@@ -35,3 +35,56 @@
         }
     }
 }
+.app-route-info {
+    width: 724px;
+    position: absolute;
+    top: 640px;
+    left: 60px;
+
+    .route-desc {
+        position: relative;
+
+        .route-from {
+            width: 238px;
+            float: left;
+            z-index: 100;
+
+            img {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        .route-to {
+            width: 238px;
+            float: right;
+            z-index: 100;
+
+            img {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        > img {
+            position: absolute;
+            width: 248px;
+            top: 16px;
+            left: 238px;
+            z-index: 10;
+        }
+
+        .route-row {
+            width: max-content;
+
+            p {
+                display: inline-block;
+                width: max-content;
+                color: #666666;
+                font-size: 16px;
+                height: 28px;
+                line-height: 28px;
+            }
+        }
+    }
+}

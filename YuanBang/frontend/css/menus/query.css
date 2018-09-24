@@ -23,7 +23,7 @@
   position: absolute;
   top: 50px;
 }
-/* line 24, ../../scss/menus/query.scss */
+/* line 25, ../../scss/menus/query.scss */
 .app-bill-query > img {
   position: absolute;
   right: 20px;
@@ -31,38 +31,78 @@
   cursor: pointer;
 }
 
-/* line 31, ../../scss/menus/query.scss */
+/* line 33, ../../scss/menus/query.scss */
 .app-bill-info {
   margin-top: 30px;
+  display: none;
 }
-/* line 34, ../../scss/menus/query.scss */
+/* line 37, ../../scss/menus/query.scss */
 .app-bill-info table {
   color: #666666;
   font-size: 16px;
 }
-/* line 38, ../../scss/menus/query.scss */
+/* line 41, ../../scss/menus/query.scss */
 .app-bill-info table td {
   height: 40px;
   line-height: 40px;
   padding-left: 16px;
 }
-/* line 45, ../../scss/menus/query.scss */
+/* line 48, ../../scss/menus/query.scss */
 .app-bill-info table thead td {
   font-weight: 600 !important;
 }
-/* line 51, ../../scss/menus/query.scss */
+/* line 54, ../../scss/menus/query.scss */
 .app-bill-info table tbody tr:first-child {
   background-color: #074a92;
 }
-/* line 54, ../../scss/menus/query.scss */
+/* line 57, ../../scss/menus/query.scss */
 .app-bill-info table tbody tr:first-child td {
   color: #fff;
 }
-/* line 59, ../../scss/menus/query.scss */
+/* line 62, ../../scss/menus/query.scss */
 .app-bill-info table tbody tr:hover {
   background-color: #074a92;
 }
-/* line 62, ../../scss/menus/query.scss */
+/* line 65, ../../scss/menus/query.scss */
 .app-bill-info table tbody tr:hover td {
   color: #fff;
+}
+
+/* line 72, ../../scss/menus/query.scss */
+.app-error-info {
+  display: none;
+  margin-top: 50px;
+  padding: 8px;
+  line-height: 48px;
+  background-color: #ffffff;
+  border: 1px solid #d2d2d2;
+  text-align: left;
+  position: relative;
+}
+/* line 82, ../../scss/menus/query.scss */
+.app-error-info a {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  cursor: pointer;
+  font-size: 22px;
+  color: #d2d2d2;
+}
+/* line 90, ../../scss/menus/query.scss */
+.app-error-info a:hover {
+  color: #0094ff;
+}
+/* line 95, ../../scss/menus/query.scss */
+.app-error-info .icon-warning {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  color: #ff7800;
+}
+/* line 102, ../../scss/menus/query.scss */
+.app-error-info p {
+  line-height: 30px;
+  padding-left: 35px;
+  font-size: 14px;
+  color: #ff7800;
 }

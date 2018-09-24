@@ -3,12 +3,150 @@
     ViewBag.Title = "路线介绍";
     Layout = "~/Views/Shared/_UserLayoutPage.cshtml";
 }
-<img id="routeLine" src="~/frontend/images/subpage/ToXiAn.png" />
+<link rel="stylesheet" href="~/frontend/css/menus/route.css" />
+<div class="container" style="height:1046px;position:relative">
+    <div class="app-route-info">
+        <div class="route-desc">
+            <div class="route-from">
+                <img id="from" />
+                <div class="route-row">
+                    <p style="font-weight:600;">网点名称：</p><p class="name"></p>
+                </div>
+                <div class="route-row">
+                    <p style="font-weight:600;">网点名称：</p><p class="address"></p>
+                </div>
+                <div class="route-row">
+                    <p style="font-weight:600;">网点名称：</p><p class="tel"></p>
+                </div>
+                <div class="route-row">
+                    <p style="font-weight:600;">网点名称：</p><p class="type"></p>
+                </div>
+            </div>
+            <img src="~/frontend/images/subpage/route.png" />
+            <div class="route-to">
+                <img id="to" />
+                <div class="route-row">
+                    <p style="font-weight:600;">网点名称：</p><p class="name"></p>
+                </div>
+                <div class="route-row">
+                    <p style="font-weight:600;">网点名称：</p><p class="address"></p>
+                </div>
+                <div class="route-row">
+                    <p style="font-weight:600;">网点名称：</p><p class="tel"></p>
+                </div>
+                <div class="route-row">
+                    <p style="font-weight:600;">网点名称：</p> <p class="type"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @section scripts{
     <script type="text/javascript">
         $(function () {
             const destination = '@ViewBag.destination';
-            $('#routeLine').prop('src', '/frontend/images/subpage/' + destination+'.png');
+            $('.container').css('background-image', 'url(/frontend/images/subpage/' + destination + '.png)');
+            $('#from').prop('src', '/frontend/images/subpage/from/' + destination + '.png');
+            $('#to').prop('src', '/frontend/images/subpage/to/' + destination + '.png');
+
+            const route = {
+                ToXiAn: {
+                    from: {
+                        name: '陕西营业部',
+                        address: '白云区石井锦亿货运市场G栋7-12档',
+                        tel: '020-62870500/18825126650',
+                        type:'发货、提货'
+                    },
+                    to: {
+                        name: '灞桥区港务区营业部',
+                        address: '乾龙物流园5栋A（北）1-3栋',
+                        tel: '029-89289327/15399488381',
+                        type: '提货'
+                    }
+                },
+                ToTaiYuan: {
+                    from: {
+                        name: '山西、太原营业部',
+                        address: '白云区石井安发货运市场B15栋3-6档',
+                        tel: '020-62198802/18825125966',
+                        type: '发货、提货'
+                    },
+                    to: {
+                        name: '杏花岭区营业部',
+                        address: '东环高速丈子头西出东行20米',
+                        tel: '029-89289327/15399488381',
+                        type: '提货'
+                    }
+                },
+                ToChangZhi: {
+                    from: {
+                        name: '长治、晋城营业部',
+                        address: '白云区石井安发货运市场B15栋3-6档',
+                        tel: '020-62198805/15626104888',
+                        type: '发货、提货'
+                    },
+                    to: {
+                        name: '长治营业部',
+                        address: '西二环南寨村福星物流市场院内',
+                        tel: '13313450084/15735199273',
+                        type: '提货'
+                    }
+                },
+                ToJinCheng: {
+                    from: {
+                        name: '长治、晋城营业部',
+                        address: '白云区石井安发货运市场B15栋3-6档',
+                        tel: '020-62198805/15626104888',
+                        type: '发货、提货'
+                    },
+                    to: {
+                        name: '晋城营业部',
+                        address: '乾龙物流园5栋A（北）1-3栋',
+                        tel: '0356-3039111/13363567222',
+                        type: '提货'
+                    }
+                },
+                ToHuShi: {
+                    from: {
+                        name: '内蒙营业部',
+                        address: '白云区石井锦亿货运市场G栋13-16档',
+                        tel: '020-62870502/18813299146',
+                        type: '发货、提货'
+                    },
+                    to: {
+                        name: '金川开发区营业部',
+                        address: '110国道蓝天学校旁中全物流园1号大库5-6号',
+                        tel: '0471-2525128/18825156630',
+                        type: '提货'
+                    }
+                },
+                ToBaoTou: {
+                    from: {
+                        name: '内蒙营业部',
+                        address: '白云区石井锦亿货运市场G栋13-16档',
+                        tel: '020-62870502/18813299146',
+                        type: '发货、提货'
+                    },
+                    to: {
+                        name: '九原区营业部',
+                        address: '哈屯高勒络锦鸿驾校对面包钢万开物流园',
+                        tel: '0472-2551616/18825126640',
+                        type: '提货'
+                    }
+                }
+            };
+
+            $('.route-from .name').text(route[destination].from.name);
+            $('.route-from .address').text(route[destination].from.address);
+            $('.route-from .address').prop('title',route[destination].from.address);
+            $('.route-from .tel').text(route[destination].from.tel);
+            $('.route-from .type').text(route[destination].from.type);
+
+            $('.route-to .name').text(route[destination].to.name);
+            $('.route-to .address').text(route[destination].to.address);
+            $('.route-to .address').prop('title',route[destination].to.address);
+            $('.route-to .tel').text(route[destination].to.tel);
+            $('.route-to .type').text(route[destination].to.type);
         });
     </script>
 }

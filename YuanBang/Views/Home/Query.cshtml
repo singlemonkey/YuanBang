@@ -14,52 +14,87 @@
         <span>物流信息</span>
     </div>
     <div class="app-bill-content">
-        <table>
+        <table id="orderInfo">
             <thead>
                 <tr>
                     <td style="width:190px">时间</td>
-                    <td style="width:80px">城市</td>
+                    <td style="width:120px">操作类型</td>
                     <td>操作记录</td>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>2018/6/25 09:38:45</td>
-                    <td>太原市</td>
-                    <td>太原市【太原小店区二部】，【关红刚/1381222345678】正在派件</td>
-                </tr>
+               
             </tbody>
         </table>
     </div>
 </div>
+<div class="app-error-info">
+    <a class="iconfont icon-close" onclick="$('.app-error-info').hide()" title="关闭"></a>
+    <i class="iconfont icon-warning"></i>
+    <p id="errorMessage"></p>
+</div>
 @section scripts{
+<script type="text/x-jsrender" id="orderLog">
+    <tr>
+        <td>{{:create_time}}</td>
+        <td>{{:type_show}}</td>
+        <td>{{:thing}}</td>
+    </tr>
+</script>
     <script type="text/javascript">
+        const tmpl = $('#orderLog');
         $(function () {
             let order = $.getQueryString('order');
             const auth = '999028872cfff7ae8ee330a33cbd3874';
-            
 
-            $('#query').on('click', function () {
+            if (order !== null) {
+                $('#app-bill-num').val(order);
+                query();
+            }
 
-                order = $('#app-bill-num').val();
+            function query() {
                 if (order.trim().length !== 0) {
                     $.ajax({
                         url: '/Home/GetOrder',
                         type: 'POST',
+                        dataType: 'json',
                         data: {
                             order: order
                         },
                         success: function (data) {
-                            console.log(data);
+                            const orderObj = $.parseJSON(data);
+                            const errno = orderObj.errno;
+                            const message = orderObj.errmsg;
+                            if (errno === 0 && message === 'success') {
+                                $('.app-error-info').hide();
+                                $('#orderInfo tbody').empty();
+
+                                const logList = orderObj.res.order_log_list;
+                                logList.forEach(function (log) {
+                                    $('#orderInfo tbody').prepend(tmpl.render(log));
+                                });
+
+                                $('.app-bill-info').show();
+                            } else {
+                                $('#errorMessage').text(message);
+                                $('.app-bill-info').hide();
+                                $('.app-error-info').show();
+                            }
                         },
                         error: function (error) {
                             console.log(error);
                         }
                     });
+                } else {
+                    $('#errorMessage').text('请输入运单号！');
+                    $('.app-error-info').show();
                 }
-                else {
-                    alert('请输入运单号！');
-                }
+            }
+
+            $('#query').on('click', function () {
+
+                order = $('#app-bill-num').val();
+                query();
             });
         });
     </script>
