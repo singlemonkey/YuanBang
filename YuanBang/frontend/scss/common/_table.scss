@@ -85,6 +85,10 @@
                         border-top: 0px;
                         border-bottom: 1px solid #E1E6EB;
                         vertical-align: middle;
+
+                        a {
+                            color: #69696d;
+                        }
                     }
 
                     &:hover {
@@ -150,7 +154,8 @@
 
                             li {
                                 float: left;
-                                margin-right:8px;
+                                margin-right: 8px;
+
                                 a {
                                     float: left;
                                     color: #333;

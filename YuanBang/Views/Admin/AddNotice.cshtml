@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "AddNotice";
 }
+<style></style>
 <div class="app-title">
     <span>添加新闻公告</span>
 </div>
@@ -12,8 +13,10 @@
                 <div class="form-field">
                     <span>标题：</span>
                     <div class="form-control">
-                        <input placeholder="请输入标题" id="noticeName" />
+                        <input type="text" placeholder="请输入标题" id="noticeName" />
+                        <label class="form-warning"><i class="iconfont icon-warning"></i>标题不能为空！</label>
                     </div>
+                    
                 </div>
             </div>
             <div class="form-row">
@@ -70,8 +73,6 @@
             });
 
             //加载文本编辑器
-            //TODO:文本编辑器的文件上传、图片上传功能需要进一步处理
-            //TODO:文本编辑器的自适应大小问题
             var ue = UE.getEditor('noticeContainer', {
                 initialFrameWidth: '100%',
                 initialFrameHeight: '400'
@@ -82,28 +83,38 @@
                 let noticeType = $('#noticeType').val();
                 let noticeContent = ue.getContent();
 
-                let data = {
-                    Title: noticeName,
-                    NoticeTypeID: noticeType,
-                    Content: noticeContent
-                };
+                if (noticeName.trim().length === 0) {
+                    $('#noticeName').focus();
+                    $('#noticeName').parent().addClass('error');
+                    return false;
+                } else if (noticeContent.trim().length === 0) {
+                    ue.focus();
+                } else {
+                    let data = {
+                        Title: noticeName,
+                        NoticeTypeID: noticeType,
+                        Content: noticeContent
+                    };
 
-                $.ajax({
-                    url: '/Admin/AddNotice/',
-                    type: 'post',
-                    dataType: 'json',
-                    data: JSON.stringify(data),
-                    contentType: "application/json",
-                    success: function (jsonData) {
-                        if (jsonData.State) {
-                            window.location.href = '/Admin/News';
-                        } else {
-                            alert(jsonData.Message);
+                    $.ajax({
+                        url: '/Admin/AddNotice/',
+                        type: 'post',
+                        dataType: 'json',
+                        data: JSON.stringify(data),
+                        contentType: "application/json",
+                        success: function (jsonData) {
+                            if (jsonData.State) {
+                                window.location.href = '/Admin/News';
+                            } else {
+                                alert(jsonData.Message);
+                            }
                         }
-                    }
-                });
+                    });
+                }
+            });
 
-
+            $('#noticeName').on('click', function () {
+                $(this).parent().removeClass('error');
             });
 
             $('#cancel').on('click', function () {

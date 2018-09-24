@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 using YuanBang.Models;
 using PagedList;
+using System.Data.Entity;
 
 namespace YuanBang.Controllers
 {
@@ -162,11 +163,47 @@ namespace YuanBang.Controllers
             return View(notice);
         }
 
-        [HttpPost]
-        public ActionResult EditNotice(Notice notice)
+        public JsonResult DeleteNotices(IList<int> IDs)
         {
-            notice.Date = DateTime.Now;
-            return Json(new { });
+            JsonData json = new JsonData();
+
+            try {
+                foreach (var id in IDs)
+                {
+                    Notice notice = db.Notices.Find(id);
+                    db.Entry(notice).State = EntityState.Deleted;
+                }
+                db.SaveChanges();
+
+                json.State = true;
+                json.Message = "删除成功";
+            } catch (Exception ex) {
+                json.State = false;
+                json.Message = ex.Message;
+            }
+
+            return Json(json);
+        }
+
+        [HttpPost]
+        public JsonResult EditNotice(Notice notice)
+        {
+            JsonData json = new JsonData();
+            try
+            {
+                notice.Date = DateTime.Now;
+                db.Entry(notice).State = EntityState.Modified;
+                db.SaveChanges();
+                json.State = true;
+                json.Message = "保存成功";
+            }
+            catch (Exception ex)
+            {
+                json.State = false;
+                json.Message = ex.Message;
+            }
+            
+            return Json(json);
         }
         #endregion
 

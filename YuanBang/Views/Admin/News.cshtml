@@ -112,6 +112,25 @@
             $('#add').on('click', function () {
                 window.location.href = '/Admin/AddNotice';
             });
+
+            $('#delete').on('click', function () {
+                const IDs = table.getSelect();
+                if (IDs.length !== 0) {
+                    $.ajax({
+                        url: '/Admin/DeleteNotices',
+                        type: 'post',
+                        dataType: 'json',
+                        data: {
+                            IDs: IDs
+                        },
+                        success: function (data) {
+                            if (data.State) {
+                                table.query();
+                            }
+                        }
+                    });
+                }
+            });
         });
     </script>
 }
