@@ -213,6 +213,7 @@
     <Content Include="frontend\images\login\logo.png" />
     <Content Include="frontend\images\subpage\bill-add-btn.png" />
     <Content Include="frontend\images\subpage\bill-query-btn.png" />
+    <Content Include="frontend\images\subpage\from\ToXiAn.png" />
     <Content Include="frontend\images\subpage\GZ-BT.png" />
     <Content Include="frontend\images\subpage\GZ-CZ.png" />
     <Content Include="frontend\images\subpage\GZ-HS.png" />
@@ -222,6 +223,7 @@
     <Content Include="frontend\images\subpage\join.png" />
     <Content Include="frontend\images\subpage\map.png" />
     <Content Include="frontend\images\subpage\QR-Code.png" />
+    <Content Include="frontend\images\subpage\route.png" />
     <Content Include="frontend\images\subpage\service-point.png" />
     <Content Include="frontend\images\subpage\suggest-submit.png" />
     <Content Include="frontend\images\subpage\third-logistics.png" />
@@ -231,6 +233,7 @@
     <Content Include="frontend\images\subpage\ToJinCheng.png" />
     <Content Include="frontend\images\subpage\ToTaiYuan.png" />
     <Content Include="frontend\images\subpage\ToXiAn.png" />
+    <Content Include="frontend\images\subpage\to\ToXiAn.png" />
     <Content Include="frontend\images\subpage\value-service.png" />
     <Content Include="frontend\js\app.js" />
     <Content Include="frontend\js\index.js" />

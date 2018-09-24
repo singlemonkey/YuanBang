@@ -3,7 +3,7 @@
     height: 222px;
     background-color: #074a92;
     position: relative;
-    padding:14px 20px;
+    padding: 14px 20px;
 
     > span {
         position: absolute;
@@ -18,18 +18,21 @@
         width: 814px;
         resize: none;
         padding: 12px;
-        position:absolute;
-        top:50px;
+        position: absolute;
+        top: 50px;
     }
-    >img{
-        position:absolute;
-        right:20px;
-        bottom:12px;
-        cursor:pointer;
+
+    > img {
+        position: absolute;
+        right: 20px;
+        bottom: 12px;
+        cursor: pointer;
     }
 }
+
 .app-bill-info {
     margin-top: 30px;
+    display: none;
 
     table {
         color: #666666;
@@ -64,5 +67,42 @@
                 }
             }
         }
+    }
+}
+.app-error-info {
+    display: none;
+    margin-top:50px;
+    padding: 8px;
+    line-height: 48px;
+    background-color: #ffffff;
+    border: 1px solid #d2d2d2;
+    text-align: left;
+    position: relative;
+
+    a {
+        position: absolute;
+        right: 20px;
+        top: 0;
+        cursor: pointer;
+        font-size: 22px;
+        color: #d2d2d2;
+
+        &:hover {
+            color: #0094ff;
+        }
+    }
+
+    .icon-warning {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        color: #ff7800;
+    }
+
+    p {
+        line-height: 30px;
+        padding-left: 35px;
+        font-size: 14px;
+        color: #ff7800;
     }
 }

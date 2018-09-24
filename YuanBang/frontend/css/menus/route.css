@@ -34,3 +34,58 @@
   padding-left: 30px;
   line-height: 22px;
 }
+
+/* line 38, ../../scss/menus/route.scss */
+.app-route-info {
+  width: 724px;
+  position: absolute;
+  top: 640px;
+  left: 60px;
+}
+/* line 44, ../../scss/menus/route.scss */
+.app-route-info .route-desc {
+  position: relative;
+}
+/* line 47, ../../scss/menus/route.scss */
+.app-route-info .route-desc .route-from {
+  width: 238px;
+  float: left;
+  z-index: 100;
+}
+/* line 52, ../../scss/menus/route.scss */
+.app-route-info .route-desc .route-from img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+/* line 58, ../../scss/menus/route.scss */
+.app-route-info .route-desc .route-to {
+  width: 238px;
+  float: right;
+  z-index: 100;
+}
+/* line 63, ../../scss/menus/route.scss */
+.app-route-info .route-desc .route-to img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+/* line 69, ../../scss/menus/route.scss */
+.app-route-info .route-desc > img {
+  position: absolute;
+  width: 248px;
+  top: 16px;
+  left: 238px;
+  z-index: 10;
+}
+/* line 77, ../../scss/menus/route.scss */
+.app-route-info .route-desc .route-row {
+  width: max-content;
+}
+/* line 80, ../../scss/menus/route.scss */
+.app-route-info .route-desc .route-row p {
+  display: inline-block;
+  width: max-content;
+  color: #666666;
+  font-size: 16px;
+  height: 28px;
+  line-height: 28px;
+}

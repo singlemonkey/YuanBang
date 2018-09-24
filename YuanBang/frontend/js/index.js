@@ -37,3 +37,9 @@ const initNotices = function () {
         }
     });
 };
+const initQuery = function () {
+    $('#app-order-query-btn').bind('click', function () {
+        const order = $('#app-order-num').val();
+        window.location.href = "/Home/Query/?order=" + order;
+    });
+}
