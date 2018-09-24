@@ -7,7 +7,7 @@
 <div class="app-bill-query">
     <span>运单查询</span>
     <textarea id="app-bill-num" placeholder="请输入运单号"></textarea>
-    <img alt="查询" src="~/frontend/images/subpage/bill-query-btn.png" />
+    <img alt="查询" src="~/frontend/images/subpage/bill-query-btn.png" id="query" />
 </div>
 <div class="app-bill-info">
     <div class="app-layout-title">
@@ -35,7 +35,33 @@
 @section scripts{
     <script type="text/javascript">
         $(function () {
+            let order = $.getQueryString('order');
+            const auth = '7d1b8c24605c6a98373ffc15963bb2d1';
+            
 
+            $('#query').on('click', function () {
+
+                order = $('#app-bill-num').val();
+                if (order.trim().length !== 0) {
+                    $.ajax({
+                        url: 'http://t800.chemanman.com/api/Order/Search/searchByAuth',
+                        type: 'get',
+                        data: {
+                            auth: auth,
+                            search_num: order
+                        },
+                        success: function (data) {
+                            console.log(data);
+                        },
+                        error: function (error) {
+                            console.log(error);
+                        }
+                    });
+                }
+                else {
+                    alert('请输入运单号！');
+                }
+            });
         });
     </script>
 }
