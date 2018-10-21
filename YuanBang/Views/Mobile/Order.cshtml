@@ -1,0 +1,124 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>网上下单</title>
+    <link rel="stylesheet" href="~/frontend/css/mobile/order.css" />
+    <link rel="stylesheet" href="~/frontend/libs/iconfont/iconfont.css" />
+</head>
+<body>
+    <header>
+        <img id="return" alt="返回" src="~/frontend/images/mobile/query/return.png" />
+        <span>网上下单</span>
+        <img id="home" alt="主页" src="~/frontend/images/mobile/query/home.png" />
+    </header>
+    <main>
+        <section>
+            <div class="header">
+                <span><i class="vertical-line"></i>寄件人姓名</span>
+            </div>
+            <div class="body">
+                <div class="form-row">
+                    <label><i class="iconfont icon-required"></i>姓名</label>
+                    <input type="text" placeholder="请输入寄件人姓名" />
+                </div>
+                <div class="form-row">
+                    <label><i class="iconfont icon-required"></i>电话</label>
+                    <input type="text" placeholder="请输入寄件人手机或固话" />
+                </div>
+                <div class="form-row">
+                    <label><i class="iconfont icon-required"></i>地址</label>
+                    <input type="text" placeholder="请输入寄件人详细地址" />
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="header">
+                <span><i class="vertical-line"></i>收货人信息</span>
+            </div>
+            <div class="body">
+                <div class="form-row">
+                    <label><i class="iconfont icon-required"></i>姓名</label>
+                    <input type="text" placeholder="请输入收货人姓名" />
+                </div>
+                <div class="form-row">
+                    <label><i class="iconfont icon-required"></i>电话</label>
+                    <input type="text" placeholder="请输入收货人手机或固话" />
+                </div>
+                <div class="form-row">
+                    <label><i class="iconfont icon-required"></i>地址</label>
+                    <input type="text" placeholder="请输入收货人详细地址" />
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="header">
+                <span><i class="vertical-line"></i>货物信息</span>
+            </div>
+            <div class="body">
+                <div class="form-row">
+                    <label><i class="iconfont icon-required"></i>名称</label>
+                    <input type="text" placeholder="请输入货物姓名" />
+                </div>
+                <div class="form-row">
+                    <label><i class="iconfont icon-required"></i>数量</label>
+                    <input type="text" placeholder="请输入货物数量" />
+                </div>
+                <div class="form-row">
+                    <label>重量</label>
+                    <input type="text" placeholder="请输入货物重量" />
+                </div>
+                <div class="form-row">
+                    <label>体积</label>
+                    <input type="text" placeholder="请输入货物体积" />
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="clause">
+            <label href="javascript:;">
+                <input type="checkbox" />
+                我已理解并同意遵守服务条款
+            </label>
+        </div>
+        <a href="javascript:;" id="submit">提交订单</a>
+    </footer>
+    <script type="text/javascript" src="~/frontend/libs/jQuery/jquery.js"></script>
+    <script>
+        $(function () {
+            const init = function () {
+                //设置屏幕缩放
+                let meta = document.createElement('meta');
+                let scale = 1 / window.devicePixelRatio;
+                meta.charset = 'utf-8';
+                meta.setAttribute('content', 'width=device-width,user-scalable=no,initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + '');
+                meta.name = 'viewport';
+                document.getElementsByTagName('head')[0].appendChild(meta);
+
+            };
+
+            const AdaptScreen = function () {
+                document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+            };
+
+            init();
+            AdaptScreen();
+            $(window).resize(function () {
+                AdaptScreen();
+            });
+
+            //返回
+            $('#return,#home').on('click', function () {
+                window.location.href = '/Mobile/Index';
+            });
+        });
+    </script>
+</body>
+</html>

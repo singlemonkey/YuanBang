@@ -1,0 +1,124 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>路线介绍</title>
+    <link rel="stylesheet" href="~/frontend/libs/iconfont/iconfont.css" />
+    <link rel="stylesheet" href="~/frontend/css/mobile/route.css" />
+</head>
+<body>
+    <header>
+        <img id="return" alt="返回" src="~/frontend/images/mobile/query/return.png" />
+        <span>路线介绍</span>
+        <img id="home" alt="主页" src="~/frontend/images/mobile/query/home.png" />
+    </header>
+    <main>
+        <img class="map" alt="路线介绍" src="~/frontend/images/mobile/route/map.png" />
+        <ul class="routes">
+            <li>
+                <section class="route-head">
+                    <span><i class="vertical-line"></i>广州直达西安</span>
+                </section>
+                <section class="route-content">
+                    <span class="tip">辐射：</span>
+                    <span class="text">
+                        咸阳，渭南，宝鸡，安康，汉中，商洛，铜川，延安，榆林，运城，固原，平凉，天水
+                    </span>
+                </section>
+            </li>
+            <li>
+                <section class="route-head">
+                    <span><i class="vertical-line"></i>广州直达呼和浩特</span>
+                </section>
+                <section class="route-content">
+                    <span class="tip">辐射：</span>
+                    <span class="text">
+                        乌兰察布，集宁，化德，四子王旗，武川，土默特旗，托克托，和林格尔，准格尔旗（薛家湾），赤峰，二连浩特，锡林郭勒盟（锡林浩特），乌兰浩特
+                    </span>
+                </section>
+            </li>
+            <li>
+                <section class="route-head">
+                    <span><i class="vertical-line"></i>广州直达包头</span>
+                </section>
+                <section class="route-content">
+                    <span class="tip">辐射：</span>
+                    <span class="text">
+                        巴彦淖尔盟周边，临河，乌拉特中旗，前旗，后旗五原，磴口，乌海，杭锦后旗鄂尔多斯市，杭锦旗，东胜，伊金霍洛旗，达拉特旗，乌审旗，鄂托克旗，准格尔旗 阿拉善旗
+                    </span>
+                </section>
+            </li>
+            <li>
+                <section class="route-head">
+                    <span><i class="vertical-line"></i>广州直达太原</span>
+                </section>
+                <section class="route-content">
+                    <span class="tip">辐射：</span>
+                    <span class="text">
+                        朔州，怀仁，大同，阳泉，运城，临汾，离石，代县，柳林，保德，临县，中阳，兴县，岚县，介休，榆次，平遥，太谷，寿阳，祁县，灵石，清徐，古交，汾阳，孝义，交城，文水，侯马，霍州，翼城，襄汾，洪洞，永济，河津，盂县，平定，忻州，原平，繁峙，定襄，宁武，岢岚，五寨，河曲，偏关，神池，山阴，应县，平鲁，灵丘，府谷，静乐，五台，交口，石楼，和顺，昔阳，左权，榆社等山西全境
+                    </span>
+                </section>
+            </li>
+            <li>
+                <section class="route-head">
+                    <span><i class="vertical-line"></i>广州直达长治</span>
+                </section>
+                <section class="route-content">
+                    <span class="tip">辐射：</span>
+                    <span class="text">
+                        长治县，黎城，武乡，平顺，长子，襄垣，潞城，壶关，屯留，沁源，沁县
+                    </span>
+                </section>
+            </li>
+            <li>
+                <section class="route-head">
+                    <span><i class="vertical-line"></i>广州直达晋城</span>
+                </section>
+                <section class="route-content">
+                    <span class="tip">辐射：</span>
+                    <span class="text">
+                        高平，阳城，沁水，陵川
+                    </span>
+                </section>
+            </li>
+        </ul>
+    </main>
+
+    <script type="text/javascript" src="~/frontend/libs/jQuery/jquery.js"></script>
+    <script>
+        $(function () {
+            const init = function () {
+                //设置屏幕缩放
+                let meta = document.createElement('meta');
+                let scale = 1 / window.devicePixelRatio;
+                meta.charset = 'utf-8';
+                meta.setAttribute('content', 'width=device-width,user-scalable=no,initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + '');
+                meta.name = 'viewport';
+                document.getElementsByTagName('head')[0].appendChild(meta);
+
+            };
+
+            const AdaptScreen = function () {
+                document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+            };
+
+            init();
+            AdaptScreen();
+            $(window).resize(function () {
+                AdaptScreen();
+            });
+
+            //返回
+            $('#return,#home').on('click', function () {
+                window.location.href = '/Mobile/Index';
+            });
+        });
+    </script>
+</body>
+</html>

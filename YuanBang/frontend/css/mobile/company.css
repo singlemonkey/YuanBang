@@ -1,0 +1,205 @@
+/* line 5, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 4, ../../scss/common/_base.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "Microsoft YaHei";
+  font-size: 12px;
+}
+
+/* line 10, ../../scss/common/_base.scss */
+html {
+  height: 100%;
+}
+
+/* line 14, ../../scss/common/_base.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 18, ../../scss/common/_base.scss */
+ul, li {
+  list-style: none;
+}
+
+/* line 22, ../../scss/common/_base.scss */
+input[type=text] {
+  font-size: 12px;
+  border: 1px solid #c8cbcc;
+  padding: 2px 30px 0 10px;
+  outline: none;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+}
+/* line 32, ../../scss/common/_base.scss */
+input[type=text]:focus {
+  border-bottom: 3px solid #000;
+  padding-top: 2px;
+}
+
+/* line 38, ../../scss/common/_base.scss */
+input[type=button] {
+  border: none;
+  letter-spacing: 3px;
+}
+
+/* line 4, ../../scss/mobile/company.scss */
+body {
+  background-color: #f5f5f5;
+}
+
+/* line 8, ../../scss/mobile/company.scss */
+header {
+  height: 6.80062vh;
+  background-color: #074a92;
+  padding: 0 5.6vw 0 4.66667vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* line 16, ../../scss/mobile/company.scss */
+header #return {
+  width: 4.13333vw;
+  height: 2.39567vh;
+}
+/* line 21, ../../scss/mobile/company.scss */
+header #home {
+  width: 5.2vw;
+  height: 2.62751vh;
+}
+/* line 26, ../../scss/mobile/company.scss */
+header span {
+  font-size: 0.42667rem;
+  color: #fff;
+}
+
+/* line 32, ../../scss/mobile/company.scss */
+main > img {
+  width: 100vw;
+  height: 34.77589vh;
+  margin-top: 0.7728vh;
+}
+/* line 38, ../../scss/mobile/company.scss */
+main .company-info {
+  padding: 4.63679vh 9.86667vw;
+  background-color: #fff;
+}
+/* line 42, ../../scss/mobile/company.scss */
+main .company-info p {
+  font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Hiragino Sans GB", "Source Han Sans CN Normal", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  font-size: 0.34667rem !important;
+  line-height: 0.53333rem;
+  text-indent: 2em;
+  color: #333333;
+  max-height: 9999px;
+}
+
+/* line 52, ../../scss/mobile/company.scss */
+footer {
+  height: 10.66461vh;
+  padding: 2.31839vh 0;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+}
+/* line 59, ../../scss/mobile/company.scss */
+footer ul.link {
+  display: flex;
+  height: 4.01855vh;
+  justify-content: center;
+  align-items: center;
+}
+/* line 66, ../../scss/mobile/company.scss */
+footer ul.link li a, footer ul.link li i {
+  display: block;
+  height: 4.01855vh;
+  line-height: 4.01855vh;
+  font-size: 0.26667rem;
+  font-weight: 500;
+  color: #333333;
+}
+/* line 75, ../../scss/mobile/company.scss */
+footer ul.link li i {
+  margin: 0 2.66667vw;
+}
+/* line 81, ../../scss/mobile/company.scss */
+footer ul.web-info {
+  display: flex;
+  height: 1.5456vh;
+  justify-content: center;
+  align-items: center;
+}
+/* line 88, ../../scss/mobile/company.scss */
+footer ul.web-info li span {
+  display: block;
+  height: 1.5456vh;
+  line-height: 1.5456vh;
+  font-size: 0.16rem;
+  margin: 0 1.33333vw;
+}

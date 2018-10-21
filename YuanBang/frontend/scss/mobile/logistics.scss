@@ -1,0 +1,116 @@
+﻿@import '../common/_mobile.scss';
+@import '../common/_base.scss';
+
+body {
+    background-color: #f5f5f5;
+}
+
+header {
+    height: px2vh(88px);
+    background-color: #074a92;
+    padding: 0 px2vw(42px) 0 px2vw(35px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    #return {
+        width: px2vw(31px);
+        height: px2vh(31px);
+    }
+
+    #home {
+        width: px2vw(39px);
+        height: px2vh(34px);
+    }
+
+    span {
+        font-size: px2rem(32px);
+        color: #fff;
+    }
+}
+
+main {
+    > img {
+        width: 100vw;
+        height: px2vh(236px);
+        margin-top: px2vh(10px);
+    }
+
+    > p {
+        font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Hiragino Sans GB", "Source Han Sans CN Normal", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+        font-size: px2rem(26px);
+        padding: px2vh(40px) px2vw(64px);
+        line-height: px2rem(40px);
+        background-color: #fff;
+        text-indent: 2em;
+        color: #333333;
+    }
+
+    .manager {
+        height: px2vh(496px);
+        padding: px2vh(75px) px2vw(165px) px2vh(116px) px2vw(140px);
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        span {
+            font-size: px2rem(28px);
+            color: #fff;
+            background-image: url(../../images/mobile/logistics/phone.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: px2vw(445px);
+            height: px2vh(140px);
+            line-height: px2vh(140px);
+            text-align:center;
+        }
+    }
+}
+footer {
+    height: px2vh(138px);
+    padding: px2vh(30px) 0;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+
+    ul.link {
+        display: flex;
+        height: px2vh(52px);
+        justify-content: center;
+        align-items: center;
+
+        li {
+            a, i {
+                display: block;
+                height: px2vh(52px);
+                line-height: px2vh(52px);
+                font-size: px2rem(20px);
+                font-weight: 500;
+                color: #333333;
+            }
+
+            i {
+                margin: 0 px2vw(20px);
+            }
+        }
+    }
+
+    ul.web-info {
+        display: flex;
+        height: px2vh(20px);
+        justify-content: center;
+        align-items: center;
+
+        li {
+            span {
+                display: block;
+                height: px2vh(20px);
+                line-height: px2vh(20px);
+                font-size: px2rem(12px);
+                margin: 0 px2vw(10px);
+            }
+        }
+    }
+}
+
