@@ -169,4 +169,3 @@ P:\YuanBang\YuanBang\bin\roslyn\vbc.rsp
 P:\YuanBang\YuanBang\bin\roslyn\VBCSCompiler.exe
 P:\YuanBang\YuanBang\bin\roslyn\VBCSCompiler.exe.config
 P:\YuanBang\YuanBang\obj\Debug\YuanBang.csproj.CopyComplete
-P:\YuanBang\YuanBang\obj\Debug\YuanBang.csprojAssemblyReference.cache
