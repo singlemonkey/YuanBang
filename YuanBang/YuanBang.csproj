@@ -254,6 +254,11 @@
     <Content Include="frontend\images\mobile\route\map.png" />
     <Content Include="frontend\images\subpage\bill-add-btn.png" />
     <Content Include="frontend\images\subpage\bill-query-btn.png" />
+    <Content Include="frontend\images\subpage\from\ToBaoTou.png" />
+    <Content Include="frontend\images\subpage\from\ToChangZhi.png" />
+    <Content Include="frontend\images\subpage\from\ToHuShi.png" />
+    <Content Include="frontend\images\subpage\from\ToJinCheng.png" />
+    <Content Include="frontend\images\subpage\from\ToTaiYuan.png" />
     <Content Include="frontend\images\subpage\from\ToXiAn.png" />
     <Content Include="frontend\images\subpage\GZ-BT.png" />
     <Content Include="frontend\images\subpage\GZ-CZ.png" />
@@ -274,6 +279,11 @@
     <Content Include="frontend\images\subpage\ToJinCheng.png" />
     <Content Include="frontend\images\subpage\ToTaiYuan.png" />
     <Content Include="frontend\images\subpage\ToXiAn.png" />
+    <Content Include="frontend\images\subpage\to\ToBaoTou.png" />
+    <Content Include="frontend\images\subpage\to\ToChangZhi.png" />
+    <Content Include="frontend\images\subpage\to\ToHuShi.png" />
+    <Content Include="frontend\images\subpage\to\ToJinCheng.png" />
+    <Content Include="frontend\images\subpage\to\ToTaiYuan.png" />
     <Content Include="frontend\images\subpage\to\ToXiAn.png" />
     <Content Include="frontend\images\subpage\value-service.png" />
     <Content Include="frontend\js\app.js" />
