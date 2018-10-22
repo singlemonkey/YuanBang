@@ -109,7 +109,7 @@ namespace YuanBang.Controllers
             reader.Close();
             stream.Close();
 
-            return Json(str);
+            return Json(str,JsonRequestBehavior.AllowGet);
         }
     }
 }

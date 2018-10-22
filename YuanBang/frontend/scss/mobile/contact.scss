@@ -1,0 +1,121 @@
+﻿@import '../common/_mobile.scss';
+@import '../common/_base.scss';
+
+body {
+    background-color: #f5f5f5;
+}
+
+header {
+    height: px2vh(88px);
+    background-color: #074a92;
+    padding: 0 px2vw(42px) 0 px2vw(35px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    #return {
+        width: px2vw(31px);
+        height: px2vh(31px);
+    }
+
+    #home {
+        width: px2vw(39px);
+        height: px2vh(34px);
+    }
+
+    span {
+        font-size: px2rem(32px);
+        color: #fff;
+    }
+}
+
+main {
+    > img {
+        width: 100vw;
+        height: px2vh(544px);
+        margin-top: px2vh(10px);
+    }
+
+    ul {
+        padding: px2vh(65px) px2vw(50px);
+        background-color:#fff;
+
+        li {
+            display: flex;
+            font-size: px2rem(26px);
+            height: px2vh(70px);
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: px2vw(36px);
+                height: px2vw(36px);
+            }
+
+            label {
+                flex: 0 0 px2vw(100px);
+                text-align: center;
+            }
+
+            a {
+                flex: 1;
+                text-decoration: underline;
+                color: #20a1f6;
+            }
+
+            .address{
+                flex:1;
+                font-weight:500;
+                margin-top:px2vh(36px);
+                line-height:px2vh(36px);
+            }
+        }
+    }
+}
+
+footer {
+    height: px2vh(138px);
+    padding: px2vh(30px) 0;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+
+    ul.link {
+        display: flex;
+        height: px2vh(52px);
+        justify-content: center;
+        align-items: center;
+
+        li {
+            a, i {
+                display: block;
+                height: px2vh(52px);
+                line-height: px2vh(52px);
+                font-size: px2rem(20px);
+                font-weight: 500;
+                color: #333333;
+            }
+
+            i {
+                margin: 0 px2vw(20px);
+            }
+        }
+    }
+
+    ul.web-info {
+        display: flex;
+        height: px2vh(20px);
+        justify-content: center;
+        align-items: center;
+
+        li {
+            span {
+                display: block;
+                height: px2vh(20px);
+                line-height: px2vh(20px);
+                font-size: px2rem(12px);
+                margin: 0 px2vw(10px);
+            }
+        }
+    }
+}

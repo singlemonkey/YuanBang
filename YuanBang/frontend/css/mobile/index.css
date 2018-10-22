@@ -1,0 +1,457 @@
+/* line 5, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 4, ../../scss/common/_base.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "Microsoft YaHei";
+  font-size: 12px;
+}
+
+/* line 10, ../../scss/common/_base.scss */
+html {
+  height: 100%;
+}
+
+/* line 14, ../../scss/common/_base.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 18, ../../scss/common/_base.scss */
+ul, li {
+  list-style: none;
+}
+
+/* line 22, ../../scss/common/_base.scss */
+input[type=text] {
+  font-size: 12px;
+  border: 1px solid #c8cbcc;
+  padding: 2px 30px 0 10px;
+  outline: none;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+}
+/* line 32, ../../scss/common/_base.scss */
+input[type=text]:focus {
+  border-bottom: 3px solid #000;
+  padding-top: 2px;
+}
+
+/* line 38, ../../scss/common/_base.scss */
+input[type=button] {
+  border: none;
+  letter-spacing: 3px;
+}
+
+/* line 4, ../../scss/mobile/index.scss */
+body {
+  color: #333;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+/* line 10, ../../scss/mobile/index.scss */
+header {
+  height: 6.4915vh;
+  position: relative;
+}
+/* line 14, ../../scss/mobile/index.scss */
+header #logo {
+  position: absolute;
+  left: 4.8vw;
+  width: 11.73333vw;
+  height: 8.96445vh;
+  z-index: 1000;
+}
+/* line 22, ../../scss/mobile/index.scss */
+header #name-ch {
+  position: absolute;
+  left: 18vw;
+  top: 2.16383vh;
+  width: 37.33333vw;
+  height: 1.85471vh;
+}
+/* line 30, ../../scss/mobile/index.scss */
+header #name-en {
+  position: absolute;
+  left: 18vw;
+  top: 4.32767vh;
+  width: 37.33333vw;
+  height: 0.85008vh;
+}
+/* line 38, ../../scss/mobile/index.scss */
+header #service-phone {
+  position: absolute;
+  right: 4.8vw;
+  top: 1.70015vh;
+  width: 19.2vw;
+  height: 1.5456vh;
+}
+/* line 46, ../../scss/mobile/index.scss */
+header #service-call {
+  position: absolute;
+  right: 4.8vw;
+  bottom: 1.08192vh;
+  width: 31.46667vw;
+  height: 2.31839vh;
+  font-size: 0.4rem;
+  text-align: right;
+  color: #074a92;
+}
+
+/* line 59, ../../scss/mobile/index.scss */
+main .slide {
+  height: 30.9119vh;
+  position: relative;
+}
+/* line 63, ../../scss/mobile/index.scss */
+main .slide .hd {
+  position: absolute;
+  bottom: 16px;
+  z-index: 1000;
+}
+/* line 68, ../../scss/mobile/index.scss */
+main .slide .hd ul {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+/* line 73, ../../scss/mobile/index.scss */
+main .slide .hd ul li {
+  flex: 0 0 50px;
+  text-align: center;
+}
+/* line 77, ../../scss/mobile/index.scss */
+main .slide .hd ul li a {
+  width: 40px;
+  height: 8px;
+  border-radius: 3px;
+  background-color: #eeeeee;
+  display: inline-block;
+}
+/* line 86, ../../scss/mobile/index.scss */
+main .slide .hd ul li.on a {
+  background-color: #99ccff;
+}
+/* line 97, ../../scss/mobile/index.scss */
+main .slide .bd img {
+  width: 100vw;
+  height: 30.9119vh;
+}
+/* line 104, ../../scss/mobile/index.scss */
+main .query {
+  height: 8.50077vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 111, ../../scss/mobile/index.scss */
+main .query .query-content {
+  width: 89.86667vw;
+  height: 5.25502vh;
+  position: relative;
+}
+/* line 116, ../../scss/mobile/index.scss */
+main .query .query-content #order {
+  width: 100%;
+  height: 100%;
+  font-size: 0.32rem;
+  padding-left: 30px;
+  border-radius: 0.16rem;
+  border: 1px solid #bebebe;
+  box-shadow: 5px 5px 5px #e8e8e8 inset;
+}
+/* line 125, ../../scss/mobile/index.scss */
+main .query .query-content #order:focus {
+  border-bottom: 1px solid #bebebe;
+}
+/* line 130, ../../scss/mobile/index.scss */
+main .query .query-content #search {
+  width: 21.6vw;
+  height: 5.10046vh;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  background-image: url(/frontend/images/mobile/index/query.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+/* line 143, ../../scss/mobile/index.scss */
+main .menus {
+  height: 14.83771vh;
+  margin-top: 0.7728vh;
+  margin-bottom: 0.7728vh;
+  background-color: #fff;
+  padding: 2.31839vh 3.2vw;
+}
+/* line 150, ../../scss/mobile/index.scss */
+main .menus ul {
+  display: flex;
+  height: 100%;
+}
+/* line 154, ../../scss/mobile/index.scss */
+main .menus ul li {
+  flex: 1 0 auto;
+}
+/* line 157, ../../scss/mobile/index.scss */
+main .menus ul li a {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+/* line 163, ../../scss/mobile/index.scss */
+main .menus ul li a span {
+  flex: 0 0 2.31839vh;
+  text-align: center;
+  font-size: 0.32rem;
+  color: #888888;
+}
+/* line 170, ../../scss/mobile/index.scss */
+main .menus ul li a .img-box {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* line 178, ../../scss/mobile/index.scss */
+main .menus ul li a .img-box img.route-desc {
+  width: 8.53333vw;
+  height: 4.63679vh;
+}
+/* line 183, ../../scss/mobile/index.scss */
+main .menus ul li a .img-box img.place-order {
+  width: 6.26667vw;
+  height: 4.9459vh;
+}
+/* line 188, ../../scss/mobile/index.scss */
+main .menus ul li a .img-box img.logistics {
+  width: 8.53333vw;
+  height: 4.32767vh;
+}
+/* line 193, ../../scss/mobile/index.scss */
+main .menus ul li a .img-box img.service-site {
+  width: 8.53333vw;
+  height: 4.01855vh;
+}
+/* line 204, ../../scss/mobile/index.scss */
+main .routes {
+  height: 28.28439vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+/* line 210, ../../scss/mobile/index.scss */
+main .routes .route-head {
+  flex: 0 0 5.40958vh;
+  border-bottom: 2px solid #f5f5f5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 4.8vw;
+}
+/* line 218, ../../scss/mobile/index.scss */
+main .routes .route-head span {
+  font-size: 0.34667rem;
+  color: #333333;
+  height: 2.47295vh;
+  line-height: 2.47295vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+/* line 227, ../../scss/mobile/index.scss */
+main .routes .route-head span i {
+  width: 1.06667vw;
+  height: 2.31839vh;
+  background-color: #074a92;
+  border-radius: 5px;
+  margin-right: 2.13333vw;
+}
+/* line 237, ../../scss/mobile/index.scss */
+main .routes .route-content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+/* line 242, ../../scss/mobile/index.scss */
+main .routes .route-content ul {
+  flex: 1 0 auto;
+  padding: 2.62751vh 2.66667vw;
+  display: flex;
+}
+/* line 247, ../../scss/mobile/index.scss */
+main .routes .route-content ul li {
+  padding: 0 2.66667vw;
+  display: flex;
+  flex: 0 0 33.333%;
+}
+/* line 252, ../../scss/mobile/index.scss */
+main .routes .route-content ul li .text-info {
+  flex: 0 0 11.73333vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* line 258, ../../scss/mobile/index.scss */
+main .routes .route-content ul li .text-info p {
+  font-size: 0.24rem;
+  color: #888888;
+  margin-bottom: 0.61824vh;
+}
+/* line 264, ../../scss/mobile/index.scss */
+main .routes .route-content ul li .text-info h4 {
+  font-size: 0.37333rem;
+  color: #333333;
+}
+/* line 270, ../../scss/mobile/index.scss */
+main .routes .route-content ul li .img-box {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* line 278, ../../scss/mobile/index.scss */
+main .routes .route-content ul li .img-box img.GzToXa {
+  width: 11.2vw;
+  height: 5.10046vh;
+}
+/* line 283, ../../scss/mobile/index.scss */
+main .routes .route-content ul li .img-box img.GzToTy {
+  width: 11.2vw;
+  height: 4.40495vh;
+}
+/* line 288, ../../scss/mobile/index.scss */
+main .routes .route-content ul li .img-box img.GzToCz {
+  width: 7.6vw;
+  height: 6.4915vh;
+}
+/* line 293, ../../scss/mobile/index.scss */
+main .routes .route-content ul li .img-box img.GzToJc {
+  width: 11.2vw;
+  height: 4.63679vh;
+}
+/* line 298, ../../scss/mobile/index.scss */
+main .routes .route-content ul li .img-box img.HsToXa {
+  width: 11.2vw;
+  height: 6.02782vh;
+}
+/* line 303, ../../scss/mobile/index.scss */
+main .routes .route-content ul li .img-box img.GzToBt {
+  width: 10.93333vw;
+  height: 6.4915vh;
+}
+/* line 310, ../../scss/mobile/index.scss */
+main .routes .route-content ul li + li {
+  border-left: 2px solid #f5f5f5;
+}
+
+/* line 319, ../../scss/mobile/index.scss */
+footer {
+  height: 10.66461vh;
+  padding: 2.31839vh 0;
+}
+/* line 324, ../../scss/mobile/index.scss */
+footer ul.link {
+  display: flex;
+  height: 4.01855vh;
+  justify-content: center;
+  align-items: center;
+}
+/* line 331, ../../scss/mobile/index.scss */
+footer ul.link li a, footer ul.link li i {
+  display: block;
+  height: 4.01855vh;
+  line-height: 4.01855vh;
+  font-size: 0.26667rem;
+  font-weight: 500;
+  color: #333333;
+}
+/* line 340, ../../scss/mobile/index.scss */
+footer ul.link li i {
+  margin: 0 2.66667vw;
+}
+/* line 346, ../../scss/mobile/index.scss */
+footer ul.web-info {
+  display: flex;
+  height: 1.5456vh;
+  justify-content: center;
+  align-items: center;
+}
+/* line 353, ../../scss/mobile/index.scss */
+footer ul.web-info li span {
+  display: block;
+  height: 1.5456vh;
+  line-height: 1.5456vh;
+  font-size: 0.16rem;
+  margin: 0 1.33333vw;
+}

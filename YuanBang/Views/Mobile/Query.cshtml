@@ -1,0 +1,120 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>订单查询</title>
+    <link rel="stylesheet" href="~/frontend/css/mobile/query.css" />
+    <link rel="stylesheet" href="~/frontend/libs/iconfont/iconfont.css" />
+</head>
+<body>
+    <header>
+        <img id="return" alt="返回" src="~/frontend/images/mobile/query/return.png" />
+        <span>运单查询</span>
+        <img id="home" alt="主页" src="~/frontend/images/mobile/query/home.png" />
+    </header>
+    <div>
+        <img id="header" alt="" src="~/frontend/images/mobile/query/header.png" />
+    </div>
+    <main>
+        <div class="main-header">
+            <span >快递单号</span>
+            <span id="order-num"></span>
+        </div>
+        <div class="main-body">
+            <ul id="logistics">
+            </ul>
+            <span id="errorMessage"></span>
+        </div>
+    </main>
+    <script type="text/javascript" src="~/frontend/libs/jQuery/jquery.js"></script>
+    <script type="text/javascript" src="~/frontend/js/app.js"></script>
+    <script type="text/javascript" src="~/frontend/libs/jsrender.js"></script>
+    <script type="text/x-jsrender" id="orderLog">
+        <li class="{{:className}}">
+            <span class="operation">{{:thing}}</span>
+            <time>{{:create_time}}</time>
+            <i class="iconfont icon-circle"></i>
+        </li>
+    </script>
+    <script>
+        $(function () {
+            const init = function () {
+                //设置屏幕缩放
+                let meta = document.createElement('meta');
+                let scale = 1 / window.devicePixelRatio;
+                meta.charset = 'utf-8';
+                meta.setAttribute('content', 'width=device-width,user-scalable=no,initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + '');
+                meta.name = 'viewport';
+                document.getElementsByTagName('head')[0].appendChild(meta);
+
+            };
+
+            const AdaptScreen = function () {
+                document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+            };
+
+            init();
+            AdaptScreen();
+            $(window).resize(function () {
+                AdaptScreen();
+            });
+
+            //返回
+            $('#return,#home').on('click', function () {
+                window.location.href = '/Mobile/Index';
+            });
+
+            //订单查询
+            const tmpl = $('#orderLog');
+
+            let order = $.getQueryString('order');
+            const auth = '999028872cfff7ae8ee330a33cbd3874';
+
+            if (order !== null) {
+                $('#order-num').text(order);
+                query();
+            }
+
+            function query() {
+                if (order.trim().length !== 0) {
+                    $.ajax({
+                        url: '/Home/GetOrder',
+                        type: 'POST',
+                        dataType: 'json',
+                        data: {
+                            order: order
+                        },
+                        success: function (data) {
+                            const orderObj = $.parseJSON(data);
+                            const errno = orderObj.errno;
+                            const message = orderObj.errmsg;
+                            if (errno === 0 && message === 'success') {
+
+                                const logList = orderObj.res.order_log_list;
+                                const count = logList.length;
+                                logList.forEach(function (log, i) {
+                                    log.className = i === count - 1 ? 'active' : '';
+                                    $('#logistics').prepend(tmpl.render(log));
+                                });
+                            } else {
+                                $('#errorMessage').text(message).css('display','block');
+                            }
+                        },
+                        error: function (error) {
+                            console.log(error);
+                        }
+                    });
+                } else {
+                    $('#errorMessage').text('请输入运单号！').css('display', 'block');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

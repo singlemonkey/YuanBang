@@ -42,4 +42,4 @@ const initQuery = function () {
         const order = $('#app-order-num').val();
         window.location.href = "/Home/Query/?order=" + order;
     });
-}
+};

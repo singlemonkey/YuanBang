@@ -162,6 +162,7 @@
     <Compile Include="App_Start\UserAuthAttribute.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MobileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -184,6 +185,14 @@
     <Content Include="frontend\css\menus\query.css" />
     <Content Include="frontend\css\menus\route.css" />
     <Content Include="frontend\css\menus\third.css" />
+    <Content Include="frontend\css\mobile\company.css" />
+    <Content Include="frontend\css\mobile\contact.css" />
+    <Content Include="frontend\css\mobile\index.css" />
+    <Content Include="frontend\css\mobile\logistics.css" />
+    <Content Include="frontend\css\mobile\order.css" />
+    <Content Include="frontend\css\mobile\query.css" />
+    <Content Include="frontend\css\mobile\route.css" />
+    <Content Include="frontend\css\mobile\suggestion.css" />
     <Content Include="frontend\css\userLayout.css" />
     <Content Include="frontend\images\index\arrow-left.png" />
     <Content Include="frontend\images\index\arrow-right.png" />
@@ -211,6 +220,38 @@
     <Content Include="frontend\images\index\wx-big.png" />
     <Content Include="frontend\images\index\wx-small.png" />
     <Content Include="frontend\images\login\logo.png" />
+    <Content Include="frontend\images\mobile\company\company.png" />
+    <Content Include="frontend\images\mobile\contact\address.png" />
+    <Content Include="frontend\images\mobile\contact\contact.png" />
+    <Content Include="frontend\images\mobile\contact\email.png" />
+    <Content Include="frontend\images\mobile\contact\fax.png" />
+    <Content Include="frontend\images\mobile\contact\phone.png" />
+    <Content Include="frontend\images\mobile\contact\website.png" />
+    <Content Include="frontend\images\mobile\index\GzToBt.png" />
+    <Content Include="frontend\images\mobile\index\GzToCz.png" />
+    <Content Include="frontend\images\mobile\index\GzToJc.png" />
+    <Content Include="frontend\images\mobile\index\GzToTy.png" />
+    <Content Include="frontend\images\mobile\index\GzToXa.png" />
+    <Content Include="frontend\images\mobile\index\HsToXa.png" />
+    <Content Include="frontend\images\mobile\index\logistics.png" />
+    <Content Include="frontend\images\mobile\index\logo.png" />
+    <Content Include="frontend\images\mobile\index\name-ch.png" />
+    <Content Include="frontend\images\mobile\index\name-en.png" />
+    <Content Include="frontend\images\mobile\index\order.png" />
+    <Content Include="frontend\images\mobile\index\query.png" />
+    <Content Include="frontend\images\mobile\index\route.png" />
+    <Content Include="frontend\images\mobile\index\service-phone.png" />
+    <Content Include="frontend\images\mobile\index\site.png" />
+    <Content Include="frontend\images\mobile\index\slide.png" />
+    <Content Include="frontend\images\mobile\logistics\logistics.png" />
+    <Content Include="frontend\images\mobile\logistics\phone.png" />
+    <Content Include="frontend\images\mobile\query\circle-active.png" />
+    <Content Include="frontend\images\mobile\query\circle.png" />
+    <Content Include="frontend\images\mobile\query\header.png" />
+    <Content Include="frontend\images\mobile\query\home.png" />
+    <Content Include="frontend\images\mobile\query\return.png" />
+    <Content Include="frontend\images\mobile\route\GzToXa.png" />
+    <Content Include="frontend\images\mobile\route\map.png" />
     <Content Include="frontend\images\subpage\bill-add-btn.png" />
     <Content Include="frontend\images\subpage\bill-query-btn.png" />
     <Content Include="frontend\images\subpage\from\ToBaoTou.png" />
@@ -566,6 +607,15 @@
     <Content Include="frontend\scss\menus\point.scss" />
     <Content Include="frontend\scss\menus\order.scss" />
     <Content Include="frontend\scss\menus\suggestion.scss" />
+    <Content Include="frontend\scss\common\_mobile.scss" />
+    <Content Include="frontend\scss\mobile\index.scss" />
+    <Content Include="frontend\scss\mobile\query.scss" />
+    <Content Include="frontend\scss\mobile\route.scss" />
+    <Content Include="frontend\scss\mobile\order.scss" />
+    <Content Include="frontend\scss\mobile\logistics.scss" />
+    <Content Include="frontend\scss\mobile\company.scss" />
+    <Content Include="frontend\scss\mobile\contact.scss" />
+    <Content Include="frontend\scss\mobile\suggestion.scss" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -612,6 +662,15 @@
     <Content Include="Views\Home\Suggestion.cshtml" />
     <Content Include="Views\Home\Service.cshtml" />
     <Content Include="Views\Admin\EditNotice.cshtml" />
+    <Content Include="Views\Mobile\Index.cshtml" />
+    <Content Include="Views\Mobile\Query.cshtml" />
+    <Content Include="Views\Mobile\Route.cshtml" />
+    <Content Include="Views\Mobile\Order.cshtml" />
+    <Content Include="Views\Mobile\Logistics.cshtml" />
+    <Content Include="Views\Mobile\Company.cshtml" />
+    <Content Include="Views\Mobile\Contact.cshtml" />
+    <Content Include="Views\Mobile\Suggestion.cshtml" />
+    <Content Include="Views\Mobile\GzToXa.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,262 @@
+/* line 5, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 4, ../../scss/common/_base.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "Microsoft YaHei";
+  font-size: 12px;
+}
+
+/* line 10, ../../scss/common/_base.scss */
+html {
+  height: 100%;
+}
+
+/* line 14, ../../scss/common/_base.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 18, ../../scss/common/_base.scss */
+ul, li {
+  list-style: none;
+}
+
+/* line 22, ../../scss/common/_base.scss */
+input[type=text] {
+  font-size: 12px;
+  border: 1px solid #c8cbcc;
+  padding: 2px 30px 0 10px;
+  outline: none;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+}
+/* line 32, ../../scss/common/_base.scss */
+input[type=text]:focus {
+  border-bottom: 3px solid #000;
+  padding-top: 2px;
+}
+
+/* line 38, ../../scss/common/_base.scss */
+input[type=button] {
+  border: none;
+  letter-spacing: 3px;
+}
+
+/* line 4, ../../scss/mobile/suggestion.scss */
+body {
+  background-color: #f5f5f5;
+}
+
+/* line 8, ../../scss/mobile/suggestion.scss */
+header {
+  height: 6.80062vh;
+  background-color: #074a92;
+  padding: 0 5.6vw 0 4.66667vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* line 16, ../../scss/mobile/suggestion.scss */
+header #return {
+  width: 4.13333vw;
+  height: 2.39567vh;
+}
+/* line 21, ../../scss/mobile/suggestion.scss */
+header #home {
+  width: 5.2vw;
+  height: 2.62751vh;
+}
+/* line 26, ../../scss/mobile/suggestion.scss */
+header span {
+  font-size: 0.42667rem;
+  color: #fff;
+}
+
+/* line 31, ../../scss/mobile/suggestion.scss */
+main {
+  text-align: center;
+}
+/* line 34, ../../scss/mobile/suggestion.scss */
+main section {
+  background-color: #fff;
+  margin-bottom: 0.61824vh;
+}
+/* line 38, ../../scss/mobile/suggestion.scss */
+main section .header {
+  height: 5.25502vh;
+  border-bottom: 2px solid #f5f5f5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 4.8vw;
+}
+/* line 46, ../../scss/mobile/suggestion.scss */
+main section .header span {
+  font-size: 0.34667rem;
+  color: #333333;
+  height: 2.47295vh;
+  line-height: 2.47295vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+/* line 55, ../../scss/mobile/suggestion.scss */
+main section .header span i {
+  width: 1.06667vw;
+  height: 2.31839vh;
+  background-color: #074a92;
+  border-radius: 5px;
+  margin-right: 2.13333vw;
+}
+/* line 65, ../../scss/mobile/suggestion.scss */
+main section .body {
+  padding: 0 2.93333vw;
+}
+/* line 68, ../../scss/mobile/suggestion.scss */
+main section .body textarea {
+  border: none;
+  width: 100%;
+  font-size: 0.34667rem;
+  padding: 20px;
+}
+/* line 74, ../../scss/mobile/suggestion.scss */
+main section .body textarea:focus {
+  border: none;
+  outline: none;
+}
+/* line 79, ../../scss/mobile/suggestion.scss */
+main section .body textarea#title {
+  height: 8.50077vh;
+}
+/* line 83, ../../scss/mobile/suggestion.scss */
+main section .body textarea#content {
+  height: 25.34776vh;
+}
+/* line 87, ../../scss/mobile/suggestion.scss */
+main section .body textarea#contact {
+  height: 6.18238vh;
+}
+/* line 94, ../../scss/mobile/suggestion.scss */
+main #submit {
+  height: 6.64606vh;
+  width: 70.93333vw;
+  border-radius: 10px;
+  background-color: #074a92;
+  display: inline-block;
+  font-size: 0.37333rem;
+  letter-spacing: 4.26667vw;
+  color: #fff;
+  line-height: 6.64606vh;
+  margin-top: 3.86399vh;
+}
+
+/* line 107, ../../scss/mobile/suggestion.scss */
+footer {
+  height: 10.66461vh;
+  padding: 2.31839vh 0;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+}
+/* line 114, ../../scss/mobile/suggestion.scss */
+footer ul.link {
+  display: flex;
+  height: 4.01855vh;
+  justify-content: center;
+  align-items: center;
+}
+/* line 121, ../../scss/mobile/suggestion.scss */
+footer ul.link li a, footer ul.link li i {
+  display: block;
+  height: 4.01855vh;
+  line-height: 4.01855vh;
+  font-size: 0.26667rem;
+  font-weight: 500;
+  color: #333333;
+}
+/* line 130, ../../scss/mobile/suggestion.scss */
+footer ul.link li i {
+  margin: 0 2.66667vw;
+}
+/* line 136, ../../scss/mobile/suggestion.scss */
+footer ul.web-info {
+  display: flex;
+  height: 1.5456vh;
+  justify-content: center;
+  align-items: center;
+}
+/* line 143, ../../scss/mobile/suggestion.scss */
+footer ul.web-info li span {
+  display: block;
+  height: 1.5456vh;
+  line-height: 1.5456vh;
+  font-size: 0.16rem;
+  margin: 0 1.33333vw;
+}
