@@ -49,10 +49,10 @@
 
             if (order !== null) {
                 $('#app-bill-num').val(order);
-                query();
+                query(order);
             }
 
-            function query() {
+            function query(order) {
                 if (order.trim().length !== 0) {
                     $.ajax({
                         url: '/Home/GetOrder',
@@ -94,7 +94,15 @@
             $('#query').on('click', function () {
 
                 order = $('#app-bill-num').val();
-                query();
+                query(order);
+            });
+
+            $(document).keydown(function (event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    order = $('#app-bill-num').val();
+                    query(order);
+                }
             });
         });
     </script>
