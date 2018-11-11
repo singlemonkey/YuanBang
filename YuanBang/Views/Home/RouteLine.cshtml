@@ -10,32 +10,26 @@
             <div class="route-from">
                 <img id="from" />
                 <div class="route-row">
-                    <p style="font-weight:600;">网点名称：</p><p class="name"></p>
+                    <p class="name"></p>
                 </div>
                 <div class="route-row">
-                    <p style="font-weight:600;">网点地址：</p><p class="address"></p>
+                    <p style="font-weight:600;">地址：</p><p class="address"></p>
                 </div>
                 <div class="route-row">
-                    <p style="font-weight:600;">联系电话：</p><p class="tel"></p>
-                </div>
-                <div class="route-row">
-                    <p style="font-weight:600;">服务类型：</p><p class="type"></p>
+                    <p style="font-weight:600;">电话：</p><p class="tel"></p>
                 </div>
             </div>
             <img src="~/frontend/images/subpage/route.png" />
             <div class="route-to">
                 <img id="to" />
                 <div class="route-row">
-                    <p style="font-weight:600;">网点名称：</p><p class="name"></p>
+                    <p class="name"></p>
                 </div>
                 <div class="route-row">
-                    <p style="font-weight:600;">网点地址：</p><p class="address"></p>
+                    <p style="font-weight:600;">地址：</p><p class="address"></p>
                 </div>
                 <div class="route-row">
-                    <p style="font-weight:600;">联系电话：</p><p class="tel"></p>
-                </div>
-                <div class="route-row">
-                    <p style="font-weight:600;">服务类型：</p> <p class="type"></p>
+                    <p style="font-weight:600;">电话：</p><p class="tel"></p>
                 </div>
             </div>
         </div>
@@ -46,27 +40,27 @@
         $(function () {
             const destination = '@ViewBag.destination';
             $('.container').css('background-image', 'url(/frontend/images/subpage/' + destination + '.png)');
-            $('#from').prop('src', '/frontend/images/subpage/from/' + destination + '.png');
-            $('#to').prop('src', '/frontend/images/subpage/to/' + destination + '.png');
+            $('#from').prop('src', '/frontend/images/subpage/from/' + destination + '.jpg');
+            $('#to').prop('src', '/frontend/images/subpage/to/' + destination + '.jpg');
 
             const route = {
                 ToXiAn: {
                     from: {
-                        name: '陕西营业部',
+                        name: '陕西线营业部',
                         address: '白云区石井锦亿货运市场G栋7-12档',
                         tel: '020-62870500/18825126650',
                         type:'发货、提货'
                     },
                     to: {
                         name: '灞桥区港务区营业部',
-                        address: '乾龙物流园5栋A（北）1-3栋',
+                        address: '港兴路乾龙物流园5栋A（北）1-3号',
                         tel: '029-89289327/15399488381',
                         type: '提货'
                     }
                 },
                 ToTaiYuan: {
                     from: {
-                        name: '山西、太原营业部',
+                        name: '山西、太原线营业部',
                         address: '白云区石井安发货运市场B15栋3-6档',
                         tel: '020-62198802/18825125966',
                         type: '发货、提货'
@@ -74,13 +68,13 @@
                     to: {
                         name: '杏花岭区营业部',
                         address: '东环高速丈子头西出东行20米',
-                        tel: '029-89289327/15399488381',
+                        tel: '0351-3951228/15735199286',
                         type: '提货'
                     }
                 },
                 ToChangZhi: {
                     from: {
-                        name: '长治、晋城营业部',
+                        name: '长治、晋城线营业部',
                         address: '白云区石井安发货运市场B15栋3-6档',
                         tel: '020-62198805/15626104888',
                         type: '发货、提货'
@@ -101,14 +95,14 @@
                     },
                     to: {
                         name: '晋城营业部',
-                        address: '乾龙物流园5栋A（北）1-3栋',
+                        address: '晋阳高速南村入口路西50米',
                         tel: '0356-3039111/13363567222',
                         type: '提货'
                     }
                 },
                 ToHuShi: {
                     from: {
-                        name: '内蒙营业部',
+                        name: '内蒙线营业部',
                         address: '白云区石井锦亿货运市场G栋13-16档',
                         tel: '020-62870502/18813299146',
                         type: '发货、提货'
@@ -116,13 +110,13 @@
                     to: {
                         name: '金川开发区营业部',
                         address: '110国道蓝天学校旁中全物流园1号大库5-6号',
-                        tel: '0471-2525128/18825156630',
+                        tel: '13191415128/18825156630',
                         type: '提货'
                     }
                 },
                 ToBaoTou: {
                     from: {
-                        name: '内蒙营业部',
+                        name: '内蒙线营业部',
                         address: '白云区石井锦亿货运市场G栋13-16档',
                         tel: '020-62870502/18813299146',
                         type: '发货、提货'

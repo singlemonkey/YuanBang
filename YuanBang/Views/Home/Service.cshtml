@@ -3,12 +3,72 @@
     ViewBag.Title = "增值服务";
     Layout = "~/Views/Shared/_UserLayoutPage.cshtml";
 }
+<style type="text/css">
+    .service-list {
+        display:flex;
+        margin-bottom:80px;
+    }
+        .service-list li {
+            flex:1;
+        }
+        .service-list.detail li  {
+            cursor: pointer;
+        }
+            .service-list li span {
+                display: block;
+                margin-top: 10px;
+                font-size: 24px;
+                font-weight: 500;
+                color: #555555;
+            }
+</style>
 <div class="app-value-service">
     <div class="app-layout-title">
         <span>增值服务</span>
     </div>
     <div class="app-value-service-content" style="text-align:center;margin-top:76px;">
-        <img alt="增值服务" src="~/frontend/images/subpage/value-service.png" />
+        <ul class="service-list">
+            <li>
+                <a title="圆邦物流上门提货">
+                    <img alt="上门提货" src="~/frontend/images/subpage/smth.png" />
+                    <span>上门提货</span>
+                </a>
+            </li>
+            <li>
+                <a title="圆邦物流限时派送">
+                    <img alt="限时派送" src="~/frontend/images/subpage/xsps.png" />
+                    <span>限时派送</span>
+                </a>
+            </li>
+            <li>
+                <a title="圆邦物流安全包装">
+                    <img alt="安全包装" src="~/frontend/images/subpage/aqbz.png" />
+                    <span>安全包装</span>
+                </a>
+            </li>
+
+
+        </ul>
+        <ul class="service-list detail">
+            <li>
+                <a href="/Home/Proxy" title="圆邦物流代签回单">
+                    <img alt="代签回单" src="~/frontend/images/subpage/dqhd.png" />
+                    <span>代签回单</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Home/PriceProtect" title="圆邦物流保价运输">
+                    <img alt="保价运输" src="~/frontend/images/subpage/bjys.png" />
+                    <span>保价运输</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Home/Collection" title="圆邦物流代收货款">
+                    <img alt="代收货款" src="~/frontend/images/subpage/qt.png" />
+                    <span>代收货款</span>
+                </a>
+            </li>
+        </ul>
     </div>
 </div>
 

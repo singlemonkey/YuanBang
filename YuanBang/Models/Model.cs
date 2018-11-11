@@ -39,4 +39,51 @@ namespace YuanBang.Models
 
         public virtual Dictionary NoticeType { get; set; }
     }
+
+    public class Order
+    {
+        public int ID { get; set; }
+        public string SendName { get; set; }
+        public string SendPhoneNumber { get; set; }
+        public string SendAddress { get; set; }
+        public string GoodsName { get; set; }
+        public int Amount { get; set; }
+        public double Weight { get; set; }
+        public double Volume { get; set; }
+
+        public string ReceiverName { get; set; }
+        public string ReceiverPhoneNumber { get; set; }
+        public string ReceiverAddress { get; set; }
+        public DateTime CreateTime { get; set; }
+    }
+
+    public class Advice
+    {
+        public int ID { get; set; }
+        public string Title { get; set; }
+        public string Type { get; set; }
+        [NotMapped]
+        public string TypeString
+        {
+            get
+            {
+                if (Type == "complain")
+                {
+                    return "投诉";
+                }
+                else
+                {
+                    return "建议";
+                }
+            }
+        }
+        public string Content { get; set; }
+        public string ContactPhoneNumber { get; set; }
+        public DateTime CreateTime { get; set; }
+        [NotMapped]
+        public string DateString
+        {
+            get => CreateTime.ToString("yyyy-MM-dd");
+        }
+    }
 }

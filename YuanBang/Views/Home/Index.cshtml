@@ -7,9 +7,15 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>广东圆邦物流有限公司</title>
+    <title>广东圆邦物流有限公司-官网</title>
+    <meta name=description content="广东圆邦物流有限公司,主营广东发往全国各地，精品专线，广州直达西安，呼和浩特，包头，太原，长治，晋城，辐射陕西全境，内蒙全境，山西全境" />
+    <meta name="keywords" content="广东圆邦物流,广州直达呼和浩特,广州直达包头,广州直达太原,广州直达长治,广州直达晋城,广州直达西安" />
     <link rel="stylesheet" href="~/frontend/libs/iconfont/iconfont.css" />
     <link rel="stylesheet" href="~/frontend/css/index.css" />
+    <script type="text/javascript" src="~/frontend/js/index.js"></script>
+    <script>
+        initUserAgent();
+    </script>
 </head>
 <body>
     @Html.Partial("Header")
@@ -58,32 +64,32 @@
                 <div class="app-cars">
                     <ul>
                         <li class="app-cars-item-1">
-                            <a href="/Home/RouteLine/?destination=ToXiAn">
+                            <a href="/Home/RouteLine/?destination=ToXiAn" title="广州直达西安">
                                 广州直达西安
                             </a>
                         </li>
                         <li class="app-cars-item-1">
-                            <a href="/Home/RouteLine/?destination=ToTaiYuan">
+                            <a href="/Home/RouteLine/?destination=ToTaiYuan" title="广东直达太原">
                                 广东直达太原
                             </a>
                         </li>
                         <li class="app-cars-item-1">
-                            <a href="/Home/RouteLine/?destination=ToChangZhi">
+                            <a href="/Home/RouteLine/?destination=ToChangZhi" title="广东直达长治">
                                 广东直达长治
                             </a>
                         </li>
                         <li class="app-cars-item-1">
-                            <a href="/Home/RouteLine/?destination=ToJinCheng">
+                            <a href="/Home/RouteLine/?destination=ToJinCheng" title="广东直达晋城">
                                 广东直达晋城
                             </a>
                         </li>
                         <li class="app-cars-item-1">
-                            <a href="/Home/RouteLine/?destination=ToHuShi">
+                            <a href="/Home/RouteLine/?destination=ToHuShi" title="广东直达呼市">
                                 广东直达呼市
                             </a>
                         </li>
                         <li class="app-cars-item-1">
-                            <a href="/Home/RouteLine/?destination=ToBaoTou">
+                            <a href="/Home/RouteLine/?destination=ToBaoTou" title="广东直达包头">
                                 广东直达包头
                             </a>
                         </li>
@@ -94,7 +100,7 @@
                         </li>
                         <li class="app-cars-item-3">
                             <a href="/Home/Join">
-                                招商加盟
+                                合作加盟
                             </a>
                         </li>
                     </ul>
@@ -165,7 +171,7 @@
     <script type="text/javascript" src="~/frontend/libs/superslide/jquery1.42.min.js"></script>
     <script type="text/javascript" src="~/frontend/libs/superslide/jquery.SuperSlide.2.1.1.js"></script>
     <script type="text/javascript" src="~/frontend/libs/jsrender.js"></script>
-    <script type="text/javascript" src="~/frontend/js/index.js"></script>
+    
     <script type="text/x-jsrender" id="newsItem">
         <li>
             <span class="title"><a href="/Home/NewsDetail/?ID={{:ID}}">{{:Title}}</a></span>

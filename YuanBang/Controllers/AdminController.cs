@@ -56,9 +56,20 @@ namespace YuanBang.Controllers
             Notice notice = db.Notices.Find(ID);
             return View(notice);
         }
+
+        public ActionResult Advices()
+        {
+            return View();
+        }
+
+        public ActionResult AdviceDetail(int ID)
+        {
+            Advice advice = db.Advices.Find(ID);
+            return View(advice);
+        }
         #endregion
 
-        #region 相关方法
+        #region 用户相关方法
 
         /// <summary>
         /// 登录验证方法
@@ -70,7 +81,8 @@ namespace YuanBang.Controllers
         [AllowAnonymous]
         public JsonResult Login(string userName, string password)
         {
-            try {
+            try
+            {
                 JsonData data = new JsonData();
 
                 Admin admin = db.Admins.FirstOrDefault(m => m.UserName == userName);
@@ -99,12 +111,16 @@ namespace YuanBang.Controllers
                 }
 
                 return Json(data);
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 throw new Exception(ex.Message);
             }
-            
-        }
 
+        }
+        #endregion
+
+        #region 新闻相关方法
         /// <summary>
         /// 获取新闻公告信息，分页显示
         /// </summary>
@@ -167,7 +183,8 @@ namespace YuanBang.Controllers
         {
             JsonData json = new JsonData();
 
-            try {
+            try
+            {
                 foreach (var id in IDs)
                 {
                     Notice notice = db.Notices.Find(id);
@@ -177,7 +194,9 @@ namespace YuanBang.Controllers
 
                 json.State = true;
                 json.Message = "删除成功";
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 json.State = false;
                 json.Message = ex.Message;
             }
@@ -202,11 +221,66 @@ namespace YuanBang.Controllers
                 json.State = false;
                 json.Message = ex.Message;
             }
-            
+
             return Json(json);
         }
         #endregion
 
+        #region 投诉建议相关方法
+
+        [HttpPost]
+        [AllowAnonymous]
+        public JsonResult GetAdvices(AdvicesQueryInfo queryInfo, PageInfo pageInfo)
+        {
+            var advices = from advice in db.Advices
+                          select advice;
+
+            if (queryInfo.Type != null)
+            {
+                advices = advices.Where(m => m.Type == queryInfo.Type);
+            }
+            if (queryInfo.Title != null && queryInfo.Title.Trim().Length != 0)
+            {
+                advices = advices.Where(m => m.Title.Contains(queryInfo.Title));
+            }
+
+            int count = advices.Count();
+
+            return Json(new
+            {
+                count=count,
+                list=advices.OrderByDescending(m=>m.CreateTime).ToPagedList(pageInfo.PageIndex, pageInfo.PageSize)
+            });
+        }
+
+        public JsonResult DeleteAdvices(IList<int> IDs)
+        {
+            JsonData json = new JsonData();
+
+            try
+            {
+                foreach (var id in IDs)
+                {
+                    Advice advice = db.Advices.Find(id);
+                    db.Entry(advice).State = EntityState.Deleted;
+                }
+                db.SaveChanges();
+
+                json.State = true;
+                json.Message = "删除成功";
+            }
+            catch (Exception ex)
+            {
+                json.State = false;
+                json.Message = ex.Message;
+            }
+
+            return Json(json);
+        }
+
+        #endregion
+
+        #region 字典相关方法
         [HttpPost]
         [AllowAnonymous]
         public JsonResult GetDictionaries(string dictionaryType)
@@ -215,5 +289,8 @@ namespace YuanBang.Controllers
             List<Dictionary> dictionaries = db.Dictionaries.Where(m => m.ParentID == parentID).OrderBy(m => m.DisPlayIndex).ToList();
             return Json(dictionaries);
         }
+
+        #endregion
+
     }
 }

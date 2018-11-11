@@ -1,0 +1,84 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>公司新闻</title>
+    <link rel="stylesheet" href="~/frontend/libs/iconfont/iconfont.css" />
+    <link rel="stylesheet" href="~/frontend/css/mobile/news.css" />
+</head>
+<body>
+    <header>
+        <img id="return" alt="返回" src="~/frontend/images/mobile/query/return.png" />
+        <span>新闻公告</span>
+        <img id="home" alt="主页" src="~/frontend/images/mobile/query/home.png" />
+    </header>
+    <main>
+        <ul id="news"></ul>
+    </main>
+    <script type="text/javascript" src="~/frontend/libs/jQuery/jquery.js"></script>
+    <script type="text/javascript" src="~/frontend/libs/jsrender.js"></script>
+    <script type="text/x-jsrender" id="newsItem">
+        <li>
+            <span class="title"><a href="/Mobile/NewsDetail/?ID={{:ID}}">{{:Title}}</a></span>
+            <span class="date">{{:DateString}}</span>
+        </li>
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            const init = function () {
+                //设置屏幕缩放
+                let meta = document.createElement('meta');
+                let scale = 1 / window.devicePixelRatio;
+                meta.charset = 'utf-8';
+                meta.setAttribute('content', 'width=device-width,user-scalable=no,initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + '');
+                meta.name = 'viewport';
+                document.getElementsByTagName('head')[0].appendChild(meta);
+
+            };
+
+            const AdaptScreen = function () {
+                document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+            };
+
+            init();
+            AdaptScreen();
+            $(window).resize(function () {
+                AdaptScreen();
+            });
+
+            $.ajax({
+                url: '/Admin/GetNotices',
+                data: {
+                    queryInfo: {
+                        Type: null
+                    },
+                    pageInfo: {
+                        PageIndex: 1,
+                        pageSize: 6
+                    }
+                },
+                type: 'post',
+                dataType: 'json',
+                success: function (notices) {
+                    let template = $.templates('#newsItem');
+                    let list = notices.list;
+                    list.forEach(function (notice) {
+                        $('#news').append(template.render(notice));
+                    });
+                }
+            });
+
+            //返回
+            $('#return,#home').on('click', function () {
+                window.location.href = '/Mobile/Index';
+            });
+        });
+    </script>
+</body>
+</html>

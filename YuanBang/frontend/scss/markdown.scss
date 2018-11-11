@@ -1,0 +1,63 @@
+﻿h1 {
+    color: #0077bb;
+    margin: 50px 0 20px;
+    font-size: 30px;
+}
+h2 {
+    margin: 35px 0 20px;
+    font-size: 26px;
+}
+h3 {
+    margin: 20px 0;
+    font-size: 21px;
+}
+h1, h2, h3 {
+    font-weight: 500;
+    line-height:40px;
+}
+hr {
+    border: 0;
+    border-bottom: 1px dashed #cfcfcf;
+    margin: 30px 0;
+}
+
+p {
+    font-family: 'PingFang SC,Hiragino Sans GB,Helvetica Neue,Microsoft Yahei,WenQuanYi Micro Hei,sans-serif';
+    width: 100%;
+    font-size: 16px;
+    line-height: 27px;
+    overflow: auto;
+    border-top-width: 0;
+    border-right-width: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #2C3E50;
+    text-indent: 2em;
+    margin: 0 0 20px;
+}
+
+blockquote {
+    padding: 10px 15px;
+    border-left-style: solid;
+    border-left-width: 10px;
+    margin: 0 0 20px;
+    border-color: #D6DBDF;
+    background: none repeat scroll 0 0 rgba(102,128,153,.05);
+
+    ul {
+        padding: 0;
+        margin: 0 0 10px 25px;
+
+        li {
+            line-height: 27px;
+            display: list-item;
+            color: #2C3E50;
+            list-style-type: disc;
+        }
+    }
+}
+strong {
+    font-weight: 700;
+}
+
+

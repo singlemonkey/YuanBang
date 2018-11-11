@@ -14,37 +14,37 @@
             <div class="app-form-row">
                 <div class="app-form-group">
                     <label><i class="iconfont icon-required"></i>姓名：</label>
-                    <input type="text" />
+                    <input type="text" id="SendName" />
                 </div>
                 <div class="app-form-group">
                     <label><i class="iconfont icon-required"></i>电话：</label>
-                    <input type="text" />
+                    <input type="text" id="SendPhoneNumber" />
                 </div>
             </div>
             <div class="app-form-row">
                 <div class="app-form-group app-form-group-single">
                     <label><i class="iconfont icon-required"></i>地址：</label>
-                    <input type="text" />
+                    <input type="text" id="SendAddress"/>
                 </div>
             </div>
             <div class="app-form-row">
                 <div class="app-form-group">
                     <label style="flex:0 0 100px"><i class="iconfont icon-required"></i>货物名称：</label>
-                    <input style="flex: 0 0 200px;" type="text" />
+                    <input style="flex: 0 0 200px;" type="text" id="GoodsName"/>
                 </div>
                 <div class="app-form-group">
                     <label><i class="iconfont icon-required"></i>数量：</label>
-                    <input type="text" />
+                    <input type="text" id="Amount" />
                 </div>
             </div>
             <div class="app-form-row">
                 <div class="app-form-group">
                     <label>重量：</label>
-                    <input type="text" />
+                    <input type="text"  id="Weight"/>
                 </div>
                 <div class="app-form-group">
                     <label>体积：</label>
-                    <input type="text" />
+                    <input type="text"  id="Volume"/>
                 </div>
             </div>
         </div>
@@ -57,17 +57,17 @@
             <div class="app-form-row">
                 <div class="app-form-group">
                     <label><i class="iconfont icon-required"></i>姓名：</label>
-                    <input type="text" />
+                    <input type="text" id="ReceiverName" />
                 </div>
                 <div class="app-form-group">
                     <label><i class="iconfont icon-required"></i>电话：</label>
-                    <input type="text" />
+                    <input type="text" id="ReceiverPhoneNumber" />
                 </div>
             </div>
             <div class="app-form-row">
                 <div class="app-form-group app-form-group-single">
                     <label><i class="iconfont icon-required"></i>地址：</label>
-                    <input type="text" />
+                    <input type="text" id="ReceiverAddress" />
                 </div>
             </div>
         </div>
@@ -82,4 +82,115 @@
         <img alt="立即下单" src="~/frontend/images/subpage/bill-add-btn.png" />
     </div>
 </div>
+@section scripts{
+    <script type="text/javascript">
+        const isPhone = /^([0-9]{3,4}-)?[0-9]{7,8}$/;//手机号码
+        const isMob = /^0?1[3|4|5|8][0-9]\d{8}$/;// 座机格式
+        $(function () {
+            $('.app-form-submit-btn').on('click', function () {
+                const sendName = $('#SendName').val().trim();
+                if (sendName.length === 0) {
+                    alert('请输入发货人姓名');
+                    $('#SendName').focus();
+                    return false;
+                }
+
+                const sendPhoneNumber = $('#SendPhoneNumber').val().trim();
+                if (sendPhoneNumber.length === 0) {
+                    alert('请输入发货人电话');
+                    $('#SendPhoneNumber').focus();
+                    return false;
+                } else {
+                    if (!isMob.test(sendPhoneNumber) && !isPhone.test(sendPhoneNumber)) {
+                        alert('电话格式错误');
+                        $('#SendPhoneNumber').focus();
+                        return false;
+                    }
+                }
+
+                const sendAddress = $('#SendAddress').val().trim();
+                if (sendAddress.length === 0) {
+                    alert('请输入发货地址');
+                    $('#SendAddress').focus();
+                    return false;
+                }
+
+                const goodsName = $('#GoodsName').val().trim();
+                if (goodsName.length === 0) {
+                    alert('请输入货物名称');
+                    $('#GoodsName').focus();
+                    return false;
+                }
+
+                const amount = $('#Amount').val().trim();
+                if (amount.length === 0) {
+                    alert('请输入数量');
+                    $('#Amount').focus();
+                    return false;
+                } else if (!/^[1-9]\d*$/.test(amount)) {
+                    alert('数量必须为大于0的整数');
+                    $('#Amount').focus();
+                    return false;
+                }
+
+                const weight = $('#Weight').val().trim();
+                const volume = $('#Volume').val().trim();
+
+                const receiverName = $('#ReceiverName').val().trim();
+                if (receiverName.length === 0) {
+                    alert('请输入收货人姓名');
+                    $('#ReceiverName').focus();
+                    return false;
+                }
+
+                const receiverPhoneNumber = $('#ReceiverPhoneNumber').val().trim();
+                if (receiverPhoneNumber.length === 0) {
+                    alert('请输入收货人电话');
+                    $('#ReceiverPhoneNumber').focus();
+                    return false;
+                } else {
+                    if (!isMob.test(receiverPhoneNumber) && !isPhone.test(receiverPhoneNumber)) {
+                        alert('收货人电话格式错误');
+                        $('#ReceiverPhoneNumber').focus();
+                        return false;
+                    }
+                }
+
+                const receiverAddress = $('#ReceiverAddress').val().trim();
+                if (receiverAddress.length === 0) {
+                    alert('请输入收货地址');
+                    $('#ReceiverAddress').focus();
+                    return false;
+                }
+
+                $.ajax({
+                    url: '/Home/AddOrder',
+                    type: 'post',
+                    dataType: 'json',
+                    data: JSON.stringify({
+                        SendName: sendName,
+                        SendPhoneNumber: sendPhoneNumber,
+                        SendAddress: sendAddress,
+                        GoodsName: goodsName,
+                        Amount: amount,
+                        Weight: weight,
+                        Volume: volume,
+                        ReceiverName: receiverName,
+                        ReceiverPhoneNumber: receiverPhoneNumber,
+                        ReceiverAddress: receiverAddress
+                    }),
+                    contentType: "application/json",
+                    success: function (jsonData) {
+                        if (jsonData.State) {
+                            alert('下单成功，我们将尽快与您联系');
+                            $('input').val('');
+                        } else {
+                            alert(jsonData.Message);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+}
 

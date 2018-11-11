@@ -97,20 +97,26 @@ footer {
     display: flex;
     margin-top: px2vh(20px);
     height: px2vh(100px);
-    background-color:#fff;
+    background-color: #fff;
 
     .clause {
         flex: 1;
-        text-align:center;
-        display:flex;
-        justify-content:center;
-        align-items:center;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         label {
-            font-size: px2rem(20px);
+            font-size: px2rem(24px);
             color: #396ea8;
             text-decoration: underline;
             text-align: center;
-            margin-right:px2vw(50px);
+            margin-right: px2vw(50px);
+
+            input {
+                width: px2vw(24px);
+                height: px2vw(24px);
+            }
         }
     }
 
@@ -120,7 +126,7 @@ footer {
         background-color: #074a92;
         height: 100%;
         text-align: center;
-        line-height:px2vh(100px);
-        color:#fff;
+        line-height: px2vh(100px);
+        color: #fff;
     }
 }

@@ -1,0 +1,30 @@
+﻿@model YuanBang.Models.Advice
+
+<div class="app-title">
+    <span>投诉建议内容</span>
+    @Html.ActionLink("返回", "/Advices")
+</div>
+<div class="container">
+    <div id="AdviceDetail">
+        <div class="app-notice">
+            <h4>@Html.DisplayFor(model => model.Title)</h4>
+            <div class="app-notice-tooltip">
+                <span>发布时间:@Html.DisplayFor(model => model.DateString)</span>
+            </div>
+            <div id="AdviceContent">
+
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script type="text/javascript" src="~/frontend/libs/editor/ueditor.parse.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#AdviceContent').html($.HTMLDecode('@Model.Content'));
+            uParse('#AdviceContent', {
+                rootPath: '~/frontend/libs/editor'
+            });
+        });
+    </script>
+}

@@ -52,6 +52,9 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1-beta1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
       <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
     </Reference>
@@ -110,9 +113,6 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -163,6 +163,14 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MobileController.cs" />
+    <Compile Include="frontend\libs\editor\net\App_Code\Config.cs" />
+    <Compile Include="frontend\libs\editor\net\App_Code\ConfigHandler.cs" />
+    <Compile Include="frontend\libs\editor\net\App_Code\CrawlerHandler.cs" />
+    <Compile Include="frontend\libs\editor\net\App_Code\Handler.cs" />
+    <Compile Include="frontend\libs\editor\net\App_Code\ListFileHandler.cs" />
+    <Compile Include="frontend\libs\editor\net\App_Code\NotSupportedHandler.cs" />
+    <Compile Include="frontend\libs\editor\net\App_Code\PathFormater.cs" />
+    <Compile Include="frontend\libs\editor\net\App_Code\UploadHandler.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -181,6 +189,7 @@
     <Content Include="frontend\css\index.css" />
     <Content Include="frontend\css\layout.css" />
     <Content Include="frontend\css\login.css" />
+    <Content Include="frontend\css\markdown.css" />
     <Content Include="frontend\css\menus\news.css" />
     <Content Include="frontend\css\menus\order.css" />
     <Content Include="frontend\css\menus\point.css" />
@@ -195,6 +204,7 @@
     <Content Include="frontend\css\mobile\order.css" />
     <Content Include="frontend\css\mobile\query.css" />
     <Content Include="frontend\css\mobile\route.css" />
+    <Content Include="frontend\css\mobile\service.css" />
     <Content Include="frontend\css\mobile\suggestion.css" />
     <Content Include="frontend\css\userLayout.css" />
     <Content Include="frontend\images\index\arrow-left.png" />
@@ -256,14 +266,17 @@
     <Content Include="frontend\images\mobile\query\return.png" />
     <Content Include="frontend\images\mobile\route\GzToXa.png" />
     <Content Include="frontend\images\mobile\route\map.png" />
+    <Content Include="frontend\images\subpage\aqbz.png" />
     <Content Include="frontend\images\subpage\bill-add-btn.png" />
     <Content Include="frontend\images\subpage\bill-query-btn.png" />
-    <Content Include="frontend\images\subpage\from\ToBaoTou.png" />
-    <Content Include="frontend\images\subpage\from\ToChangZhi.png" />
-    <Content Include="frontend\images\subpage\from\ToHuShi.png" />
-    <Content Include="frontend\images\subpage\from\ToJinCheng.png" />
-    <Content Include="frontend\images\subpage\from\ToTaiYuan.png" />
-    <Content Include="frontend\images\subpage\from\ToXiAn.png" />
+    <Content Include="frontend\images\subpage\bjys.png" />
+    <Content Include="frontend\images\subpage\dqhd.png" />
+    <Content Include="frontend\images\subpage\from\ToBaoTou.jpg" />
+    <Content Include="frontend\images\subpage\from\ToChangZhi.jpg" />
+    <Content Include="frontend\images\subpage\from\ToHuShi.jpg" />
+    <Content Include="frontend\images\subpage\from\ToJinCheng.jpg" />
+    <Content Include="frontend\images\subpage\from\ToTaiYuan.jpg" />
+    <Content Include="frontend\images\subpage\from\ToXiAn.jpg" />
     <Content Include="frontend\images\subpage\GZ-BT.png" />
     <Content Include="frontend\images\subpage\GZ-CZ.png" />
     <Content Include="frontend\images\subpage\GZ-HS.png" />
@@ -286,9 +299,12 @@
     <Content Include="frontend\images\subpage\points\taiyuan.jpg" />
     <Content Include="frontend\images\subpage\points\xian.jpg" />
     <Content Include="frontend\images\subpage\QR-Code.png" />
+    <Content Include="frontend\images\subpage\qt.png" />
     <Content Include="frontend\images\subpage\route.png" />
     <Content Include="frontend\images\subpage\service-point.png" />
+    <Content Include="frontend\images\subpage\smth.png" />
     <Content Include="frontend\images\subpage\suggest-submit.png" />
+    <Content Include="frontend\images\subpage\third-logistics-contact.png" />
     <Content Include="frontend\images\subpage\third-logistics.png" />
     <Content Include="frontend\images\subpage\ToBaoTou.png" />
     <Content Include="frontend\images\subpage\ToChangZhi.png" />
@@ -296,28 +312,16 @@
     <Content Include="frontend\images\subpage\ToJinCheng.png" />
     <Content Include="frontend\images\subpage\ToTaiYuan.png" />
     <Content Include="frontend\images\subpage\ToXiAn.png" />
-    <Content Include="frontend\images\subpage\to\ToBaoTou.png" />
-    <Content Include="frontend\images\subpage\to\ToChangZhi.png" />
-    <Content Include="frontend\images\subpage\to\ToHuShi.png" />
-    <Content Include="frontend\images\subpage\to\ToJinCheng.png" />
-    <Content Include="frontend\images\subpage\to\ToTaiYuan.png" />
-    <Content Include="frontend\images\subpage\to\ToXiAn.png" />
+    <Content Include="frontend\images\subpage\to\ToBaoTou.jpg" />
+    <Content Include="frontend\images\subpage\to\ToChangZhi.jpg" />
+    <Content Include="frontend\images\subpage\to\ToHuShi.jpg" />
+    <Content Include="frontend\images\subpage\to\ToJinCheng.jpg" />
+    <Content Include="frontend\images\subpage\to\ToTaiYuan.jpg" />
+    <Content Include="frontend\images\subpage\to\ToXiAn.jpg" />
     <Content Include="frontend\images\subpage\value-service.png" />
+    <Content Include="frontend\images\subpage\xsps.png" />
     <Content Include="frontend\js\app.js" />
     <Content Include="frontend\js\index.js" />
-    <Content Include="frontend\libs\editor\asp\action_config.asp" />
-    <Content Include="frontend\libs\editor\asp\action_crawler.asp" />
-    <Content Include="frontend\libs\editor\asp\action_list.asp" />
-    <Content Include="frontend\libs\editor\asp\action_upload.asp" />
-    <Content Include="frontend\libs\editor\asp\ASPJson.class.asp" />
-    <Content Include="frontend\libs\editor\asp\config.json" />
-    <Content Include="frontend\libs\editor\asp\config_loader.asp" />
-    <Content Include="frontend\libs\editor\asp\controller.asp" />
-    <Content Include="frontend\libs\editor\asp\MultiformProcessor.class.asp" />
-    <Content Include="frontend\libs\editor\asp\PathFormatter.class.asp" />
-    <Content Include="frontend\libs\editor\asp\README.md" />
-    <Content Include="frontend\libs\editor\asp\Uploader.Class.asp" />
-    <Content Include="frontend\libs\editor\asp\upload\image\20180919\15372936656147886.png" />
     <Content Include="frontend\libs\editor\dialogs\anchor\anchor.html" />
     <Content Include="frontend\libs\editor\dialogs\attachment\attachment.css" />
     <Content Include="frontend\libs\editor\dialogs\attachment\attachment.html" />
@@ -480,6 +484,10 @@
     <Content Include="frontend\libs\editor\lang\zh-cn\images\music.png" />
     <Content Include="frontend\libs\editor\lang\zh-cn\images\upload.png" />
     <Content Include="frontend\libs\editor\lang\zh-cn\zh-cn.js" />
+    <Content Include="frontend\libs\editor\net\Bin\Newtonsoft.Json.dll" />
+    <Content Include="frontend\libs\editor\net\Bin\Newtonsoft.Json.pdb" />
+    <Content Include="frontend\libs\editor\net\Bin\Newtonsoft.Json.xml" />
+    <Content Include="frontend\libs\editor\net\net.sln" />
     <Content Include="frontend\libs\editor\themes\default\css\ueditor.css" />
     <Content Include="frontend\libs\editor\themes\default\css\ueditor.min.css" />
     <Content Include="frontend\libs\editor\themes\default\dialogbase.css" />
@@ -555,14 +563,10 @@
     <Content Include="frontend\libs\editor\third-party\highcharts\themes\skies.js" />
     <Content Include="frontend\libs\editor\third-party\jquery-1.10.2.js" />
     <Content Include="frontend\libs\editor\third-party\jquery-1.10.2.min.js" />
-    <Content Include="frontend\libs\editor\third-party\jquery-1.10.2.min.map" />
     <Content Include="frontend\libs\editor\third-party\snapscreen\UEditorSnapscreen.exe" />
     <Content Include="frontend\libs\editor\third-party\SyntaxHighlighter\shCore.js" />
     <Content Include="frontend\libs\editor\third-party\SyntaxHighlighter\shCoreDefault.css" />
-    <Content Include="frontend\libs\editor\third-party\video-js\font\vjs.eot" />
     <Content Include="frontend\libs\editor\third-party\video-js\font\vjs.svg" />
-    <Content Include="frontend\libs\editor\third-party\video-js\font\vjs.ttf" />
-    <Content Include="frontend\libs\editor\third-party\video-js\font\vjs.woff" />
     <Content Include="frontend\libs\editor\third-party\video-js\video-js.css" />
     <Content Include="frontend\libs\editor\third-party\video-js\video-js.min.css" />
     <Content Include="frontend\libs\editor\third-party\video-js\video-js.swf" />
@@ -580,7 +584,6 @@
     <Content Include="frontend\libs\editor\third-party\webuploader\webuploader.min.js" />
     <Content Include="frontend\libs\editor\third-party\webuploader\webuploader.withoutimage.js" />
     <Content Include="frontend\libs\editor\third-party\webuploader\webuploader.withoutimage.min.js" />
-    <Content Include="frontend\libs\editor\third-party\xss.min.js" />
     <Content Include="frontend\libs\editor\third-party\zeroclipboard\ZeroClipboard.js" />
     <Content Include="frontend\libs\editor\third-party\zeroclipboard\ZeroClipboard.min.js" />
     <Content Include="frontend\libs\editor\third-party\zeroclipboard\ZeroClipboard.swf" />
@@ -633,6 +636,17 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="frontend\scss\common\_base.scss" />
+    <Content Include="frontend\scss\markdown.scss" />
+    <Content Include="frontend\scss\mobile\service.scss" />
+    <Content Include="frontend\libs\editor\net\config.json" />
+    <Content Include="frontend\libs\editor\net\controller.ashx" />
+    <Content Include="frontend\libs\editor\net\README.md" />
+    <Content Include="frontend\libs\editor\net\Web.config" />
+    <Content Include="frontend\libs\editor\third-party\jquery-1.10.2.min.map" />
+    <Content Include="frontend\libs\editor\third-party\video-js\font\vjs.eot" />
+    <Content Include="frontend\libs\editor\third-party\video-js\font\vjs.ttf" />
+    <Content Include="frontend\libs\editor\third-party\video-js\font\vjs.woff" />
+    <Content Include="frontend\scss\mobile\News.scss" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -688,10 +702,17 @@
     <Content Include="Views\Mobile\Contact.cshtml" />
     <Content Include="Views\Mobile\Suggestion.cshtml" />
     <Content Include="Views\Mobile\GzToXa.cshtml" />
+    <Content Include="Views\Home\Proxy.cshtml" />
+    <Content Include="Views\Home\PriceProtect.cshtml" />
+    <Content Include="Views\Home\Collection.cshtml" />
+    <Content Include="Views\Mobile\Service.cshtml" />
+    <Content Include="Views\Admin\Advices.cshtml" />
+    <Content Include="Views\Admin\AdviceDetail.cshtml" />
+    <Content Include="Views\Mobile\News.cshtml" />
+    <Content Include="Views\Mobile\NewsDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="upload\image\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -219,15 +219,20 @@ footer .clause {
   justify-content: center;
   align-items: center;
 }
-/* line 108, ../../scss/mobile/order.scss */
+/* line 109, ../../scss/mobile/order.scss */
 footer .clause label {
-  font-size: 0.26667rem;
+  font-size: 0.32rem;
   color: #396ea8;
   text-decoration: underline;
   text-align: center;
   margin-right: 6.66667vw;
 }
-/* line 117, ../../scss/mobile/order.scss */
+/* line 116, ../../scss/mobile/order.scss */
+footer .clause label input {
+  width: 3.2vw;
+  height: 3.2vw;
+}
+/* line 123, ../../scss/mobile/order.scss */
 footer #submit {
   flex: 0 0 38.66667vw;
   font-size: 0.37333rem;

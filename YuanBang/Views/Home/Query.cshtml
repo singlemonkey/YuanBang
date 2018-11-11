@@ -1,7 +1,9 @@
 ﻿
 @{
-    ViewBag.Title = "运单查询";
-    Layout = "~/Views/Shared/_UserLayoutPage.cshtml";
+                /**/
+
+                ViewBag.Title = "运单查询";
+                Layout = "~/Views/Shared/_UserLayoutPage.cshtml";
 }
 <link rel="stylesheet" href="~/frontend/css/menus/query.css" />
 <div class="app-bill-query">
@@ -22,9 +24,7 @@
                     <td>操作记录</td>
                 </tr>
             </thead>
-            <tbody>
-               
-            </tbody>
+            <tbody></tbody>
         </table>
     </div>
 </div>
@@ -34,13 +34,13 @@
     <p id="errorMessage"></p>
 </div>
 @section scripts{
-<script type="text/x-jsrender" id="orderLog">
-    <tr>
-        <td>{{:create_time}}</td>
-        <td>{{:type_show}}</td>
-        <td>{{:thing}}</td>
-    </tr>
-</script>
+    <script type="text/x-jsrender" id="orderLog">
+        <tr>
+            <td>{{:create_time}}</td>
+            <td>{{:type_show}}</td>
+            <td>{{:thing}}</td>
+        </tr>
+    </script>
     <script type="text/javascript">
         const tmpl = $('#orderLog');
         $(function () {
