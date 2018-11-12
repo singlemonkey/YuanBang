@@ -1,6 +1,6 @@
 /* line 1, ../../scss/menus/point.scss */
 .app-service-list {
-  padding: 25px 0 25px 50px;
+  padding: 5px 0 5px 50px;
 }
 /* line 4, ../../scss/menus/point.scss */
 .app-service-list .app-service-item {
@@ -17,8 +17,10 @@
   position: absolute;
   top: 20px;
   left: 0;
+  width: 249px;
+  height: 148px;
 }
-/* line 19, ../../scss/menus/point.scss */
+/* line 21, ../../scss/menus/point.scss */
 .app-service-list .app-service-item .app-service-contact {
   position: absolute;
   top: 36px;
@@ -26,13 +28,13 @@
   color: #666666;
   font-size: 16px;
 }
-/* line 27, ../../scss/menus/point.scss */
+/* line 29, ../../scss/menus/point.scss */
 .app-service-list .app-service-item .app-service-contact .app-service-address-name, .app-service-list .app-service-item .app-service-contact .app-service-contact-name {
   font-weight: 800;
   height: 34px;
   line-height: 34px;
 }
-/* line 33, ../../scss/menus/point.scss */
+/* line 35, ../../scss/menus/point.scss */
 .app-service-list .app-service-item .app-service-contact .app-service-address-value, .app-service-list .app-service-item .app-service-contact .app-service-contact-value {
   height: 28px;
   line-height: 28px;

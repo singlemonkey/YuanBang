@@ -4,11 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using YuanBang.Models;
+
 namespace YuanBang.Controllers
 {
     [AllowAnonymous]
     public class MobileController : Controller
     {
+        private YuanBangContext db = new YuanBangContext();
         // GET: Mobile
         public ActionResult Index()
         {
@@ -53,6 +56,22 @@ namespace YuanBang.Controllers
         public ActionResult GzToXa()
         {
             return View();
+        }
+
+        public ActionResult Service()
+        {
+            return View();
+        }
+
+        public ActionResult News()
+        {
+            return View();
+        }
+
+        public ActionResult NewsDetail(int ID)
+        {
+            Notice notice = db.Notices.Find(ID);
+            return View(notice);
         }
     }
 }

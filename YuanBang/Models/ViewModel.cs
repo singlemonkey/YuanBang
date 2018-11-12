@@ -24,4 +24,10 @@ namespace YuanBang.Models
         public int? Type { get; set; }
         public string Name { get; set; }
     }
+
+    public class AdvicesQueryInfo
+    {
+        public string Type { get; set; }
+        public string Title { get; set; }
+    }
 }

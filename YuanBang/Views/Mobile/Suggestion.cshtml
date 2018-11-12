@@ -48,25 +48,25 @@
     <footer>
         <ul class="link">
             <li>
-                <a>公司概述</a>
+                <a href="/Mobile/Company">公司概述</a>
             </li>
             <li>
                 <i class="iconfont icon-split-line"></i>
             </li>
             <li>
-                <a>公司新闻</a>
+                <a href="/Mobile/News">公司新闻</a>
             </li>
             <li>
                 <i class="iconfont icon-split-line"></i>
             </li>
             <li>
-                <a>联系我们</a>
+                <a href="/Mobile/Contact">联系我们</a>
             </li>
             <li>
                 <i class="iconfont icon-split-line"></i>
             </li>
             <li>
-                <a>意见反馈</a>
+                <a href="/Mobile/Suggestion">意见反馈</a>
             </li>
         </ul>
         <ul class="web-info">
@@ -88,7 +88,9 @@
         </ul>
     </footer>
     <script type="text/javascript" src="~/frontend/libs/jQuery/jquery.js"></script>
-    <script>
+    <script type="text/javascript">
+        const isPhone = /^([0-9]{3,4}-)?[0-9]{7,8}$/;//手机号码
+        const isMob = /^0?1[3|4|5|8][0-9]\d{8}$/;// 座机格式
         $(function () {
             const init = function () {
                 //设置屏幕缩放
@@ -114,6 +116,53 @@
             //返回
             $('#return,#home').on('click', function () {
                 window.location.href = '/Mobile/Index';
+            });
+
+            $('#submit').on('click', function () {
+                const suggestionTitle = $('#title').val().trim();
+                const suggestionContent = $('#content').val().trim();
+                const suggestionPhoneNumber = $('#contact').val().trim();
+
+
+                if (suggestionTitle.length === 0) {
+                    alert('请输入意见标题');
+                    $('#SuggestionTitle').focus();
+                    return false;
+                } else if (suggestionContent.length === 0) {
+                    alert('请输入意见内容');
+                    $('#SuggestionContent').focus();
+                    return false;
+                } else {
+                    if (suggestionPhoneNumber.length !== 0) {
+                        if (!isMob.test(suggestionPhoneNumber) && !isPhone.test(suggestionPhoneNumber)) {
+                            alert('联系方式格式错误');
+                            $('#SuggestionPhoneNumber').focus();
+                            return false;
+                        }
+                    }
+                    $.ajax({
+                        url: '/Home/AddAdvice',
+                        type: 'post',
+                        dataType: 'json',
+                        contentType: "application/json",
+                        data: JSON.stringify({
+                            Title: suggestionTitle,
+                            Type: 'suggestion',
+                            Content: suggestionContent,
+                            ContactPhoneNumber: suggestionPhoneNumber
+                        }),
+                        success: function (jsonData) {
+                            if (jsonData.State) {
+                                alert('提交成功，感谢您的反馈！');
+                                $('input').val('');
+                                $('textarea').val('');
+                            } else {
+                                alert(jsonData.Message);
+                            }
+                        }
+                    });
+
+                }
             });
         });
     </script>

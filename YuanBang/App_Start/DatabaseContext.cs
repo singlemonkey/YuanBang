@@ -18,6 +18,8 @@ namespace YuanBang
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Dictionary> Dictionaries { get; set; }
         public DbSet<Notice> Notices { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Advice> Advices { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -28,7 +30,7 @@ namespace YuanBang
     /// <summary>
     /// 初始化数据库数据
     /// </summary>
-    public class ModelInitializer :DropCreateDatabaseIfModelChanges<YuanBangContext>
+    public class ModelInitializer : CreateDatabaseIfNotExists<YuanBangContext>
     {
         protected override void Seed(YuanBangContext context)
         {

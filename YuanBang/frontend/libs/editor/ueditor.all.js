@@ -1,7 +1,7 @@
 /*!
  * UEditor
  * version: ueditor
- * build: Wed Aug 10 2016 11:06:23 GMT+0800 (CST)
+ * build: Thu May 29 2014 16:48:12 GMT+0800 (中国标准时间)
  */
 
 (function(){
@@ -766,24 +766,6 @@ var utils = UE.utils = {
 
         }) : '';
     },
-    /**
-     * 将url中的html字符转义， 仅转义  ', ", <, > 四个字符
-     * @param  { String } str 需要转义的字符串
-     * @param  { RegExp } reg 自定义的正则
-     * @return { String }     转义后的字符串
-     */
-    unhtmlForUrl:function (str, reg) {
-        return str ? str.replace(reg || /[<">']/g, function (a) {
-            return {
-                '<':'&lt;',
-                '&':'&amp;',
-                '"':'&quot;',
-                '>':'&gt;',
-                "'":'&#39;'
-            }[a]
-
-        }) : '';
-    },
 
     /**
      * 将str中的转义字符还原成html字符
@@ -816,7 +798,7 @@ var utils = UE.utils = {
 
     /**
      * 将css样式转换为驼峰的形式
-     * @method cssStylemStyle
+     * @method cssStyleToDomStyle
      * @param { String } cssName 需要转换的css样式名
      * @return { String } 转换成驼峰形式后的css样式名
      * @example
@@ -825,11 +807,11 @@ var utils = UE.utils = {
      * var str = 'border-top';
      *
      * //output: borderTop
-     * console.log( UE.utils.cssStylemStyle( str ) );
+     * console.log( UE.utils.cssStyleToDomStyle( str ) );
      *
      * ```
      */
-    cssStylemStyle:function () {
+    cssStyleToDomStyle:function () {
         var test = document.createElement('div').style,
             cache = {
                 'float':test.cssFloat != undefined ? 'cssFloat' : test.styleFloat != undefined ? 'styleFloat' : 'float'
@@ -1500,7 +1482,6 @@ utils.each(['String', 'Function', 'Array', 'Number', 'RegExp', 'Object', 'Date']
         return Object.prototype.toString.apply(obj) == '[object ' + v + ']';
     }
 });
-
 
 // core/EventBase.js
 /**
@@ -3004,7 +2985,7 @@ var domUtils = dom.domUtils = {
                     if (style) {
                         style = style.split(';');
                         for (var j = 0, s; s = style[j++];) {
-                            ci.style[utils.cssStylemStyle(s.split(':')[0])] = s.split(':')[1];
+                            ci.style[utils.cssStyleToDomStyle(s.split(':')[0])] = s.split(':')[1];
                         }
                     }
                 }
@@ -3387,7 +3368,7 @@ var domUtils = dom.domUtils = {
         try {
             var value = domUtils.getStyle(element, styleName) ||
                 (window.getComputedStyle ? domUtils.getWindow(element).getComputedStyle(element, '').getPropertyValue(styleName) :
-                    ( element.currentStyle || element.style )[utils.cssStylemStyle(styleName)]);
+                    ( element.currentStyle || element.style )[utils.cssStyleToDomStyle(styleName)]);
 
         } catch (e) {
             return "";
@@ -3601,7 +3582,7 @@ var domUtils = dom.domUtils = {
             if (element.style.removeProperty) {
                 element.style.removeProperty (name);
             }else {
-                element.style.removeAttribute (utils.cssStylemStyle(name));
+                element.style.removeAttribute (utils.cssStyleToDomStyle(name));
             }
         }
 
@@ -3635,7 +3616,7 @@ var domUtils = dom.domUtils = {
      * ```
      */
     getStyle:function (element, name) {
-        var value = element.style[ utils.cssStylemStyle(name) ];
+        var value = element.style[ utils.cssStyleToDomStyle(name) ];
         return utils.fixColor(name, value);
     },
     /**
@@ -3663,7 +3644,7 @@ var domUtils = dom.domUtils = {
      * ```
      */
     setStyle:function (element, name, value) {
-        element.style[utils.cssStylemStyle(name)] = value;
+        element.style[utils.cssStyleToDomStyle(name)] = value;
         if(!utils.trim(element.style.cssText)){
             this.removeAttributes(element,'style')
         }
@@ -6443,7 +6424,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                 start, tmp, parent;
             if ( browser.ie9below ) {
                 if ( !range ) {
-                    // 给第一个值可能会有问题
+                    //todo 给第一个值可能会有问题
                     return this.document.body.firstChild;
                 }
                 //control元素
@@ -9379,7 +9360,7 @@ var filterWord = UE.filterWord = function () {
  */
 
 var htmlparser = UE.htmlparser = function (htmlstr,ignoreBlank) {
-    // 原来的方式  [^"'<>\/] 有\/就不能配对上 <TD vAlign=top background=../AAA.JPG> 这样的标签了
+    //todo 原来的方式  [^"'<>\/] 有\/就不能配对上 <TD vAlign=top background=../AAA.JPG> 这样的标签了
     //先去掉了，加上的原因忘了，这里先记录
     var re_tag = /<(?:(?:\/([^>]+)>)|(?:!--([\S|\s]*?)-->)|(?:([^\s\/<>]+)\s*((?:(?:"[^"]*")|(?:'[^']*')|[^"'<>])*)\/?>))/g,
         re_attr = /([\w\-:.]+)(?:(?:\s*=\s*(?:(?:"([^"]*)")|(?:'([^']*)')|([^\s>]+)))|(?=\s|$))/g;
@@ -9551,7 +9532,6 @@ var htmlparser = UE.htmlparser = function (htmlstr,ignoreBlank) {
     return root;
 };
 
-
 // core/filternode.js
 /**
  * UE过滤节点的静态方法
@@ -9615,7 +9595,7 @@ var filterNode = UE.filterNode = function () {
                            var tmpAttrs = {},tmpVal;
                            for(var a in attrs){
                                tmpVal = node.getAttr(a);
-                               // 只先对style单独处理
+                               //todo 只先对style单独处理
                                if(a == 'style' && utils.isArray(attrs[a])){
                                    var tmpCssStyle = [];
                                    utils.each(attrs[a],function(v){
@@ -10011,7 +9991,7 @@ UE.plugins['defaultfilter'] = function () {
                         }
                         break;
                     case 'img':
-                        // base64暂时去掉，后边做远程图片上传后，干掉这个
+                        //todo base64暂时去掉，后边做远程图片上传后，干掉这个
                         if (val = node.getAttr('src')) {
                             if (/^data:/.test(val)) {
                                 node.parentNode.removeChild(node);
@@ -11121,29 +11101,6 @@ UE.commands['insertimage'] = {
             return;
         }
 
-        function unhtmlData(imgCi) {
-
-            utils.each('width,height,border,hspace,vspace'.split(','), function (item) {
-
-                if (imgCi[item]) {
-                    imgCi[item] = parseInt(imgCi[item], 10) || 0;
-                }
-            });
-
-            utils.each('src,_src'.split(','), function (item) {
-
-                if (imgCi[item]) {
-                    imgCi[item] = utils.unhtmlForUrl(imgCi[item]);
-                }
-            });
-            utils.each('title,alt'.split(','), function (item) {
-
-                if (imgCi[item]) {
-                    imgCi[item] = utils.unhtml(imgCi[item]);
-                }
-            });
-        }
-
         if (img && /img/i.test(img.tagName) && (img.className != "edui-faked-video" || img.className.indexOf("edui-upload-video")!=-1) && !img.getAttribute("word_img")) {
             var first = opt.shift();
             var floatStyle = first['floatStyle'];
@@ -11162,8 +11119,6 @@ UE.commands['insertimage'] = {
             var html = [], str = '', ci;
             ci = opt[0];
             if (opt.length == 1) {
-                unhtmlData(ci);
-
                 str = '<img src="' + ci.src + '" ' + (ci._src ? ' _src="' + ci._src + '" ' : '') +
                     (ci.width ? 'width="' + ci.width + '" ' : '') +
                     (ci.height ? ' height="' + ci.height + '" ' : '') +
@@ -11180,7 +11135,6 @@ UE.commands['insertimage'] = {
 
             } else {
                 for (var i = 0; ci = opt[i++];) {
-                    unhtmlData(ci);
                     str = '<p ' + (ci['floatStyle'] == 'center' ? 'style="text-align: center" ' : '') + '><img src="' + ci.src + '" ' +
                         (ci.width ? 'width="' + ci.width + '" ' : '') + (ci._src ? ' _src="' + ci._src + '" ' : '') +
                         (ci.height ? ' height="' + ci.height + '" ' : '') +
@@ -11197,7 +11151,6 @@ UE.commands['insertimage'] = {
         me.fireEvent('afterinsertimage', opt)
     }
 };
-
 
 // plugins/justify.js
 /**
@@ -15722,7 +15675,7 @@ UE.plugins['list'] = function () {
             }
         }
         //只以开始为准
-        // 后续改进
+        //todo 后续改进
         var li = domUtils.findParentByTagName(range.startContainer, 'li', true);
         if(li){
 
@@ -16186,7 +16139,7 @@ UE.plugins['list'] = function () {
         textarea: function (editor, holder){
             var textarea = holder.ownerDocument.createElement('textarea');
             textarea.style.cssText = 'position:absolute;resize:none;width:100%;height:100%;border:0;padding:0;margin:0;overflow-y:auto;';
-            // : IE下只有onresize属性可用... 很纠结
+            // todo: IE下只有onresize属性可用... 很纠结
             if (browser.ie && browser.version < 8) {
                 textarea.style.width = holder.offsetWidth + 'px';
                 textarea.style.height = holder.offsetHeight + 'px';
@@ -16210,14 +16163,14 @@ UE.plugins['list'] = function () {
                         range.collapse(true);
                         range.select();
                     } else {
-                        //: chrome下无法设置焦点
+                        //todo: chrome下无法设置焦点
                         textarea.setSelectionRange(0, 0);
                         textarea.focus();
                     }
                 },
                 dispose: function (){
                     holder.removeChild(textarea);
-                    // 
+                    // todo
                     holder.onresize = null;
                     textarea = null;
                     holder = null;
@@ -17151,7 +17104,7 @@ UE.plugins['fiximgclick'] = (function () {
                                 me.selection.getRange().selectNode(target).select();
                             }
                         });
-                        // 有iframe的情况，mousedown不能往下传。。
+                        //TODO 有iframe的情况，mousedown不能往下传。。
                         domUtils.on(imageScale.resizer, 'mousedown', function (e) {
                             me.selection.getNative().removeAllRanges();
                             var ele = e.target || e.srcElement;
@@ -17642,14 +17595,6 @@ UE.plugins['video'] = function (){
      * @param addParagraph  是否需要添加P 标签
      */
     function creatInsertStr(url,width,height,id,align,classname,type){
-
-        url = utils.unhtmlForUrl(url);
-        align = utils.unhtml(align);
-        classname = utils.unhtml(classname);
-
-        width = parseInt(width, 10) || 0;
-        height = parseInt(height, 10) || 0;
-
         var str;
         switch (type){
             case 'image':
@@ -17784,7 +17729,6 @@ UE.plugins['video'] = function (){
         }
     };
 };
-
 
 // plugins/table.core.js
 /**
@@ -18102,7 +18046,7 @@ UE.plugins['video'] = function (){
                         if (tmpEnd > end && flag) break;
                         if (cell == tmpCell || end == tmpEnd) {
                             //只获取单一的单元格
-                            // 仅获取单一单元格在特定情况下会造成returns为空，从而影响后续的拖拽实现，修正这个。需考虑性能
+                            //todo 仅获取单一单元格在特定情况下会造成returns为空，从而影响后续的拖拽实现，修正这个。需考虑性能
                             if (tmpCell[flag ? "colSpan" : "rowSpan"] == 1) {
                                 returns.push(tmpCell);
                             }
@@ -18991,7 +18935,7 @@ UE.plugins['video'] = function (){
                 tableWidth = firstParentBlock.offsetWidth,
                 tdWidth = Math.floor(tableWidth / opt.numCols - defaultValue.tdPadding * 2 - defaultValue.tdBorder);
 
-            //其他属性
+            //todo其他属性
             !opt.tdvalign && (opt.tdvalign = me.options.tdvalign);
             me.execCommand("inserthtml", createTable(opt, tdWidth));
         }
@@ -19801,7 +19745,7 @@ UE.plugins['video'] = function (){
             if (!table) return -1;
             var interlaced = table.getAttribute("interlaced");
             if (cmd == "interlacetable") {
-                // 待定
+                //TODO 待定
                 //是否需要待定，如果设置，则命令只能单次执行成功，但反射具备toggle效果；否则可以覆盖前次命令，但反射将不存在toggle效果
                 return (interlaced === "enabled") ? -1 : 0;
             } else {
@@ -19865,7 +19809,6 @@ UE.plugins['video'] = function (){
         }
     }
 })();
-
 
 // plugins/table.action.js
 /**
@@ -19940,7 +19883,7 @@ UE.plugins['table'] = function () {
         dragTd = null;    //发生拖动的目标td
 
     var mousedown = false,
-    // 判断混乱模式
+    //todo 判断混乱模式
         needIEHack = true;
 
     me.setOpt({
@@ -20174,7 +20117,7 @@ UE.plugins['table'] = function () {
                             for (var j = 0, cj; cj = ci[j++];) {
                                 if (td) {
                                     td.innerHTML = cj.innerHTML;
-                                    // 定制处理
+                                    //todo 定制处理
                                     cj.getAttribute('width') && td.setAttribute('width', cj.getAttribute('width'));
                                     cj.getAttribute('vAlign') && td.setAttribute('vAlign', cj.getAttribute('vAlign'));
                                     cj.getAttribute('align') && td.setAttribute('align', cj.getAttribute('align'));
@@ -20285,7 +20228,7 @@ UE.plugins['table'] = function () {
 
 
         //内容变化时触发索引更新
-        // 可否考虑标记检测，如果不涉及表格的变化就不进行索引重建和更新
+        //todo 可否考虑标记检测，如果不涉及表格的变化就不进行索引重建和更新
         me.addListener("contentchange", function () {
             var me = this;
             //尽可能排除一些不需要更新的状况
@@ -22338,7 +22281,7 @@ UE.plugins['contextmenu'] = function () {
                             }
                         }
                         contextItems.push( {
-                            // 修正成自动获取方式
+                            //todo 修正成自动获取方式
                             'label':getLabel(),
                             className:'edui-for-' + item.icon,
                             'subMenu':{
@@ -24808,88 +24751,6 @@ UE.plugin.register('insertfile', function (){
 
 
 
-// plugins/xssFilter.js
-/**
- * @file xssFilter.js
- * @desc xss过滤器
- * @author robbenmu
- */
-
-UE.plugins.xssFilter = function() {
-
-	var config = UEDITOR_CONFIG;
-	var whitList = config.whitList;
-
-	function filter(node) {
-
-		var tagName = node.tagName;
-		var attrs = node.attrs;
-
-		if (!whitList.hasOwnProperty(tagName)) {
-			node.parentNode.removeChild(node);
-			return false;
-		}
-
-		UE.utils.each(attrs, function (val, key) {
-
-			if (whitList[tagName].indexOf(key) === -1) {
-				node.setAttr(key);
-			}
-		});
-	}
-
-	// 添加inserthtml\paste等操作用的过滤规则
-	if (whitList && config.xssFilterRules) {
-		this.options.filterRules = function () {
-
-			var result = {};
-
-			UE.utils.each(whitList, function(val, key) {
-				result[key] = function (node) {
-					return filter(node);
-				};
-			});
-
-			return result;
-		}();
-	}
-
-	var tagList = [];
-
-	UE.utils.each(whitList, function (val, key) {
-		tagList.push(key);
-	});
-
-	// 添加input过滤规则
-	//
-	if (whitList && config.inputXssFilter) {
-		this.addInputRule(function (root) {
-
-			root.traversal(function(node) {
-				if (node.type !== 'element') {
-					return false;
-				}
-				filter(node);
-			});
-		});
-	}
-	// 添加output过滤规则
-	//
-	if (whitList && config.outputXssFilter) {
-		this.addOutputRule(function (root) {
-
-			root.traversal(function(node) {
-				if (node.type !== 'element') {
-					return false;
-				}
-				filter(node);
-			});
-		});
-	}
-
-};
-
-
 // ui/ui.js
 var baidu = baidu || {};
 baidu.editor = baidu.editor || {};
@@ -26833,7 +26694,7 @@ UE.ui = baidu.editor.ui = {};
 ///import ui/menu.js
 ///import ui/splitbutton.js
 (function (){
-    // : menu和item提成通用list
+    // todo: menu和item提成通用list
     var utils = baidu.editor.utils,
         uiUtils = baidu.editor.ui.uiUtils,
         Menu = baidu.editor.ui.Menu,
@@ -27163,7 +27024,7 @@ UE.ui = baidu.editor.ui = {};
                 '</div></div></div>';
         },
         postRender: function (){
-            // : 保持居中/记住上次关闭位置选项
+            // todo: 保持居中/记住上次关闭位置选项
             if (!this.modalMask.getDom()) {
                 this.modalMask.render();
                 this.modalMask.hide();
@@ -27957,7 +27818,7 @@ UE.ui = baidu.editor.ui = {};
     for (var p in dialogBtns) {
         (function (type, vals) {
             for (var i = 0, ci; ci = vals[i++];) {
-                // opera下存在问题
+                //todo opera下存在问题
                 if (browser.opera && ci === "searchreplace") {
                     continue;
                 }
@@ -28413,7 +28274,7 @@ UE.ui = baidu.editor.ui = {};
         if (!val.length)return;
         for (var i = 0, ci, items = []; ci = val[i++];) {
             items.push({
-                //:写死了
+                //todo:写死了
                 label:ci,
                 value:ci,
                 theme:editor.options.theme,
@@ -28899,7 +28760,7 @@ UE.ui = baidu.editor.ui = {};
                                     '<span onclick=$$._onRemoveButtonClick(\'anchor\') class="edui-clickable">' + editor.getLang("delete") + '</span></nobr>');
                         }
                         if (img.getAttribute("word_img")) {
-                            // 放到dialog去做查询
+                            //todo 放到dialog去做查询
                             editor.word_img = [img.getAttribute("word_img")];
                             dialogName = "wordimageDialog"
                         }
@@ -29415,7 +29276,7 @@ UE.ui = baidu.editor.ui = {};
                         ci.style.display =  displays[i]
                     }
                     //编辑器最外容器设置了高度，会导致，编辑器不占位
-                    // 先去掉，没有找到原因
+                    //todo 先去掉，没有找到原因
                     if(holder.style.height){
                         holder.style.height = ''
                     }
