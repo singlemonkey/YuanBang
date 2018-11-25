@@ -46,8 +46,7 @@ namespace YuanBang
 
             var admins = new List<Admin>
             {
-                new Admin {ID = 1,UserName = "admin",Password = "123456"},
-                new Admin {ID = 2,UserName = "superadmin",Password = "123456"}
+                new Admin {ID = 1,UserName = "admin",Password = "123456",ErrorTimes=0}
             };
             admins.ForEach(a => context.Admins.Add(a));
             context.SaveChanges();

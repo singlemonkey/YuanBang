@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewBag.Title = "Advices";
+}
+<div class="app-title">
+    <span>订单管理</span>
+</div>
+<div class="container">
+    <div id="OrderManage">
+        <div class="app-table-content">
+            <div class="app-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:40px;text-align:center;">
+                                <input type="checkbox" class="selectAll" />
+                            </th>
+                            <th style="width:80px">
+                                寄件人姓名
+                            </th>
+                            <th style="width:80px">
+                                寄件人电话
+                            </th>
+                            <th style="width:140px">
+                                寄件地址
+                            </th>
+                            <th style="width:140px">
+                                收件人姓名
+                            </th>
+                            <th style="width:140px">
+                                收件人电话
+                            </th>
+                            <th style="width:140px">
+                                收货地址
+                            </th>
+                            <th style="width:140px">
+                                货物名称
+                            </th>
+                            <th style="width:140px">
+                                数量
+                            </th>
+                            <th style="width:140px">
+                                重量
+                            </th>
+                            <th style="width:140px">
+                                体积
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="OrdersTable"></tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="11">
+                                <ul class="app-table-nav">
+                                    <li><a href="javascript:;" id="delete" class="delete">删除</a></li>
+                                </ul>
+                                <ul class="app-table-pages"></ul>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script type="text/x-jsrender" id="row">
+        <tr>
+            <td style="width:40px;text-align:center">
+                <input type="checkbox" class="selectItem" data-id="{{:ID}}" />
+            </td>
+            <td>{{:SendName}}</td>
+            <td>{{:SendPhoneNumber}}</td>
+            <td title="{{:SendAddress}}">{{:SendAddress}}</td>
+            <td>{{:ReceiverName}}</td>
+            <td>{{:ReceiverPhoneNumber}}</td>
+            <td title="{{:ReceiverAddress}}">{{:ReceiverAddress}}</td>
+            <td>{{:GoodsName}}</td>
+            <td>{{:Amount}}</td>
+            <td>{{:Weight}}</td>
+            <td>{{:Volume}}</td>
+        </tr>
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            //初始化表格
+            let table = new Table({
+                container: '#OrdersTable',
+                url: '/Admin/GetOrders',
+                rows: 10,
+                template: $.templates("#row")
+            });
+            table.query();
+
+            //加载新闻分类
+
+            $('#delete').on('click', function () {
+                const IDs = table.getSelect();
+                if (IDs.length !== 0) {
+                    $.ajax({
+                        url: '/Admin/DeleteOrders',
+                        type: 'post',
+                        dataType: 'json',
+                        data: {
+                            IDs: IDs
+                        },
+                        success: function (data) {
+                            if (data.State) {
+                                table.query();
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}

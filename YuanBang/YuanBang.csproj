@@ -201,6 +201,7 @@
     <Content Include="frontend\css\mobile\contact.css" />
     <Content Include="frontend\css\mobile\index.css" />
     <Content Include="frontend\css\mobile\logistics.css" />
+    <Content Include="frontend\css\mobile\News.css" />
     <Content Include="frontend\css\mobile\order.css" />
     <Content Include="frontend\css\mobile\query.css" />
     <Content Include="frontend\css\mobile\route.css" />
@@ -257,6 +258,9 @@
     <Content Include="frontend\images\mobile\index\service-phone.png" />
     <Content Include="frontend\images\mobile\index\site.png" />
     <Content Include="frontend\images\mobile\index\slide.png" />
+    <Content Include="frontend\images\mobile\index\slide1.png" />
+    <Content Include="frontend\images\mobile\index\slide2.png" />
+    <Content Include="frontend\images\mobile\index\slide3.png" />
     <Content Include="frontend\images\mobile\logistics\logistics.png" />
     <Content Include="frontend\images\mobile\logistics\phone.png" />
     <Content Include="frontend\images\mobile\query\circle-active.png" />
@@ -322,6 +326,24 @@
     <Content Include="frontend\images\subpage\xsps.png" />
     <Content Include="frontend\js\app.js" />
     <Content Include="frontend\js\index.js" />
+    <Content Include="frontend\libs\404\css\ie8.css" />
+    <Content Include="frontend\libs\404\css\main.css" />
+    <Content Include="frontend\libs\404\css\tipsy.css" />
+    <Content Include="frontend\libs\404\font\sing-webfont.svg" />
+    <Content Include="frontend\libs\404\images\404.png" />
+    <Content Include="frontend\libs\404\images\bubble.png" />
+    <Content Include="frontend\libs\404\images\cat.png" />
+    <Content Include="frontend\libs\404\images\cookie.png" />
+    <Content Include="frontend\libs\404\images\dog.png" />
+    <Content Include="frontend\libs\404\images\planet.png" />
+    <Content Include="frontend\libs\404\images\search.png" />
+    <Content Include="frontend\libs\404\images\sky-background.png" />
+    <Content Include="frontend\libs\404\images\sky-shine.jpg" />
+    <Content Include="frontend\libs\404\images\tipsy.gif" />
+    <Content Include="frontend\libs\404\images\universal-preloader.gif" />
+    <Content Include="frontend\libs\404\scripts\custom-scripts.js" />
+    <Content Include="frontend\libs\404\scripts\jquery-1.7.2.min.js" />
+    <Content Include="frontend\libs\404\scripts\jquery.tipsy.js" />
     <Content Include="frontend\libs\editor\dialogs\anchor\anchor.html" />
     <Content Include="frontend\libs\editor\dialogs\attachment\attachment.css" />
     <Content Include="frontend\libs\editor\dialogs\attachment\attachment.html" />
@@ -484,9 +506,6 @@
     <Content Include="frontend\libs\editor\lang\zh-cn\images\music.png" />
     <Content Include="frontend\libs\editor\lang\zh-cn\images\upload.png" />
     <Content Include="frontend\libs\editor\lang\zh-cn\zh-cn.js" />
-    <Content Include="frontend\libs\editor\net\Bin\Newtonsoft.Json.dll" />
-    <Content Include="frontend\libs\editor\net\Bin\Newtonsoft.Json.pdb" />
-    <Content Include="frontend\libs\editor\net\Bin\Newtonsoft.Json.xml" />
     <Content Include="frontend\libs\editor\net\net.sln" />
     <Content Include="frontend\libs\editor\themes\default\css\ueditor.css" />
     <Content Include="frontend\libs\editor\themes\default\css\ueditor.min.css" />
@@ -647,6 +666,11 @@
     <Content Include="frontend\libs\editor\third-party\video-js\font\vjs.ttf" />
     <Content Include="frontend\libs\editor\third-party\video-js\font\vjs.woff" />
     <Content Include="frontend\scss\mobile\News.scss" />
+    <Content Include="frontend\libs\404\font\sing-webfont.eot" />
+    <Content Include="frontend\libs\404\font\sing-webfont.ttf" />
+    <Content Include="frontend\libs\404\font\sing-webfont.woff" />
+    <Content Include="frontend\libs\404\font\sing-webfont_162a16fe.eot" />
+    <Content Include="frontend\libs\404\images\Thumbs.db" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -710,9 +734,13 @@
     <Content Include="Views\Admin\AdviceDetail.cshtml" />
     <Content Include="Views\Mobile\News.cshtml" />
     <Content Include="Views\Mobile\NewsDetail.cshtml" />
+    <Content Include="Views\Admin\Orders.cshtml" />
+    <Content Include="Views\Home\NotFound.cshtml" />
+    <Content Include="Views\Admin\Password.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="frontend\libs\editor\net\Bin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

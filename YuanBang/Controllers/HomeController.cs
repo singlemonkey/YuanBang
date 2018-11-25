@@ -76,6 +76,10 @@ namespace YuanBang.Controllers
         public ActionResult NewsDetail(int ID)
         {
             Notice notice = db.Notices.Find(ID);
+            if (notice == null)
+            {
+                return View("NotFound");
+            }
             return View(notice);
         }
 
@@ -103,6 +107,11 @@ namespace YuanBang.Controllers
         }
 
         public ActionResult Collection()
+        {
+            return View();
+        }
+
+        public ActionResult NotFound()
         {
             return View();
         }
