@@ -37,8 +37,8 @@ main {
     }
 
     ul {
-        padding: px2vh(65px) px2vw(50px);
-        background-color:#fff;
+        padding: px2vh(65px) px2vw(20px);
+        background-color: #fff;
 
         li {
             display: flex;
@@ -53,7 +53,7 @@ main {
             }
 
             label {
-                flex: 0 0 px2vw(100px);
+                flex: 0 0 px2vw(120px);
                 text-align: center;
             }
 
@@ -63,11 +63,21 @@ main {
                 color: #20a1f6;
             }
 
-            .address{
-                flex:1;
-                font-weight:500;
-                margin-top:px2vh(36px);
-                line-height:px2vh(36px);
+            &.contact-address {
+                height: px2vh(90px);
+            }
+
+            .address {
+                flex: 1;
+                font-weight: 500;
+                margin-top: px2vh(36px);
+                line-height: px2vh(36px);
+                display:flex;
+                flex-direction:column;
+
+                a {
+                    flex:1;
+                }
             }
         }
     }

@@ -13,6 +13,9 @@ namespace YuanBang.Models
         public int ID { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
+
+        public int ErrorTimes { get; set; }
+        public DateTime? FirstDateTime { get; set; }
     }
 
     public class Dictionary

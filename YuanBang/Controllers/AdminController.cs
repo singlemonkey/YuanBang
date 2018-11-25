@@ -25,6 +25,11 @@ namespace YuanBang.Controllers
             return View();
         }
 
+        public ActionResult Password()
+        {
+            return View();
+        }
+
         /// <summary>
         /// 后台管理首页
         /// </summary>
@@ -67,6 +72,11 @@ namespace YuanBang.Controllers
             Advice advice = db.Advices.Find(ID);
             return View(advice);
         }
+
+        public ActionResult Orders()
+        {
+            return View();
+        }
         #endregion
 
         #region 用户相关方法
@@ -94,20 +104,52 @@ namespace YuanBang.Controllers
                 }
                 else
                 {
-                    if (admin.Password != password)
+                    if (admin.ErrorTimes >= 10)
                     {
-                        //如果密码不正确
+                        //如果账号不存在
                         data.State = false;
-                        data.Message = "密码不正确";
+                        data.Message = "账号输错密码过多已被自动锁定，请稍后重试";
                     }
                     else
                     {
-                        //保存session信息
-                        data.State = true;
-                        data.Message = "登陆成功";
+                        if (admin.Password != password)
+                        {
+                            //如果密码不正确
+                            data.State = false;
+                            data.Message = "密码不正确";
 
-                        Session["Admin"] = admin.UserName;
+                            if (admin.FirstDateTime == null)
+                            {
+                                admin.FirstDateTime = DateTime.Now;
+                            }
+                            else
+                            {
+                                DateTime prevDateTime = DateTime.Parse(admin.FirstDateTime.ToString());
+                                //如果没有超过十分钟
+                                if (prevDateTime.AddMinutes(10) > DateTime.Now)
+                                {
+                                    admin.ErrorTimes += 1;
+                                    db.Entry(admin).State = EntityState.Modified;
+                                }
+                                else
+                                {
+                                    admin.FirstDateTime = DateTime.Now;
+                                    admin.ErrorTimes = 1;
+                                }
+
+                            }
+                            db.SaveChanges();
+                        }
+                        else
+                        {
+                            //保存session信息
+                            data.State = true;
+                            data.Message = "登陆成功";
+
+                            Session["Admin"] = admin.UserName;
+                        }
                     }
+
                 }
 
                 return Json(data);
@@ -117,6 +159,36 @@ namespace YuanBang.Controllers
                 throw new Exception(ex.Message);
             }
 
+        }
+
+        public JsonResult ModifyPassword(string prevPassword,string newPassword)
+        {
+            JsonData json = new JsonData();
+            try
+            {
+                string userName = Session["Admin"].ToString();
+                Admin admin = db.Admins.Single(m => m.UserName == userName);
+                if (admin.Password != prevPassword)
+                {
+                    json.State = false;
+                    json.Message = "原密码输入错误，请重新输入";
+                }
+                else
+                {
+                    admin.Password = newPassword;
+                    db.Entry(admin).State = EntityState.Modified;
+                    db.SaveChanges();
+
+                    json.State = true;
+                    json.Message = "修改成功";
+                }
+            }
+            catch (Exception ex)
+            {
+                json.State = false;
+                json.Message = ex.Message;
+            }
+            return Json(json,JsonRequestBehavior.AllowGet);
         }
         #endregion
 
@@ -248,8 +320,8 @@ namespace YuanBang.Controllers
 
             return Json(new
             {
-                count=count,
-                list=advices.OrderByDescending(m=>m.CreateTime).ToPagedList(pageInfo.PageIndex, pageInfo.PageSize)
+                count = count,
+                list = advices.OrderByDescending(m => m.CreateTime).ToPagedList(pageInfo.PageIndex, pageInfo.PageSize)
             });
         }
 
@@ -263,6 +335,51 @@ namespace YuanBang.Controllers
                 {
                     Advice advice = db.Advices.Find(id);
                     db.Entry(advice).State = EntityState.Deleted;
+                }
+                db.SaveChanges();
+
+                json.State = true;
+                json.Message = "删除成功";
+            }
+            catch (Exception ex)
+            {
+                json.State = false;
+                json.Message = ex.Message;
+            }
+
+            return Json(json);
+        }
+
+        #endregion
+
+        #region 订单相关方法
+
+        [HttpPost]
+        [AllowAnonymous]
+        public JsonResult GetOrders(Object queryInfo, PageInfo pageInfo)
+        {
+            var orders = from order in db.Orders
+                         select order;
+
+            int count = orders.Count();
+
+            return Json(new
+            {
+                count = count,
+                list = orders.OrderByDescending(m => m.CreateTime).ToPagedList(pageInfo.PageIndex, pageInfo.PageSize)
+            });
+        }
+
+        public JsonResult DeleteOrders(IList<int> IDs)
+        {
+            JsonData json = new JsonData();
+
+            try
+            {
+                foreach (var id in IDs)
+                {
+                    Order order = db.Orders.Find(id);
+                    db.Entry(order).State = EntityState.Deleted;
                 }
                 db.SaveChanges();
 
