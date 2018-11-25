@@ -1,3 +1,7 @@
+/*@function px2vh($px) {
+    $vh:12.94px;
+    @return ($px/$vh) +vh;
+}*/
 /* line 5, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -116,7 +120,7 @@ body {
 
 /* line 8, ../../scss/mobile/suggestion.scss */
 header {
-  height: 6.80062vh;
+  height: 1.17333rem;
   background-color: #074a92;
   padding: 0 5.6vw 0 4.66667vw;
   display: flex;
@@ -126,12 +130,12 @@ header {
 /* line 16, ../../scss/mobile/suggestion.scss */
 header #return {
   width: 4.13333vw;
-  height: 2.39567vh;
+  height: 0.41333rem;
 }
 /* line 21, ../../scss/mobile/suggestion.scss */
 header #home {
   width: 5.2vw;
-  height: 2.62751vh;
+  height: 0.45333rem;
 }
 /* line 26, ../../scss/mobile/suggestion.scss */
 header span {
@@ -146,11 +150,11 @@ main {
 /* line 34, ../../scss/mobile/suggestion.scss */
 main section {
   background-color: #fff;
-  margin-bottom: 0.61824vh;
+  margin-bottom: 0.10667rem;
 }
 /* line 38, ../../scss/mobile/suggestion.scss */
 main section .header {
-  height: 5.25502vh;
+  height: 0.90667rem;
   border-bottom: 2px solid #f5f5f5;
   display: flex;
   justify-content: flex-start;
@@ -161,8 +165,8 @@ main section .header {
 main section .header span {
   font-size: 0.34667rem;
   color: #333333;
-  height: 2.47295vh;
-  line-height: 2.47295vh;
+  height: 0.42667rem;
+  line-height: 0.42667rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -170,7 +174,7 @@ main section .header span {
 /* line 55, ../../scss/mobile/suggestion.scss */
 main section .header span i {
   width: 1.06667vw;
-  height: 2.31839vh;
+  height: 0.4rem;
   background-color: #074a92;
   border-radius: 5px;
   margin-right: 2.13333vw;
@@ -193,19 +197,19 @@ main section .body textarea:focus {
 }
 /* line 79, ../../scss/mobile/suggestion.scss */
 main section .body textarea#title {
-  height: 8.50077vh;
+  height: 1.46667rem;
 }
 /* line 83, ../../scss/mobile/suggestion.scss */
 main section .body textarea#content {
-  height: 25.34776vh;
+  height: 4.37333rem;
 }
 /* line 87, ../../scss/mobile/suggestion.scss */
 main section .body textarea#contact {
-  height: 6.18238vh;
+  height: 1.06667rem;
 }
 /* line 94, ../../scss/mobile/suggestion.scss */
 main #submit {
-  height: 6.64606vh;
+  height: 1.14667rem;
   width: 70.93333vw;
   border-radius: 10px;
   background-color: #074a92;
@@ -213,14 +217,14 @@ main #submit {
   font-size: 0.37333rem;
   letter-spacing: 4.26667vw;
   color: #fff;
-  line-height: 6.64606vh;
-  margin-top: 3.86399vh;
+  line-height: 1.14667rem;
+  margin-top: 0.66667rem;
 }
 
 /* line 107, ../../scss/mobile/suggestion.scss */
 footer {
-  height: 10.66461vh;
-  padding: 2.31839vh 0;
+  height: 1.84rem;
+  padding: 0.4rem 0;
   position: absolute;
   bottom: 0;
   width: 100vw;
@@ -228,15 +232,15 @@ footer {
 /* line 114, ../../scss/mobile/suggestion.scss */
 footer ul.link {
   display: flex;
-  height: 4.01855vh;
+  height: 0.69333rem;
   justify-content: center;
   align-items: center;
 }
 /* line 121, ../../scss/mobile/suggestion.scss */
 footer ul.link li a, footer ul.link li i {
   display: block;
-  height: 4.01855vh;
-  line-height: 4.01855vh;
+  height: 0.69333rem;
+  line-height: 0.69333rem;
   font-size: 0.26667rem;
   font-weight: 500;
   color: #333333;
@@ -248,15 +252,15 @@ footer ul.link li i {
 /* line 136, ../../scss/mobile/suggestion.scss */
 footer ul.web-info {
   display: flex;
-  height: 1.5456vh;
+  height: 0.26667rem;
   justify-content: center;
   align-items: center;
 }
 /* line 143, ../../scss/mobile/suggestion.scss */
 footer ul.web-info li span {
   display: block;
-  height: 1.5456vh;
-  line-height: 1.5456vh;
+  height: 0.26667rem;
+  line-height: 0.26667rem;
   font-size: 0.16rem;
   margin: 0 1.33333vw;
 }

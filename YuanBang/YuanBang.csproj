@@ -268,7 +268,12 @@
     <Content Include="frontend\images\mobile\query\header.png" />
     <Content Include="frontend\images\mobile\query\home.png" />
     <Content Include="frontend\images\mobile\query\return.png" />
-    <Content Include="frontend\images\mobile\route\GzToXa.png" />
+    <Content Include="frontend\images\mobile\route\ToBaoTou.png" />
+    <Content Include="frontend\images\mobile\route\ToChangZhi.png" />
+    <Content Include="frontend\images\mobile\route\ToHuShi.png" />
+    <Content Include="frontend\images\mobile\route\ToJinCheng.png" />
+    <Content Include="frontend\images\mobile\route\ToTaiYuan.png" />
+    <Content Include="frontend\images\mobile\route\ToXiAn.png" />
     <Content Include="frontend\images\mobile\route\map.png" />
     <Content Include="frontend\images\subpage\aqbz.png" />
     <Content Include="frontend\images\subpage\bill-add-btn.png" />
@@ -725,7 +730,7 @@
     <Content Include="Views\Mobile\Company.cshtml" />
     <Content Include="Views\Mobile\Contact.cshtml" />
     <Content Include="Views\Mobile\Suggestion.cshtml" />
-    <Content Include="Views\Mobile\GzToXa.cshtml" />
+    <Content Include="Views\Mobile\RouteLine.cshtml" />
     <Content Include="Views\Home\Proxy.cshtml" />
     <Content Include="Views\Home\PriceProtect.cshtml" />
     <Content Include="Views\Home\Collection.cshtml" />

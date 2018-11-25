@@ -83,6 +83,8 @@ D:\Github\YuanBang\YuanBang\obj\Debug\YuanBang.csproj.CoreCompileInputs.cache
 D:\Github\YuanBang\YuanBang\obj\Debug\YuanBang.csproj.CopyComplete
 D:\Github\YuanBang\YuanBang\obj\Debug\YuanBang.dll
 D:\Github\YuanBang\YuanBang\obj\Debug\YuanBang.pdb
+D:\Github\YuanBang\YuanBang\bin\Newtonsoft.Json.pdb
+D:\Github\YuanBang\YuanBang\obj\Debug\YuanBang.csprojAssemblyReference.cache
 P:\YuanBang\YuanBang\bin\ApplicationInsights.config
 P:\YuanBang\YuanBang\bin\YuanBang.dll.config
 P:\YuanBang\YuanBang\bin\YuanBang.dll
@@ -169,5 +171,3 @@ P:\YuanBang\YuanBang\obj\Debug\YuanBang.csproj.CoreCompileInputs.cache
 P:\YuanBang\YuanBang\obj\Debug\YuanBang.csproj.CopyComplete
 P:\YuanBang\YuanBang\obj\Debug\YuanBang.dll
 P:\YuanBang\YuanBang\obj\Debug\YuanBang.pdb
-D:\Github\YuanBang\YuanBang\bin\Newtonsoft.Json.pdb
-D:\Github\YuanBang\YuanBang\obj\Debug\YuanBang.csprojAssemblyReference.cache

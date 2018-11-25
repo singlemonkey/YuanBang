@@ -1,3 +1,7 @@
+/*@function px2vh($px) {
+    $vh:12.94px;
+    @return ($px/$vh) +vh;
+}*/
 /* line 5, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -116,7 +120,7 @@ body {
 
 /* line 8, ../../scss/mobile/logistics.scss */
 header {
-  height: 6.80062vh;
+  height: 1.17333rem;
   background-color: #074a92;
   padding: 0 5.6vw 0 4.66667vw;
   display: flex;
@@ -126,12 +130,12 @@ header {
 /* line 16, ../../scss/mobile/logistics.scss */
 header #return {
   width: 4.13333vw;
-  height: 2.39567vh;
+  height: 0.41333rem;
 }
 /* line 21, ../../scss/mobile/logistics.scss */
 header #home {
   width: 5.2vw;
-  height: 2.62751vh;
+  height: 0.45333rem;
 }
 /* line 26, ../../scss/mobile/logistics.scss */
 header span {
@@ -142,14 +146,14 @@ header span {
 /* line 33, ../../scss/mobile/logistics.scss */
 main > img {
   width: 100vw;
-  height: 18.23802vh;
-  margin-top: 0.7728vh;
+  height: 3.14667rem;
+  margin-top: 0.13333rem;
 }
 /* line 39, ../../scss/mobile/logistics.scss */
 main > p {
   font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Hiragino Sans GB", "Source Han Sans CN Normal", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
   font-size: 0.34667rem;
-  padding: 3.09119vh 8.53333vw;
+  padding: 0.53333rem 8.53333vw;
   line-height: 0.53333rem;
   background-color: #fff;
   text-indent: 2em;
@@ -157,8 +161,8 @@ main > p {
 }
 /* line 49, ../../scss/mobile/logistics.scss */
 main .manager {
-  height: 38.33076vh;
-  padding: 5.79598vh 22vw 8.96445vh 18.66667vw;
+  height: 6.61333rem;
+  padding: 1rem 22vw 1.54667rem 18.66667vw;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -172,15 +176,15 @@ main .manager span {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 59.33333vw;
-  height: 10.81917vh;
-  line-height: 10.81917vh;
+  height: 1.86667rem;
+  line-height: 1.86667rem;
   text-align: center;
 }
 
 /* line 70, ../../scss/mobile/logistics.scss */
 footer {
-  height: 10.66461vh;
-  padding: 2.31839vh 0;
+  height: 1.84rem;
+  padding: 0.4rem 0;
   position: absolute;
   bottom: 0;
   width: 100vw;
@@ -188,15 +192,15 @@ footer {
 /* line 77, ../../scss/mobile/logistics.scss */
 footer ul.link {
   display: flex;
-  height: 4.01855vh;
+  height: 0.69333rem;
   justify-content: center;
   align-items: center;
 }
 /* line 84, ../../scss/mobile/logistics.scss */
 footer ul.link li a, footer ul.link li i {
   display: block;
-  height: 4.01855vh;
-  line-height: 4.01855vh;
+  height: 0.69333rem;
+  line-height: 0.69333rem;
   font-size: 0.26667rem;
   font-weight: 500;
   color: #333333;
@@ -208,15 +212,15 @@ footer ul.link li i {
 /* line 99, ../../scss/mobile/logistics.scss */
 footer ul.web-info {
   display: flex;
-  height: 1.5456vh;
+  height: 0.26667rem;
   justify-content: center;
   align-items: center;
 }
 /* line 106, ../../scss/mobile/logistics.scss */
 footer ul.web-info li span {
   display: block;
-  height: 1.5456vh;
-  line-height: 1.5456vh;
+  height: 0.26667rem;
+  line-height: 0.26667rem;
   font-size: 0.16rem;
   margin: 0 1.33333vw;
 }

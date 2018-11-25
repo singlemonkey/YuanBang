@@ -3,9 +3,14 @@
     @return ($px/$vw) +vw;
 }
 
-@function px2vh($px) {
+/*@function px2vh($px) {
     $vh:12.94px;
     @return ($px/$vh) +vh;
+}*/
+
+@function px2vh($px) {
+    $vh: 75px;
+    @return ($px/$vh) +rem;
 }
 
 @function px2rem($px) {

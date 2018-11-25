@@ -1,3 +1,7 @@
+/*@function px2vh($px) {
+    $vh:12.94px;
+    @return ($px/$vh) +vh;
+}*/
 /* line 5, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -111,7 +115,7 @@ input[type=button] {
 
 /* line 4, ../../scss/mobile/query.scss */
 header {
-  height: 6.80062vh;
+  height: 1.17333rem;
   background-color: #074a92;
   padding: 0 5.6vw 0 4.66667vw;
   display: flex;
@@ -121,12 +125,12 @@ header {
 /* line 12, ../../scss/mobile/query.scss */
 header #return {
   width: 4.13333vw;
-  height: 2.39567vh;
+  height: 0.41333rem;
 }
 /* line 17, ../../scss/mobile/query.scss */
 header #home {
   width: 5.2vw;
-  height: 2.62751vh;
+  height: 0.45333rem;
 }
 /* line 21, ../../scss/mobile/query.scss */
 header span {
@@ -136,7 +140,7 @@ header span {
 
 /* line 26, ../../scss/mobile/query.scss */
 #header {
-  height: 26.66151vh;
+  height: 4.6rem;
   width: 100%;
 }
 
@@ -150,11 +154,11 @@ main .main-header span {
   font-size: 0.37333rem;
   font-weight: 500;
   display: inline-block;
-  line-height: 6.18238vh;
+  line-height: 1.06667rem;
 }
 /* line 44, ../../scss/mobile/query.scss */
 main .main-body {
-  padding: 2.31839vh 10.13333vw;
+  padding: 0.4rem 10.13333vw;
 }
 /* line 47, ../../scss/mobile/query.scss */
 main .main-body ul {
@@ -163,7 +167,7 @@ main .main-body ul {
 
 /* line 53, ../../scss/mobile/query.scss */
 #logistics li {
-  height: 10.51005vh;
+  height: 1.81333rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -177,7 +181,7 @@ main .main-body ul {
 }
 /* line 66, ../../scss/mobile/query.scss */
 #logistics li .operation {
-  margin-bottom: 1.39104vh;
+  margin-bottom: 0.24rem;
 }
 /* line 70, ../../scss/mobile/query.scss */
 #logistics li i {

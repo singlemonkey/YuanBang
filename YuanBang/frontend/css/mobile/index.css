@@ -1,3 +1,7 @@
+/*@function px2vh($px) {
+    $vh:12.94px;
+    @return ($px/$vh) +vh;
+}*/
 /* line 5, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -118,7 +122,7 @@ body {
 
 /* line 10, ../../scss/mobile/index.scss */
 header {
-  height: 6.4915vh;
+  height: 1.12rem;
   position: relative;
 }
 /* line 14, ../../scss/mobile/index.scss */
@@ -126,55 +130,55 @@ header #logo {
   position: absolute;
   left: 4.8vw;
   width: 11.73333vw;
-  height: 8.96445vh;
+  height: 1.54667rem;
   z-index: 1000;
 }
 /* line 22, ../../scss/mobile/index.scss */
 header #name-ch {
   position: absolute;
   left: 18vw;
-  top: 2.16383vh;
+  top: 0.37333rem;
   width: 37.33333vw;
-  height: 1.85471vh;
+  height: 0.32rem;
 }
 /* line 30, ../../scss/mobile/index.scss */
 header #name-en {
   position: absolute;
   left: 18vw;
-  top: 4.32767vh;
+  top: 0.74667rem;
   width: 37.33333vw;
-  height: 0.85008vh;
+  height: 0.14667rem;
 }
 /* line 38, ../../scss/mobile/index.scss */
 header #service-phone {
   position: absolute;
   right: 4.8vw;
-  top: 1.70015vh;
+  top: 0.29333rem;
   width: 19.2vw;
-  height: 1.5456vh;
+  height: 0.26667rem;
 }
 /* line 46, ../../scss/mobile/index.scss */
 header .service-call {
   position: absolute;
   right: 4.8vw;
   width: 31.46667vw;
-  height: 2.31839vh;
+  height: 0.4rem;
   font-size: 0.32rem;
   text-align: right;
   color: #074a92;
 }
 /* line 55, ../../scss/mobile/index.scss */
 header .service-call.one {
-  top: 0.92736vh;
+  top: 0.16rem;
 }
 /* line 59, ../../scss/mobile/index.scss */
 header .service-call.two {
-  bottom: 0.61824vh;
+  bottom: 0.10667rem;
 }
 
 /* line 66, ../../scss/mobile/index.scss */
 main .slide {
-  height: 30.9119vh;
+  height: 5.33333rem;
   position: relative;
 }
 /* line 70, ../../scss/mobile/index.scss */
@@ -209,11 +213,11 @@ main .slide .hd ul li.on a {
 /* line 104, ../../scss/mobile/index.scss */
 main .slide .bd img {
   width: 100vw;
-  height: 30.9119vh;
+  height: 5.33333rem;
 }
 /* line 111, ../../scss/mobile/index.scss */
 main .query {
-  height: 8.50077vh;
+  height: 1.46667rem;
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -222,7 +226,7 @@ main .query {
 /* line 118, ../../scss/mobile/index.scss */
 main .query .query-content {
   width: 89.86667vw;
-  height: 5.25502vh;
+  height: 1.06667rem;
   position: relative;
 }
 /* line 123, ../../scss/mobile/index.scss */
@@ -232,17 +236,17 @@ main .query .query-content #order {
   font-size: 0.32rem;
   padding-left: 30px;
   border-radius: 0.16rem;
-  border: 1px solid #bebebe;
+  border: 1px solid red;
   box-shadow: 5px 5px 5px #e8e8e8 inset;
 }
 /* line 132, ../../scss/mobile/index.scss */
 main .query .query-content #order:focus {
-  border-bottom: 1px solid #bebebe;
+  border-bottom: 1px solid red;
 }
 /* line 137, ../../scss/mobile/index.scss */
 main .query .query-content #search {
   width: 21.6vw;
-  height: 5.10046vh;
+  height: 1.06667rem;
   position: absolute;
   right: 1px;
   top: 1px;
@@ -252,11 +256,11 @@ main .query .query-content #search {
 }
 /* line 150, ../../scss/mobile/index.scss */
 main .menus {
-  height: 14.83771vh;
-  margin-top: 0.7728vh;
-  margin-bottom: 0.7728vh;
+  height: 2.56rem;
+  margin-top: 0.13333rem;
+  margin-bottom: 0.13333rem;
   background-color: #fff;
-  padding: 2.31839vh 3.2vw;
+  padding: 0.4rem 3.2vw;
 }
 /* line 157, ../../scss/mobile/index.scss */
 main .menus ul {
@@ -276,7 +280,7 @@ main .menus ul li a {
 }
 /* line 170, ../../scss/mobile/index.scss */
 main .menus ul li a span {
-  flex: 0 0 2.31839vh;
+  flex: 0 0 0.4rem;
   text-align: center;
   font-size: 0.32rem;
   color: #888888;
@@ -292,33 +296,33 @@ main .menus ul li a .img-box {
 /* line 185, ../../scss/mobile/index.scss */
 main .menus ul li a .img-box img.route-desc {
   width: 8.53333vw;
-  height: 4.63679vh;
+  height: 0.8rem;
 }
 /* line 190, ../../scss/mobile/index.scss */
 main .menus ul li a .img-box img.place-order {
   width: 6.26667vw;
-  height: 4.9459vh;
+  height: 0.85333rem;
 }
 /* line 195, ../../scss/mobile/index.scss */
 main .menus ul li a .img-box img.logistics {
   width: 8.53333vw;
-  height: 4.32767vh;
+  height: 0.74667rem;
 }
 /* line 200, ../../scss/mobile/index.scss */
 main .menus ul li a .img-box img.service-site {
   width: 8.53333vw;
-  height: 4.01855vh;
+  height: 0.69333rem;
 }
 /* line 211, ../../scss/mobile/index.scss */
 main .routes {
-  height: 28.28439vh;
+  height: 4.88rem;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
 }
 /* line 217, ../../scss/mobile/index.scss */
 main .routes .route-head {
-  flex: 0 0 5.40958vh;
+  flex: 0 0 0.93333rem;
   border-bottom: 2px solid #f5f5f5;
   display: flex;
   justify-content: flex-start;
@@ -329,8 +333,8 @@ main .routes .route-head {
 main .routes .route-head span {
   font-size: 0.34667rem;
   color: #333333;
-  height: 2.47295vh;
-  line-height: 2.47295vh;
+  height: 0.42667rem;
+  line-height: 0.42667rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -338,7 +342,7 @@ main .routes .route-head span {
 /* line 234, ../../scss/mobile/index.scss */
 main .routes .route-head span i {
   width: 1.06667vw;
-  height: 2.31839vh;
+  height: 0.4rem;
   background-color: #074a92;
   border-radius: 5px;
   margin-right: 2.13333vw;
@@ -352,7 +356,7 @@ main .routes .route-content {
 /* line 249, ../../scss/mobile/index.scss */
 main .routes .route-content ul {
   flex: 1 0 auto;
-  padding: 2.62751vh 2.66667vw;
+  padding: 0.45333rem 2.66667vw;
   display: flex;
 }
 /* line 254, ../../scss/mobile/index.scss */
@@ -372,7 +376,7 @@ main .routes .route-content ul li .text-info {
 main .routes .route-content ul li .text-info p {
   font-size: 0.24rem;
   color: #888888;
-  margin-bottom: 0.61824vh;
+  margin-bottom: 0.10667rem;
 }
 /* line 271, ../../scss/mobile/index.scss */
 main .routes .route-content ul li .text-info h4 {
@@ -390,32 +394,32 @@ main .routes .route-content ul li .img-box {
 /* line 285, ../../scss/mobile/index.scss */
 main .routes .route-content ul li .img-box img.GzToXa {
   width: 11.2vw;
-  height: 5.10046vh;
+  height: 0.88rem;
 }
 /* line 290, ../../scss/mobile/index.scss */
 main .routes .route-content ul li .img-box img.GzToTy {
   width: 11.2vw;
-  height: 4.40495vh;
+  height: 0.76rem;
 }
 /* line 295, ../../scss/mobile/index.scss */
 main .routes .route-content ul li .img-box img.GzToCz {
   width: 7.6vw;
-  height: 6.4915vh;
+  height: 1.12rem;
 }
 /* line 300, ../../scss/mobile/index.scss */
 main .routes .route-content ul li .img-box img.GzToJc {
   width: 11.2vw;
-  height: 4.63679vh;
+  height: 0.8rem;
 }
 /* line 305, ../../scss/mobile/index.scss */
 main .routes .route-content ul li .img-box img.HsToXa {
   width: 11.2vw;
-  height: 6.02782vh;
+  height: 1.04rem;
 }
 /* line 310, ../../scss/mobile/index.scss */
 main .routes .route-content ul li .img-box img.GzToBt {
   width: 10.93333vw;
-  height: 6.4915vh;
+  height: 1.12rem;
 }
 /* line 317, ../../scss/mobile/index.scss */
 main .routes .route-content ul li + li {
@@ -424,21 +428,21 @@ main .routes .route-content ul li + li {
 
 /* line 326, ../../scss/mobile/index.scss */
 footer {
-  height: 10.66461vh;
-  padding: 2.31839vh 0;
+  height: 1.84rem;
+  padding: 0.4rem 0;
 }
 /* line 331, ../../scss/mobile/index.scss */
 footer ul.link {
   display: flex;
-  height: 4.01855vh;
+  height: 0.69333rem;
   justify-content: center;
   align-items: center;
 }
 /* line 338, ../../scss/mobile/index.scss */
 footer ul.link li a, footer ul.link li i {
   display: block;
-  height: 4.01855vh;
-  line-height: 4.01855vh;
+  height: 0.69333rem;
+  line-height: 0.69333rem;
   font-size: 0.26667rem;
   font-weight: 500;
   color: #333333;
@@ -450,15 +454,15 @@ footer ul.link li i {
 /* line 353, ../../scss/mobile/index.scss */
 footer ul.web-info {
   display: flex;
-  height: 1.5456vh;
+  height: 0.26667rem;
   justify-content: center;
   align-items: center;
 }
 /* line 360, ../../scss/mobile/index.scss */
 footer ul.web-info li span {
   display: block;
-  height: 1.5456vh;
-  line-height: 1.5456vh;
+  height: 0.26667rem;
+  line-height: 0.26667rem;
   font-size: 0.16rem;
   margin: 0 1.33333vw;
 }

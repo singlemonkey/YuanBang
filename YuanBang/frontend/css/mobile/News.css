@@ -1,5 +1,9 @@
 @charset "UTF-8";
-/* line 5, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/*@function px2vh($px) {
+    $vh:12.94px;
+    @return ($px/$vh) +vh;
+}*/
+/* line 5, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,45 +25,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -117,7 +121,7 @@ body {
 
 /* line 7, ../../scss/mobile/News.scss */
 header {
-  height: 6.80062vh;
+  height: 1.17333rem;
   background-color: #074a92;
   padding: 0 5.6vw 0 4.66667vw;
   display: flex;
@@ -127,12 +131,12 @@ header {
 /* line 15, ../../scss/mobile/News.scss */
 header #return {
   width: 4.13333vw;
-  height: 2.39567vh;
+  height: 0.41333rem;
 }
 /* line 20, ../../scss/mobile/News.scss */
 header #home {
   width: 5.2vw;
-  height: 2.62751vh;
+  height: 0.45333rem;
 }
 /* line 25, ../../scss/mobile/News.scss */
 header span {
@@ -142,7 +146,7 @@ header span {
 
 /* line 33, ../../scss/mobile/News.scss */
 main #news li {
-  padding: 1.5456vh 2.66667vw;
+  padding: 0.26667rem 2.66667vw;
   font-size: 0.37333rem;
   display: flex;
 }
@@ -164,7 +168,7 @@ main h4 {
   font: 0.53333rem "微软雅黑";
   color: #222;
   text-align: center;
-  padding: 1.5456vh 0;
+  padding: 0.26667rem 0;
 }
 /* line 60, ../../scss/mobile/News.scss */
 main .app-notice-tooltip {
@@ -186,7 +190,7 @@ main #content img {
 }
 /* line 77, ../../scss/mobile/News.scss */
 main #content p {
-  font-size: 0.7728vh;
+  font-size: 0.13333rem;
   text-indent: 0.66667rem !important;
-  line-height: 2.31839vh;
+  line-height: 0.4rem;
 }

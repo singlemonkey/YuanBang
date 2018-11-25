@@ -1,0 +1,186 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link rel="stylesheet" href="~/frontend/css/mobile/route.css" />
+    <link rel="stylesheet" href="~/frontend/libs/iconfont/iconfont.css" />
+</head>
+<body>
+    <header>
+        <img id="return" alt="返回" src="~/frontend/images/mobile/query/return.png" />
+        <span id="name"></span>
+        <img id="home" alt="主页" src="~/frontend/images/mobile/query/home.png" />
+    </header>
+    <main>
+        <img id="route-img"/>
+        <section>
+            <div class="header">
+                <span><i class="vertical-line"></i>起始点</span>
+            </div>
+            <div class="body">
+                <div class="form-row">
+                    <label class="left">网点名称</label>
+                    <label class="right" id="from-name"></label>
+                </div>
+                <div class="form-row">
+                    <label class="left">网点地址</label>
+                    <label class="right" id="from-address"></label>
+                </div>
+                <div class="form-row">
+                    <label class="left">联系方式</label>
+                    <label class="right" id="from-phone"></label>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="header">
+                <span><i class="vertical-line"></i>目的地</span>
+            </div>
+            <div class="body">
+                <div class="form-row">
+                    <label class="left">网点名称</label>
+                    <label class="right" id="to-name"></label>
+                </div>
+                <div class="form-row">
+                    <label class="left">网点地址</label>
+                    <label class="right" id="to-address"></label>
+                </div>
+                <div class="form-row">
+                    <label class="left">联系方式</label>
+                    <label class="right" id="to-phone"></label>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="text/javascript" src="~/frontend/libs/jQuery/jquery.js"></script>
+    <script>
+        $(function () {
+            const init = function () {
+                //设置屏幕缩放
+                let meta = document.createElement('meta');
+                let scale = 1 / window.devicePixelRatio;
+                meta.charset = 'utf-8';
+                meta.setAttribute('content', 'width=device-width,user-scalable=no,initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + '');
+                meta.name = 'viewport';
+                document.getElementsByTagName('head')[0].appendChild(meta);
+
+            };
+
+            const AdaptScreen = function () {
+                document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+            };
+
+            init();
+            AdaptScreen();
+            $(window).resize(function () {
+                AdaptScreen();
+            });
+
+            //返回
+            $('#return,#home').on('click', function () {
+                window.location.href = '/Mobile/Index';
+            });
+
+            const destination = '@ViewBag.destination';
+            const route = {
+                ToXiAn: {
+                    name:'广州直达西安',
+                    from: {
+                        name: '广州陕西线营业部',
+                        address: '白云区石井锦亿货运市场G栋7-12档',
+                        tel: '020-62870500/18825126650'
+                    },
+                    to: {
+                        name: '灞桥区港务区营业部',
+                        address: '港兴路乾龙物流园5栋A（北）1-3号',
+                        tel: '029-89289327/15399488381'
+                    }
+                },
+                ToTaiYuan: {
+                    name:'广州直达太原',
+                    from: {
+                        name: '广州山西、太原线营业部',
+                        address: '白云区石井安发货运市场B15栋3-6档',
+                        tel: '020-62198802/18825125966'
+                    },
+                    to: {
+                        name: '杏花岭区营业部',
+                        address: '东环高速丈子头西出东行20米',
+                        tel: '0351-3951228/15735199286'
+                    }
+                },
+                ToChangZhi: {
+                    name: '广州直达长治',
+                    from: {
+                        name: '广州长治、晋城线营业部',
+                        address: '白云区石井安发货运市场B15栋3-6档',
+                        tel: '020-62198805/15626104888'
+                    },
+                    to: {
+                        name: '长治营业部',
+                        address: '西二环南寨村福星物流市场院内',
+                        tel: '13313450084/15735199273'
+                    }
+                },
+                ToJinCheng: {
+                    name: '广州直达晋城',
+                    from: {
+                        name: '广州长治、晋城营业部',
+                        address: '白云区石井安发货运市场B15栋3-6档',
+                        tel: '020-62198805/15626104888'
+                    },
+                    to: {
+                        name: '晋城营业部',
+                        address: '晋阳高速南村入口路西50米',
+                        tel: '0356-3039111/13363567222'
+                    }
+                },
+                ToHuShi: {
+                    name: '广州直达呼市',
+                    from: {
+                        name: '广州内蒙线营业部',
+                        address: '白云区石井锦亿货运市场G栋13-16档',
+                        tel: '020-62870502/18813299146'
+                    },
+                    to: {
+                        name: '金川开发区营业部',
+                        address: '110国道蓝天学校旁中全物流园1号大库5-6号',
+                        tel: '13191415128/18825156630'
+                    }
+                },
+                ToBaoTou: {
+                    name: '广州直达包头',
+                    from: {
+                        name: '广州内蒙线营业部',
+                        address: '白云区石井锦亿货运市场G栋13-16档',
+                        tel: '020-62870502/18813299146'
+                    },
+                    to: {
+                        name: '九原区营业部',
+                        address: '哈屯高勒络锦鸿驾校对面包钢万开物流园',
+                        tel: '0472-2551616/18825126640'
+                    }
+                }
+            };
+
+            $('#name').text(route[destination].name);
+            $('#route-img').prop('src', '/frontend/images/mobile/route/' + destination + '.png');
+
+            $('#from-name').text(route[destination].from.name);
+            $('#from-address').text(route[destination].from.address);
+            $('#from-phone').text(route[destination].from.tel);
+
+            $('#to-name').text(route[destination].to.name);
+            $('#to-address').text(route[destination].to.address);
+            $('#to-phone').text(route[destination].to.tel);
+        });
+    </script>
+</body>
+</html>

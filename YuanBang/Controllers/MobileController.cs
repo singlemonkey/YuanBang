@@ -53,8 +53,9 @@ namespace YuanBang.Controllers
             return View();
         }
 
-        public ActionResult GzToXa()
+        public ActionResult RouteLine(string destination)
         {
+            ViewBag.destination = destination;
             return View();
         }
 

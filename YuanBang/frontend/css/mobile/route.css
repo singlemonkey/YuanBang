@@ -1,3 +1,7 @@
+/*@function px2vh($px) {
+    $vh:12.94px;
+    @return ($px/$vh) +vh;
+}*/
 /* line 5, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -116,7 +120,7 @@ body {
 
 /* line 6, ../../scss/mobile/route.scss */
 header {
-  height: 6.80062vh;
+  height: 1.17333rem;
   background-color: #074a92;
   padding: 0 5.6vw 0 4.66667vw;
   display: flex;
@@ -126,12 +130,12 @@ header {
 /* line 14, ../../scss/mobile/route.scss */
 header #return {
   width: 4.13333vw;
-  height: 2.39567vh;
+  height: 0.41333rem;
 }
 /* line 19, ../../scss/mobile/route.scss */
 header #home {
   width: 5.2vw;
-  height: 2.62751vh;
+  height: 0.45333rem;
 }
 /* line 24, ../../scss/mobile/route.scss */
 header span {
@@ -141,17 +145,17 @@ header span {
 
 /* line 30, ../../scss/mobile/route.scss */
 main .map {
-  height: 48.22257vh;
+  height: 8.32rem;
   width: 100vw;
 }
 /* line 36, ../../scss/mobile/route.scss */
 main .routes li {
   background-color: #fff;
-  margin-bottom: 0.61824vh;
+  margin-bottom: 0.10667rem;
 }
 /* line 40, ../../scss/mobile/route.scss */
 main .routes li .route-head {
-  height: 5.25502vh;
+  height: 0.90667rem;
   border-bottom: 2px solid #f5f5f5;
   display: flex;
   justify-content: flex-start;
@@ -162,8 +166,8 @@ main .routes li .route-head {
 main .routes li .route-head span {
   font-size: 0.34667rem;
   color: #333333;
-  height: 2.47295vh;
-  line-height: 2.47295vh;
+  height: 0.42667rem;
+  line-height: 0.42667rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -171,7 +175,7 @@ main .routes li .route-head span {
 /* line 57, ../../scss/mobile/route.scss */
 main .routes li .route-head span i {
   width: 1.06667vw;
-  height: 2.31839vh;
+  height: 0.4rem;
   background-color: #074a92;
   border-radius: 5px;
   margin-right: 2.13333vw;
@@ -185,7 +189,7 @@ main .routes li .route-content {
 main .routes li .route-content span {
   font-size: 0.29333rem;
   color: #888888;
-  line-height: 2.47295vh;
+  line-height: 0.42667rem;
 }
 /* line 77, ../../scss/mobile/route.scss */
 main .routes li .route-content span.tip {
@@ -198,11 +202,11 @@ main .routes li .route-content span.text {
 /* line 89, ../../scss/mobile/route.scss */
 main section {
   background-color: #fff;
-  margin-bottom: 0.61824vh;
+  margin-bottom: 0.10667rem;
 }
 /* line 93, ../../scss/mobile/route.scss */
 main section .header {
-  height: 5.25502vh;
+  height: 0.90667rem;
   border-bottom: 2px solid #f5f5f5;
   display: flex;
   justify-content: flex-start;
@@ -213,8 +217,8 @@ main section .header {
 main section .header span {
   font-size: 0.34667rem;
   color: #333333;
-  height: 2.47295vh;
-  line-height: 2.47295vh;
+  height: 0.42667rem;
+  line-height: 0.42667rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -222,7 +226,7 @@ main section .header span {
 /* line 110, ../../scss/mobile/route.scss */
 main section .header span i {
   width: 1.06667vw;
-  height: 2.31839vh;
+  height: 0.4rem;
   background-color: #074a92;
   border-radius: 5px;
   margin-right: 2.13333vw;
@@ -238,8 +242,8 @@ main section .body .form-row {
 /* line 126, ../../scss/mobile/route.scss */
 main section .body .form-row label {
   font-size: 0.34667rem;
-  height: 6.18238vh;
-  line-height: 6.18238vh;
+  height: 1.06667rem;
+  line-height: 1.06667rem;
 }
 /* line 132, ../../scss/mobile/route.scss */
 main section .body .form-row .left {
@@ -256,7 +260,7 @@ main section .body .form-row .right {
   padding-left: 2.66667vw;
 }
 /* line 149, ../../scss/mobile/route.scss */
-main .GzToXa {
+main img {
   width: 100%;
-  height: 48.37713vh;
+  height: 7.86667rem;
 }

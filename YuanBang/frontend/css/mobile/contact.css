@@ -1,4 +1,8 @@
-/* line 5, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/*@function px2vh($px) {
+    $vh:12.94px;
+    @return ($px/$vh) +vh;
+}*/
+/* line 5, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -116,7 +120,7 @@ body {
 
 /* line 8, ../../scss/mobile/contact.scss */
 header {
-  height: 6.80062vh;
+  height: 1.17333rem;
   background-color: #074a92;
   padding: 0 5.6vw 0 4.66667vw;
   display: flex;
@@ -126,12 +130,12 @@ header {
 /* line 16, ../../scss/mobile/contact.scss */
 header #return {
   width: 4.13333vw;
-  height: 2.39567vh;
+  height: 0.41333rem;
 }
 /* line 21, ../../scss/mobile/contact.scss */
 header #home {
   width: 5.2vw;
-  height: 2.62751vh;
+  height: 0.45333rem;
 }
 /* line 26, ../../scss/mobile/contact.scss */
 header span {
@@ -142,19 +146,19 @@ header span {
 /* line 33, ../../scss/mobile/contact.scss */
 main > img {
   width: 100vw;
-  height: 42.04019vh;
-  margin-top: 0.7728vh;
+  height: 7.25333rem;
+  margin-top: 0.13333rem;
 }
 /* line 39, ../../scss/mobile/contact.scss */
 main ul {
-  padding: 5.02318vh 2.66667vw;
+  padding: 0.86667rem 2.66667vw;
   background-color: #fff;
 }
 /* line 43, ../../scss/mobile/contact.scss */
 main ul li {
   display: flex;
   font-size: 0.34667rem;
-  height: 5.40958vh;
+  height: 0.93333rem;
   justify-content: center;
   align-items: center;
 }
@@ -176,14 +180,14 @@ main ul li a {
 }
 /* line 66, ../../scss/mobile/contact.scss */
 main ul li.contact-address {
-  height: 6.95518vh;
+  height: 1.2rem;
 }
 /* line 70, ../../scss/mobile/contact.scss */
 main ul li .address {
   flex: 1;
   font-weight: 500;
-  margin-top: 2.78207vh;
-  line-height: 2.78207vh;
+  margin-top: 0.48rem;
+  line-height: 0.48rem;
   display: flex;
   flex-direction: column;
 }
@@ -194,8 +198,8 @@ main ul li .address a {
 
 /* line 86, ../../scss/mobile/contact.scss */
 footer {
-  height: 10.66461vh;
-  padding: 2.31839vh 0;
+  height: 1.84rem;
+  padding: 0.4rem 0;
   position: absolute;
   bottom: 0;
   width: 100vw;
@@ -203,15 +207,15 @@ footer {
 /* line 93, ../../scss/mobile/contact.scss */
 footer ul.link {
   display: flex;
-  height: 4.01855vh;
+  height: 0.69333rem;
   justify-content: center;
   align-items: center;
 }
 /* line 100, ../../scss/mobile/contact.scss */
 footer ul.link li a, footer ul.link li i {
   display: block;
-  height: 4.01855vh;
-  line-height: 4.01855vh;
+  height: 0.69333rem;
+  line-height: 0.69333rem;
   font-size: 0.26667rem;
   font-weight: 500;
   color: #333333;
@@ -223,15 +227,15 @@ footer ul.link li i {
 /* line 115, ../../scss/mobile/contact.scss */
 footer ul.web-info {
   display: flex;
-  height: 1.5456vh;
+  height: 0.26667rem;
   justify-content: center;
   align-items: center;
 }
 /* line 122, ../../scss/mobile/contact.scss */
 footer ul.web-info li span {
   display: block;
-  height: 1.5456vh;
-  line-height: 1.5456vh;
+  height: 0.26667rem;
+  line-height: 0.26667rem;
   font-size: 0.16rem;
   margin: 0 1.33333vw;
 }

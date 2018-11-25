@@ -117,7 +117,7 @@ main {
 
         .query-content {
             width: px2vw(674px);
-            height: px2vh(68px);
+            height: px2vh(80px);
             position: relative;
 
             #order {
@@ -126,17 +126,17 @@ main {
                 font-size: px2rem(24px);
                 padding-left: 30px;
                 border-radius: px2rem(12px);
-                border: 1px solid #bebebe;
+                border: 1px solid red;
                 box-shadow: 5px 5px 5px #e8e8e8 inset;
 
                 &:focus {
-                    border-bottom: 1px solid #bebebe;
+                    border-bottom: 1px solid red;
                 }
             }
 
             #search {
                 width: px2vw(162px);
-                height: px2vh(66px);
+                height: px2vh(80px);
                 position: absolute;
                 right: 1px;
                 top: 1px;

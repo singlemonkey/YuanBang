@@ -1,3 +1,7 @@
+/*@function px2vh($px) {
+    $vh:12.94px;
+    @return ($px/$vh) +vh;
+}*/
 /* line 5, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -116,7 +120,7 @@ body {
 
 /* line 8, ../../scss/mobile/company.scss */
 header {
-  height: 6.80062vh;
+  height: 1.17333rem;
   background-color: #074a92;
   padding: 0 5.6vw 0 4.66667vw;
   display: flex;
@@ -126,12 +130,12 @@ header {
 /* line 16, ../../scss/mobile/company.scss */
 header #return {
   width: 4.13333vw;
-  height: 2.39567vh;
+  height: 0.41333rem;
 }
 /* line 21, ../../scss/mobile/company.scss */
 header #home {
   width: 5.2vw;
-  height: 2.62751vh;
+  height: 0.45333rem;
 }
 /* line 26, ../../scss/mobile/company.scss */
 header span {
@@ -142,12 +146,12 @@ header span {
 /* line 32, ../../scss/mobile/company.scss */
 main > img {
   width: 100vw;
-  height: 34.77589vh;
-  margin-top: 0.7728vh;
+  height: 6rem;
+  margin-top: 0.13333rem;
 }
 /* line 38, ../../scss/mobile/company.scss */
 main .company-info {
-  padding: 4.63679vh 9.86667vw;
+  padding: 0.8rem 9.86667vw;
   background-color: #fff;
 }
 /* line 42, ../../scss/mobile/company.scss */
@@ -162,8 +166,8 @@ main .company-info p {
 
 /* line 52, ../../scss/mobile/company.scss */
 footer {
-  height: 10.66461vh;
-  padding: 2.31839vh 0;
+  height: 1.84rem;
+  padding: 0.4rem 0;
   position: absolute;
   bottom: 0;
   width: 100vw;
@@ -171,15 +175,15 @@ footer {
 /* line 59, ../../scss/mobile/company.scss */
 footer ul.link {
   display: flex;
-  height: 4.01855vh;
+  height: 0.69333rem;
   justify-content: center;
   align-items: center;
 }
 /* line 66, ../../scss/mobile/company.scss */
 footer ul.link li a, footer ul.link li i {
   display: block;
-  height: 4.01855vh;
-  line-height: 4.01855vh;
+  height: 0.69333rem;
+  line-height: 0.69333rem;
   font-size: 0.26667rem;
   font-weight: 500;
   color: #333333;
@@ -191,15 +195,15 @@ footer ul.link li i {
 /* line 81, ../../scss/mobile/company.scss */
 footer ul.web-info {
   display: flex;
-  height: 1.5456vh;
+  height: 0.26667rem;
   justify-content: center;
   align-items: center;
 }
 /* line 88, ../../scss/mobile/company.scss */
 footer ul.web-info li span {
   display: block;
-  height: 1.5456vh;
-  line-height: 1.5456vh;
+  height: 0.26667rem;
+  line-height: 0.26667rem;
   font-size: 0.16rem;
   margin: 0 1.33333vw;
 }
