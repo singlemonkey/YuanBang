@@ -1,4 +1,4 @@
-﻿const initUserAgent = function () {
+﻿var initUserAgent = function () {
     var sUserAgent = navigator.userAgent.toLowerCase();
     var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
     var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
@@ -12,23 +12,23 @@
         window.location.href = "/Mobile/Index";
     }
 };
-const initSlide = function () {
+var initSlide = function () {
     jQuery(".app-slide").slide({
         mainCell: ".bd ul",
         autoPlay: true,
         effect: 'fold',
-        interTime: 5000,
+        interTime: 3000,
         easing: 'swing'
     });
     jQuery(".app-profile-slide").slide({
         mainCell: ".bd ul",
         autoPlay: true,
         effect: 'fold',
-        interTime: 5000,
+        interTime: 3000,
         easing: 'swing'
     });
 };
-const initNotices = function () {
+var initNotices = function () {
     $.ajax({
         url: '/Admin/GetNotices',
         data: {
@@ -43,23 +43,23 @@ const initNotices = function () {
         type: 'post',
         dataType: 'json',
         success: function (notices) {
-            let template = $.templates('#newsItem');
-            let list = notices.list;
+            var template = $.templates('#newsItem');
+            var list = notices.list;
             list.forEach(function (notice) {
                 $('#news').append(template.render(notice));
             });
         }
     });
 };
-const initQuery = function () {
+var initQuery = function () {
     $('#app-order-query-btn').bind('click', function () {
-        const order = $('#app-order-num').val();
+        var order = $('#app-order-num').val();
         window.location.href = "/Home/Query/?order=" + order;
     });
 
     $(document).keydown(function (event) {
         if (event.keyCode === 13) {
-            const order = $('#app-order-num').val();
+            var order = $('#app-order-num').val();
             window.location.href = "/Home/Query/?order=" + order;
         }
     });

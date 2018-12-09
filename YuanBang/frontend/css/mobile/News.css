@@ -144,6 +144,10 @@ header span {
   color: #fff;
 }
 
+/* line 30, ../../scss/mobile/News.scss */
+main {
+  min-height: 12rem;
+}
 /* line 33, ../../scss/mobile/News.scss */
 main #news li {
   padding: 0.26667rem 2.66667vw;
@@ -160,7 +164,7 @@ main #news li .title a {
 }
 /* line 46, ../../scss/mobile/News.scss */
 main #news li .date {
-  flex: 0 0 20vw;
+  flex: 0 0 24vw;
   color: #333333;
 }
 /* line 53, ../../scss/mobile/News.scss */
@@ -193,4 +197,46 @@ main #content p {
   font-size: 0.13333rem;
   text-indent: 0.66667rem !important;
   line-height: 0.4rem;
+}
+
+/* line 84, ../../scss/mobile/News.scss */
+footer {
+  height: 1.84rem;
+  padding: 0.4rem 0;
+  width: 100vw;
+}
+/* line 89, ../../scss/mobile/News.scss */
+footer ul.link {
+  display: flex;
+  height: 0.69333rem;
+  justify-content: center;
+  align-items: center;
+}
+/* line 96, ../../scss/mobile/News.scss */
+footer ul.link li a, footer ul.link li i {
+  display: block;
+  height: 0.69333rem;
+  line-height: 0.69333rem;
+  font-size: 0.26667rem;
+  font-weight: 500;
+  color: #333333;
+}
+/* line 105, ../../scss/mobile/News.scss */
+footer ul.link li i {
+  margin: 0 2.66667vw;
+}
+/* line 111, ../../scss/mobile/News.scss */
+footer ul.web-info {
+  display: flex;
+  height: 0.26667rem;
+  justify-content: center;
+  align-items: center;
+}
+/* line 118, ../../scss/mobile/News.scss */
+footer ul.web-info li span {
+  display: block;
+  height: 0.26667rem;
+  line-height: 0.26667rem;
+  font-size: 0.16rem;
+  margin: 0 1.33333vw;
 }

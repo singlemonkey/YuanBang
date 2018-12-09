@@ -22,13 +22,18 @@
         <img id="header" alt="" src="~/frontend/images/mobile/query/header.png" />
     </div>
     <main>
+        <div class="query">
+            <div class="query-content">
+                <input type="text" id="order" placeholder="请输入要查询的运单号" />
+                <a href="javascript:;" id="search"></a>
+            </div>
+        </div>
         <div class="main-header">
-            <span >快递单号</span>
+            <span>快递单号</span>
             <span id="order-num"></span>
         </div>
         <div class="main-body">
-            <ul id="logistics">
-            </ul>
+            <ul id="logistics"></ul>
             <span id="errorMessage"></span>
         </div>
     </main>
@@ -71,6 +76,11 @@
             });
 
             //订单查询
+            $('#search').on('click', function () {
+                const queryOrder = $('#order').val();
+                $('#order-num').text(queryOrder);
+                query(queryOrder);
+            });
             const tmpl = $('#orderLog');
 
             let order = $.getQueryString('order');
@@ -78,17 +88,18 @@
 
             if (order !== null) {
                 $('#order-num').text(order);
-                query();
+                query(order);
             }
 
-            function query() {
-                if (order.trim().length !== 0) {
+            function query(queryOrder) {
+                $('#logistics').empty();
+                if (queryOrder.trim().length !== 0) {
                     $.ajax({
                         url: '/Home/GetOrder',
                         type: 'POST',
                         dataType: 'json',
                         data: {
-                            order: order
+                            order: queryOrder
                         },
                         success: function (data) {
                             const orderObj = $.parseJSON(data);

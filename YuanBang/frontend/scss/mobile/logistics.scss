@@ -30,6 +30,8 @@ header {
 }
 
 main {
+    background-color: #fff;
+
     > img {
         width: 100vw;
         height: px2vh(236px);
@@ -38,12 +40,48 @@ main {
 
     > p {
         font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Hiragino Sans GB", "Source Han Sans CN Normal", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
-        font-size: px2rem(26px);
-        padding: px2vh(40px) px2vw(64px);
+        padding: px2vh(5px) px2vw(34px);
         line-height: px2rem(40px);
         background-color: #fff;
         text-indent: 2em;
         color: #333333;
+    }
+
+    h1 {
+        color: #0077bb;
+        margin: px2rem(50px) 0 px2rem(20px);
+        font-size: px2rem(30px);
+    }
+
+    h2 {
+        margin: px2rem(25px) px2rem(15px) px2rem(25px);
+        font-size: px2rem(15px);
+    }
+
+    h3 {
+        margin: px2rem(20px) 0;
+        font-size: px2rem(21px);
+    }
+
+    blockquote {
+        padding: px2rem(10px) px2rem(15px);
+        border-left-style: solid;
+        border-left-width: px2rem(10px);
+        margin: 0 0 px2rem(20px);
+        border-color: #D6DBDF;
+        background: none repeat scroll 0 0 rgba(102,128,153,.05);
+
+        ul {
+            padding: 0;
+            margin: 0 0 px2rem(10px) px2rem(25px);
+
+            li {
+                line-height: px2rem(27px);
+                display: list-item;
+                color: #2C3E50;
+                list-style-type: disc;
+            }
+        }
     }
 
     .manager {
@@ -63,7 +101,7 @@ main {
             width: px2vw(445px);
             height: px2vh(140px);
             line-height: px2vh(140px);
-            text-align:center;
+            text-align: center;
         }
     }
 }

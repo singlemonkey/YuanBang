@@ -145,27 +145,66 @@ header span {
 }
 
 /* line 32, ../../scss/mobile/query.scss */
+main .query {
+  height: 1.46667rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 39, ../../scss/mobile/query.scss */
+main .query .query-content {
+  width: 89.86667vw;
+  height: 1.06667rem;
+  position: relative;
+}
+/* line 44, ../../scss/mobile/query.scss */
+main .query .query-content #order {
+  width: 100%;
+  height: 100%;
+  font-size: 0.32rem;
+  padding-left: 30px;
+  border-radius: 0.16rem;
+  border: 1px solid red;
+  box-shadow: 5px 5px 5px #e8e8e8 inset;
+}
+/* line 53, ../../scss/mobile/query.scss */
+main .query .query-content #order:focus {
+  border-bottom: 1px solid red;
+}
+/* line 58, ../../scss/mobile/query.scss */
+main .query .query-content #search {
+  width: 21.6vw;
+  height: 1.06667rem;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  background-image: url(/frontend/images/mobile/index/query.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+/* line 71, ../../scss/mobile/query.scss */
 main .main-header {
   padding: 0 3.2vw;
   border-bottom: 2px solid #f5f5f5;
 }
-/* line 36, ../../scss/mobile/query.scss */
+/* line 75, ../../scss/mobile/query.scss */
 main .main-header span {
   font-size: 0.37333rem;
   font-weight: 500;
   display: inline-block;
   line-height: 1.06667rem;
 }
-/* line 44, ../../scss/mobile/query.scss */
+/* line 83, ../../scss/mobile/query.scss */
 main .main-body {
   padding: 0.4rem 10.13333vw;
 }
-/* line 47, ../../scss/mobile/query.scss */
+/* line 86, ../../scss/mobile/query.scss */
 main .main-body ul {
   border-left: 4px dotted #cccccc;
 }
 
-/* line 53, ../../scss/mobile/query.scss */
+/* line 92, ../../scss/mobile/query.scss */
 #logistics li {
   height: 1.81333rem;
   display: flex;
@@ -174,16 +213,16 @@ main .main-body ul {
   padding-left: 5.33333vw;
   position: relative;
 }
-/* line 61, ../../scss/mobile/query.scss */
+/* line 100, ../../scss/mobile/query.scss */
 #logistics li > * {
-  font-size: 0.37333rem;
+  font-size: 0.32rem;
   color: #333333;
 }
-/* line 66, ../../scss/mobile/query.scss */
+/* line 105, ../../scss/mobile/query.scss */
 #logistics li .operation {
   margin-bottom: 0.24rem;
 }
-/* line 70, ../../scss/mobile/query.scss */
+/* line 109, ../../scss/mobile/query.scss */
 #logistics li i {
   color: #cccccc;
   position: absolute;
@@ -191,12 +230,12 @@ main .main-body ul {
   left: -2.53333vw;
   background-color: #fff;
 }
-/* line 79, ../../scss/mobile/query.scss */
+/* line 118, ../../scss/mobile/query.scss */
 #logistics li.active > * {
   color: #074a92;
 }
 
-/* line 85, ../../scss/mobile/query.scss */
+/* line 124, ../../scss/mobile/query.scss */
 #errorMessage {
   display: none;
   padding-left: 5vw;

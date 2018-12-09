@@ -169,7 +169,7 @@ main ul li img {
 }
 /* line 55, ../../scss/mobile/contact.scss */
 main ul li label {
-  flex: 0 0 16vw;
+  flex: 0 0 13.33333vw;
   text-align: center;
 }
 /* line 60, ../../scss/mobile/contact.scss */
@@ -200,18 +200,16 @@ main ul li .address a {
 footer {
   height: 1.84rem;
   padding: 0.4rem 0;
-  position: absolute;
-  bottom: 0;
   width: 100vw;
 }
-/* line 93, ../../scss/mobile/contact.scss */
+/* line 91, ../../scss/mobile/contact.scss */
 footer ul.link {
   display: flex;
   height: 0.69333rem;
   justify-content: center;
   align-items: center;
 }
-/* line 100, ../../scss/mobile/contact.scss */
+/* line 98, ../../scss/mobile/contact.scss */
 footer ul.link li a, footer ul.link li i {
   display: block;
   height: 0.69333rem;
@@ -220,18 +218,18 @@ footer ul.link li a, footer ul.link li i {
   font-weight: 500;
   color: #333333;
 }
-/* line 109, ../../scss/mobile/contact.scss */
+/* line 107, ../../scss/mobile/contact.scss */
 footer ul.link li i {
   margin: 0 2.66667vw;
 }
-/* line 115, ../../scss/mobile/contact.scss */
+/* line 113, ../../scss/mobile/contact.scss */
 footer ul.web-info {
   display: flex;
   height: 0.26667rem;
   justify-content: center;
   align-items: center;
 }
-/* line 122, ../../scss/mobile/contact.scss */
+/* line 120, ../../scss/mobile/contact.scss */
 footer ul.web-info li span {
   display: block;
   height: 0.26667rem;

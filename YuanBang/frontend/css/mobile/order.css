@@ -143,12 +143,12 @@ header span {
   color: #fff;
 }
 
-/* line 32, ../../scss/mobile/order.scss */
+/* line 33, ../../scss/mobile/order.scss */
 main section {
   background-color: #fff;
   margin-bottom: 0.10667rem;
 }
-/* line 36, ../../scss/mobile/order.scss */
+/* line 37, ../../scss/mobile/order.scss */
 main section .header {
   height: 0.90667rem;
   border-bottom: 2px solid #f5f5f5;
@@ -157,7 +157,7 @@ main section .header {
   align-items: center;
   padding-left: 4.8vw;
 }
-/* line 44, ../../scss/mobile/order.scss */
+/* line 45, ../../scss/mobile/order.scss */
 main section .header span {
   font-size: 0.34667rem;
   color: #333333;
@@ -167,7 +167,7 @@ main section .header span {
   justify-content: flex-start;
   align-items: center;
 }
-/* line 53, ../../scss/mobile/order.scss */
+/* line 54, ../../scss/mobile/order.scss */
 main section .header span i {
   width: 1.06667vw;
   height: 0.4rem;
@@ -175,15 +175,15 @@ main section .header span i {
   border-radius: 5px;
   margin-right: 2.13333vw;
 }
-/* line 63, ../../scss/mobile/order.scss */
+/* line 64, ../../scss/mobile/order.scss */
 main section .body {
   padding: 0 2.93333vw;
 }
-/* line 66, ../../scss/mobile/order.scss */
+/* line 67, ../../scss/mobile/order.scss */
 main section .body .form-row {
   display: flex;
 }
-/* line 69, ../../scss/mobile/order.scss */
+/* line 70, ../../scss/mobile/order.scss */
 main section .body .form-row label {
   position: relative;
   flex: 0 0 20.26667vw;
@@ -193,7 +193,7 @@ main section .body .form-row label {
   height: 1.06667rem;
   line-height: 1.06667rem;
 }
-/* line 78, ../../scss/mobile/order.scss */
+/* line 79, ../../scss/mobile/order.scss */
 main section .body .form-row label i {
   position: absolute;
   font-size: 0.37333rem;
@@ -201,21 +201,21 @@ main section .body .form-row label i {
   font-weight: 500;
   left: 0.24rem;
 }
-/* line 87, ../../scss/mobile/order.scss */
+/* line 88, ../../scss/mobile/order.scss */
 main section .body .form-row input {
   flex: 1;
   font-size: 0.34667rem;
   border: none;
 }
 
-/* line 96, ../../scss/mobile/order.scss */
+/* line 97, ../../scss/mobile/order.scss */
 footer {
   display: flex;
   margin-top: 0.26667rem;
   height: 1.33333rem;
   background-color: #fff;
 }
-/* line 102, ../../scss/mobile/order.scss */
+/* line 103, ../../scss/mobile/order.scss */
 footer .clause {
   flex: 1;
   text-align: center;
@@ -223,7 +223,7 @@ footer .clause {
   justify-content: center;
   align-items: center;
 }
-/* line 109, ../../scss/mobile/order.scss */
+/* line 110, ../../scss/mobile/order.scss */
 footer .clause label {
   font-size: 0.32rem;
   color: #396ea8;
@@ -231,12 +231,12 @@ footer .clause label {
   text-align: center;
   margin-right: 6.66667vw;
 }
-/* line 116, ../../scss/mobile/order.scss */
+/* line 117, ../../scss/mobile/order.scss */
 footer .clause label input {
   width: 3.2vw;
   height: 3.2vw;
 }
-/* line 123, ../../scss/mobile/order.scss */
+/* line 124, ../../scss/mobile/order.scss */
 footer #submit {
   flex: 0 0 38.66667vw;
   font-size: 0.37333rem;

@@ -151,10 +151,11 @@ main > img {
 }
 /* line 38, ../../scss/mobile/company.scss */
 main .company-info {
+  height: 7.6rem;
   padding: 0.8rem 9.86667vw;
   background-color: #fff;
 }
-/* line 42, ../../scss/mobile/company.scss */
+/* line 43, ../../scss/mobile/company.scss */
 main .company-info p {
   font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Hiragino Sans GB", "Source Han Sans CN Normal", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
   font-size: 0.34667rem !important;
@@ -164,22 +165,20 @@ main .company-info p {
   max-height: 9999px;
 }
 
-/* line 52, ../../scss/mobile/company.scss */
+/* line 53, ../../scss/mobile/company.scss */
 footer {
   height: 1.84rem;
   padding: 0.4rem 0;
-  position: absolute;
-  bottom: 0;
   width: 100vw;
 }
-/* line 59, ../../scss/mobile/company.scss */
+/* line 58, ../../scss/mobile/company.scss */
 footer ul.link {
   display: flex;
   height: 0.69333rem;
   justify-content: center;
   align-items: center;
 }
-/* line 66, ../../scss/mobile/company.scss */
+/* line 65, ../../scss/mobile/company.scss */
 footer ul.link li a, footer ul.link li i {
   display: block;
   height: 0.69333rem;
@@ -188,18 +187,18 @@ footer ul.link li a, footer ul.link li i {
   font-weight: 500;
   color: #333333;
 }
-/* line 75, ../../scss/mobile/company.scss */
+/* line 74, ../../scss/mobile/company.scss */
 footer ul.link li i {
   margin: 0 2.66667vw;
 }
-/* line 81, ../../scss/mobile/company.scss */
+/* line 80, ../../scss/mobile/company.scss */
 footer ul.web-info {
   display: flex;
   height: 0.26667rem;
   justify-content: center;
   align-items: center;
 }
-/* line 88, ../../scss/mobile/company.scss */
+/* line 87, ../../scss/mobile/company.scss */
 footer ul.web-info li span {
   display: block;
   height: 0.26667rem;

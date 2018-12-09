@@ -1,90 +1,99 @@
 ﻿.app-footer {
-	.app-contact-info {
-		height: 200px;
-		background-color: #396ea8;
+    .app-contact-info {
+        height: 200px;
+        background-color: #396ea8;
 
-		.app-contact-content {
-			height: 100%;
-			padding: 52px 80px 46px 28px;
-			display: flex;
-			flex-direction: row;
+        .app-contact-content {
+            height: 100%;
+            padding: 52px 80px 46px 28px;
+            display: flex;
+            flex-direction: row;
 
-			.app-contact-wx {
-				flex: 0 0 103px;
-				height: 100%;
-				background-image: url(../../frontend/images/index/wx-big.png);
-				background-repeat: no-repeat;
-                background-size:100% 100%;
-			}
+            .app-contact-wx {
+                flex: 0 0 103px;
+                height: 100%;
+                background-image: url(../../frontend/images/index/wx-big.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                position: relative;
 
-			.app-contact-base {
-				flex: 0 0 688px;
-				padding-left: 40px;
+                span {
+                    color: #fff;
+                    font-size: 12px;
+                    position: absolute;
+                    bottom: -20px;
+                    word-break: keep-all;
+                    left: -21px;
+                }
+            }
 
-				table {
-					width: 100%;
+            .app-contact-base {
+                flex: 0 0 688px;
+                padding-left: 40px;
 
-					tr {
-						td {
-							span {
-								height: 25px;
-								line-height: 25px;
-								font-size: 12px;
-								color: #eeeeee;
+                table {
+                    width: 100%;
 
-								i {
-									color: #95ffff;
-									font-size: 14px;
-									height: 14px;
-									width: 14px;
-									text-align: center;
-									margin-right: 12px;
-								}
-							}
-						}
+                    tr {
+                        td {
+                            span {
+                                height: 25px;
+                                line-height: 25px;
+                                font-size: 12px;
+                                color: #eeeeee;
 
-						td:first-child {
-							
-						}
-					}
-				}
-			}
+                                i {
+                                    color: #95ffff;
+                                    font-size: 14px;
+                                    height: 14px;
+                                    width: 14px;
+                                    text-align: center;
+                                    margin-right: 12px;
+                                }
+                            }
+                        }
 
-			.app-contact-phone {
-				position: relative;
-				height: 100%;
-				width: 100%;
+                        td:first-child {
+                        }
+                    }
+                }
+            }
 
-				.app-contact-phone-icon {
-					height: 51px;
-					width: 62px;
-					background-image: url(../../frontend/images/index/phone.png);
-					background-repeat: no-repeat;
-					position: absolute;
-					left: 0;
-					top: 30px;
-				}
+            .app-contact-phone {
+                position: relative;
+                height: 100%;
+                width: 100%;
 
-				.app-contact-phone-text {
-					position: absolute;
-					left: 84px;
-					top: 30px;
+                .app-contact-phone-icon {
+                    height: 51px;
+                    width: 62px;
+                    background-image: url(../../frontend/images/index/phone.png);
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    left: 0;
+                    top: 30px;
+                }
 
-					span {
-						display: block;
-						color: #eeeeee;
+                .app-contact-phone-text {
+                    position: absolute;
+                    left: 84px;
+                    top: 30px;
 
-						&:hover {
-							color: #ffff;
-						}
-					}
-				}
-			}
-		}
-	}
+                    span {
+                        display: block;
+                        color: #eeeeee;
 
-	.app-property {
-		height: 48px;
-		background-color: #074a92;
-	}
+                        &:hover {
+                            color: #ffff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .app-property {
+        height: 48px;
+        background-color: #074a92;
+    }
 }

@@ -225,18 +225,16 @@ main #submit {
 footer {
   height: 1.84rem;
   padding: 0.4rem 0;
-  position: absolute;
-  bottom: 0;
   width: 100vw;
 }
-/* line 114, ../../scss/mobile/suggestion.scss */
+/* line 112, ../../scss/mobile/suggestion.scss */
 footer ul.link {
   display: flex;
   height: 0.69333rem;
   justify-content: center;
   align-items: center;
 }
-/* line 121, ../../scss/mobile/suggestion.scss */
+/* line 119, ../../scss/mobile/suggestion.scss */
 footer ul.link li a, footer ul.link li i {
   display: block;
   height: 0.69333rem;
@@ -245,18 +243,18 @@ footer ul.link li a, footer ul.link li i {
   font-weight: 500;
   color: #333333;
 }
-/* line 130, ../../scss/mobile/suggestion.scss */
+/* line 128, ../../scss/mobile/suggestion.scss */
 footer ul.link li i {
   margin: 0 2.66667vw;
 }
-/* line 136, ../../scss/mobile/suggestion.scss */
+/* line 134, ../../scss/mobile/suggestion.scss */
 footer ul.web-info {
   display: flex;
   height: 0.26667rem;
   justify-content: center;
   align-items: center;
 }
-/* line 143, ../../scss/mobile/suggestion.scss */
+/* line 141, ../../scss/mobile/suggestion.scss */
 footer ul.web-info li span {
   display: block;
   height: 0.26667rem;

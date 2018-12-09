@@ -53,7 +53,7 @@ main {
             }
 
             label {
-                flex: 0 0 px2vw(120px);
+                flex: 0 0 px2vw(100px);
                 text-align: center;
             }
 
@@ -86,8 +86,6 @@ main {
 footer {
     height: px2vh(138px);
     padding: px2vh(30px) 0;
-    position: absolute;
-    bottom: 0;
     width: 100vw;
 
     ul.link {
